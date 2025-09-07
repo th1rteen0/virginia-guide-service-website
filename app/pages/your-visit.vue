@@ -92,87 +92,83 @@
 
     <!-- Tour Schedule -->
     <section class="relative bg-neutral-100">
-        <div class="max-w-7xl mx-auto gap-10 p-8 sm:p-6 md:p-4 ">
-
-            <div class="flex flex-col lg:flex-row items-start">
-                    <!-- Left: Tour Schedule Text -->
-                    <div class="flex flex-col items-center lg:items-start">
-                        <p class="font-['Montserrat'] text-left font-medium text-UVA-orange text-4xl sm:text-5xl leading-tight mb-6">
-                            TOUR SCHEDULE
-                        </p>
-                        <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-xl px-4">
-                            <li>
-                            Standard Tours will leave at 11:00 AM from the Lawn-side of the Rotunda Steps every Friday, Saturday, and Sunday 
-                            <a class="underline" href="http://www.virginia.edu/registrar/calendar.html">
-                                during the academic school year.
-                            </a>
-                            </li>
-                            <li>
-                            Exceptions include 
-                            <a class="underline" href="https://virginiasports.com/sports/football/schedule/">
-                                home football game days
-                            </a> and 
-                            <a class="underline" href="https://registrar.virginia.edu/calendar/academic">
-                                when classes are not in session.
-                            </a>
-                            </li>
-                            <li>
-                            Tours last around 1 Hour.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Right: Registration Form (overlapping the section) -->
-                    <div class="w-full lg:w-1/2 relative">
-                        <div class="relative lg:absolute lg:-bottom-190 z-20 w-full">
-                            <div class="flex flex-col shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] rounded-xl p-6 bg-white">
-                                <h1 class="font=['Montserrat'] font-medium text-3xl text-royal-blue mb-4">
-                                    Register Here
-                                </h1>
-                                <form class="flex flex-col">
-                                    <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
-                                    <input type="text" id="fname" name="fname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-
-                                    <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
-                                    <input type="text" id="lname" name="lname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-
-                                    <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
-                                    <input type="email" id="email" name="email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-
-                                    <label for="number" class="font-[Montserrat] font-light text-royal-blue">Phone Number</label>
-                                    <input type="tel" id="number" name="number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-
-                                    <div class="flex flex-row justify-between gap-4">
-                                        <div class="flex flex-col">
-                                            <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date</label>
-                                            <input type="date" id="date" name="date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-                                        </div>
-                                        <div class="flex flex-col">
-                                            <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
-                                            <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-                                        </div>
-                                    </div>
-
-                                    <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">How many minors are in your group?</label>
-                                    <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-
-
-                                    <label for="tour" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
-                                    <input type="text" id="tour" name="tour" value="Standard Historical Tour" readonly class="font-[Montserrat] text-royal-blue border border-gray-300 bg-gray-100 cursor-not-allowed rounded-lg px-4 py-2 focus:outline-none mb-5"/>
-
-
-                                    <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Notes for the Tour</label>
-                                    <textarea id="notes" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
-
-                                    <button type="submit" class="font-[Montserrat] bg-royal-blue text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-900 transition duration-300">
-                                        Register
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+        <div class="flex flex-col lg:flex-row items-start max-w-7xl mx-auto gap-10 p-8 sm:p-6 md:p-4">
+            <!-- Left: Tour Schedule Text -->
+            <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
+                <p class="font-['Montserrat'] text-left font-medium text-UVA-orange text-4xl sm:text-5xl leading-tight mb-6">
+                    TOUR SCHEDULE
+                </p>
+                <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-xl px-4">
+                    <li>
+                    Standard Tours will leave at 11:00 AM from the Lawn-side of the Rotunda Steps every Friday, Saturday, and Sunday 
+                    <a class="underline" href="http://www.virginia.edu/registrar/calendar.html">
+                        during the academic school year.
+                    </a>
+                    </li>
+                    <li>
+                    Exceptions include 
+                    <a class="underline" href="https://virginiasports.com/sports/football/schedule/">
+                        home football game days
+                    </a> and 
+                    <a class="underline" href="https://registrar.virginia.edu/calendar/academic">
+                        when classes are not in session.
+                    </a>
+                    </li>
+                    <li>
+                    Tours last around 1 Hour.
+                    </li>
+                </ul>
             </div>
 
+            <!-- Right: Registration Form (overlapping the section) -->
+            <div class="w-full lg:w-1/2 relative">
+                <div class="relative lg:absolute lg:-bottom-190 z-20 w-full">
+                    <div class="flex flex-col shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] rounded-xl p-6 bg-white">
+                        <h1 class="font=['Montserrat'] font-medium text-3xl text-royal-blue mb-4">
+                            Register Here
+                        </h1>
+                        <form class="flex flex-col">
+                            <label for="fname" class="font-[Montserrat] font-light text-royal-blue">First Name</label>
+                            <input type="text" id="fname" name="fname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                            <label for="lname" class="font-[Montserrat] font-light text-royal-blue">Last Name</label>
+                            <input type="text" id="lname" name="lname" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                            <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
+                            <input type="email" id="email" name="email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                            <label for="number" class="font-[Montserrat] font-light text-royal-blue">Phone Number</label>
+                            <input type="tel" id="number" name="number" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+                            <div class="flex flex-row justify-between gap-4">
+                                <div class="flex flex-col">
+                                    <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date</label>
+                                    <input type="date" id="date" name="date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                </div>
+                                <div class="flex flex-col">
+                                    <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
+                                    <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                </div>
+                            </div>
+
+                            <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">How many minors are in your group?</label>
+                            <input type="number" id="guestNum" name="guestNum" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+
+
+                            <label for="tour" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
+                            <input type="text" id="tour" name="tour" value="Standard Historical Tour" readonly class="font-[Montserrat] text-royal-blue border border-gray-300 bg-gray-100 cursor-not-allowed rounded-lg px-4 py-2 focus:outline-none mb-5"/>
+
+
+                            <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Notes for the Tour</label>
+                            <textarea id="notes" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
+
+                            <button type="submit" class="font-[Montserrat] bg-royal-blue text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-900 transition duration-300">
+                                Register
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Banner -->
@@ -191,7 +187,6 @@
 
     <!-- Location and Parking -->
     <section class="bg-neutral-100">
-        
         <div class="flex flex-col lg:flex-row justify-center gap-10 p-10 sm:p-8 md:p-6 w-full lg:w-1/2">
             <!-- Left: Tour Schedule Text -->
             <div class="flex flex-col items-center lg:items-start">
