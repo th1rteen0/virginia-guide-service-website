@@ -26,9 +26,11 @@
           </button>
         </a>
   
-        <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-300">
-          FOR EDUCATORS
-        </button>
+        <a href="/for-educators">
+          <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-300">
+            FOR EDUCATORS
+          </button>
+        </a>
   
         <button class="font-['Montserrat'] font-medium bg-transparent hover:bg-royal-blue hover:text-white cursor-pointer rounded-sm px-3 py-3 transition duration-300">
           JOIN GUIDES

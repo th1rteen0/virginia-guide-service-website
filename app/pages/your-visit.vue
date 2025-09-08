@@ -100,7 +100,7 @@
                 <p class="font-['Montserrat'] text-left font-medium text-UVA-orange text-4xl sm:text-5xl leading-tight mb-6">
                     TOUR SCHEDULE
                 </p>
-                <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-3xl lg:max-w-xl px-4">
+                <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-3xl lg:max-w-xl px-4 lg:pb-5">
                     <li>
                     Standard Tours will leave at 11:00 AM from the Lawn-side of the Rotunda Steps every Friday, Saturday, and Sunday 
                     <a class="underline" href="http://www.virginia.edu/registrar/calendar.html">
