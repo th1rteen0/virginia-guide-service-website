@@ -171,6 +171,132 @@
         </div>
     </section>
 
+    <!--Carousel: Tour Review Section-->
+    <div class="review-carousel-body">
+        <div class="review-slider">
+            <div class="review-slide-track grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Review 1 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <!-- Date -->
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        January 2024
+                    </p>
+                    <!-- Review Text -->
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “[Guide name]—he was so well informed and thoughtful in explaining the historical
+                        relationship to history and the importance of understanding it in the present.”
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)]  p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “Well researched presentation. She did a great job putting various events onto a timeline, 
+                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university.”
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “I was very impressed with how well the event was organized. 
+                        I reached out in January when most students were still on break and got a response within 2 days! 
+                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do.”
+                    </p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “Our tour guide, [guide], was incredibly knowledgeable and engaging. 
+                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling.”
+                    </p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
+                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects.”
+                    </p>
+                </div>
+
+                <!--Same 5 slides (doubled)-->
+
+                <!-- Review 1 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <!-- Date -->
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        January 2024
+                    </p>
+                    <!-- Review Text -->
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “[Guide name]—he was so well informed and thoughtful in explaining the historical
+                        relationship to history and the importance of understanding it in the present.”
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “Well researched presentation. She did a great job putting various events onto a timeline, 
+                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university.”
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “I was very impressed with how well the event was organized. 
+                        I reached out in January when most students were still on break and got a response within 2 days! 
+                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do.”
+                    </p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “Our tour guide, [guide], was incredibly knowledgeable and engaging. 
+                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling.”
+                    </p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
+                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
+                        February 2024
+                    </p>
+                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] line-clamp-6">
+                        “[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
+                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects.”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Footer Section-->
     <section>
         <div class="relative overflow-hidden">
@@ -296,3 +422,51 @@
     </section>
 
 </template>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 8rem;
+    }
+    /* Carousel for the Tour Reviews Section */
+    .review-carousel-body {
+        width: 100%;
+        height: var(--height);
+        display: grid;
+        place-items: center;
+    }
+    .review-slider{
+        height: 400px;
+        margin: auto;
+        position: relative;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+    .review-slide-track{
+        display: flex;
+        width: calc(350px * 18);
+        animation: scroll-right 20s linear infinite;
+    }
+    /* Right to left */
+    @keyframes scroll-right {
+        0% {
+            transform: translateX(calc(-350px * 5));
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    .review-slide-track:hover{
+        animation-play-state: paused;
+    }
+    .review-slide{
+        height: 250px;
+        width: 350px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        perspective: 100px;
+    }
+</style>

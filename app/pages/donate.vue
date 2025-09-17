@@ -12,10 +12,10 @@
         </div>
     </header> 
 
-    <!-- Overlapping Section for donating-->
+    <!-- Overlapping Section for Donatation Information-->
     <section class="relative z-20 -mt-20 px-4 mb-10">
 
-        <div class="shadow-lg p-6 max-w-3xl mx-auto text-center bg-royal-blue">
+        <div class="shadow-lg p-6 max-w-3xl mx-auto text-center bg-royal-blue border-double border-6 border-UVA-orange">
 
             <div class="flex sm:flex-col justify-evenly items-center gap-4">
                 <p class="text-white font-['Montserrat'] p-4 text-base sm:text-lg">
