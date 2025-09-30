@@ -441,10 +441,10 @@
                     <!-- Column 1 -->
                     <ul class="flex flex-col gap-2 min-w-[100x]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
-                        <a href="your-visit">
+                        <a href="/your-visit">
                             <li class="cursor-pointer">Directions + FAQ</li>
                         </a>
-                        <a href="about-tours#about-tours">
+                        <a href="/about-tours#about-tours">
                             <li class="cursor-pointer">History Tours</li>
                         </a>
                         <a href="/about-tours#specialty-tours">
