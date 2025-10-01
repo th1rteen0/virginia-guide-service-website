@@ -99,7 +99,7 @@
     </section>
 
     <!--Directions: Join Guides-->
-    <section id="join-guides" v-if="joinGuides">
+    <section id="join-guides" v-show="joinGuides">
 
         <!--Running Banner: Join Guides-->
         <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9]">
@@ -282,10 +282,10 @@
     </section>
 
     <!--Directions: Being a Guide-->
-    <section v-if="beingAGuide">
+    <section v-show="beingAGuide">
 
         <!--Running Banner: Being A Guide-->
-        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9]">
+        <div class="scrollElement running-text-container font-[Roboto] font-medium text-[#ECE9E9]">
             <!--First Copy-->
             <ul>
                 <li>
@@ -315,7 +315,7 @@
         <!--Container-->
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <!--What We Do Text-->
-            <div class="flex flex-col lg:flex-row gap-6 pb-5">
+            <div class="scrollElement flex flex-col lg:flex-row gap-6 pb-5">
                 <div class="flex flex-col space-y-1 justify-center text-center lg:text-start">
                     <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
                     WHAT WE DO
@@ -333,7 +333,7 @@
                     <!--flex col-->
                     <div class="flex flex-col w-full lg:w-[60%] gap-x-10 gap-y-5 justify-center items-center">
                         <!-- Why We Do It Text -->
-                        <div class="flex flex-col w-full space-y-1 text-center lg:text-start">
+                        <div class="scrollElement flex flex-col w-full space-y-1 text-center lg:text-start">
                             <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
                                 WHY WE DO IT
                             </h2>
@@ -349,7 +349,7 @@
                             </p>
                         </div>
                         <!--Img + the honor of representing UVA-->
-                        <div class="flex flex-col lg:flex-row w-[80%] lg:w-full gap-x-5 items-center justify-center p-2 bg-royal-blue text-center lg:text-start">
+                        <div class="scrollElement flex flex-col lg:flex-row w-[80%] lg:w-full gap-x-5 items-center justify-center p-2 bg-royal-blue text-center lg:text-start">
                             <div class="flex flex-col w-full lg:w-1/2 justify-center items-center">
                                 <img src="/join-guides-page/beingaguide_mtnview.png" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2">
                             </div>
@@ -366,7 +366,7 @@
                     </div>
 
                     <!-- Shreya and Madhin Image -->
-                    <div class="flex flex-col w-full lg:w-[40%] justify-center items-center pt-5 lg:pt-0">
+                    <div class="scrollElement flex flex-col w-full lg:w-[40%] justify-center items-center pt-5 lg:pt-0">
                         <img src="/join-guides-page/beingaguide_shreyamadhin.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2 border-4 border-dotted border-dark-green">
                     </div>
                 </div>
@@ -375,7 +375,7 @@
                 <div class="flex flex-col lg:flex-row py-5 gap-5">
                     <!--Text-->
                     <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
-                        <div class="p-5 border-4 border-dark-green text-center lg:text-start">
+                        <div class="scrollElement p-5 border-4 border-dark-green text-center lg:text-start">
                             <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
                                 Collaboration Across Grounds
                             </h2>
@@ -385,11 +385,11 @@
                         </div>
                     </div>
                     <!--Image-->
-                    <div class="flex flex-col w-full lg:w-[30%] items-center justify-center">
+                    <div class="scrollElement flex flex-col w-full lg:w-[30%] items-center justify-center">
                         <img src="/join-guides-page/beingaguide_metthebanner.jpeg" class="object-cover w-full max-w-3xs md:max-w-2xs lg:max-w-xs p-2 bg-dark-green">
                     </div>
                     <!--Text-->
-                    <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
+                    <div class="scrollElement flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
                         <div class="p-5 border-4 border-dark-green text-center lg:text-start">
                             <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
                                 Exploring HISTORY That Matters To You
@@ -404,11 +404,11 @@
                 <!--third flex row-->
                 <div class="flex flex-col lg:flex-row gap-5">
                     <!--Image-->
-                    <div class="flex flex-col w-full lg:w-1/2 items-center justify-center">
+                    <div class="scrollElement flex flex-col w-full lg:w-1/2 items-center justify-center">
                         <img src="/join-guides-page/beingaguide_metthepicnic.jpg" class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg p-2 border-4 border-dotted border-dark-green">
                     </div>
                     <!--Text-->
-                    <div class="flex flex-col w-full lg:w-1/2 space-y-1 justify-center text-center lg:text-start">
+                    <div class="scrollElement flex flex-col w-full lg:w-1/2 space-y-1 justify-center text-center lg:text-start">
                         <div class="p-10 text-white bg-royal-blue">
                             <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
                                 The Colonnades Ball
@@ -423,11 +423,11 @@
                 <!--fourth flex row-->
                 <div class="flex flex-col lg:flex-row gap-x-5 pt-5">
                     <!--Image-->
-                    <div class="flex flex-col w-full lg:w-[35%] items-center justify-center mb-5 lg:mb-0">
+                    <div class="scrollElement flex flex-col w-full lg:w-[35%] items-center justify-center mb-5 lg:mb-0">
                         <img src="/join-guides-page/beingaguide_colonnades.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
                     </div>
                     <!--Text-->
-                    <div class="flex flex-col w-full lg:w-[30%] space-y-1 p-5 justify-center bg-UVA-orange text-white text-center lg:text-start">
+                    <div class="scrollElement flex flex-col w-full lg:w-[30%] space-y-1 p-5 justify-center bg-UVA-orange text-white text-center lg:text-start">
                         <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
                             Friendships Beyond Grounds
                         </h2>
@@ -436,7 +436,7 @@
                         </p>
                     </div>
                     <!--Image-->
-                    <div class="flex flex-col w-full lg:w-[35%] items-center justify-center mt-5 lg:mt-0">
+                    <div class="scrollElement flex flex-col w-full lg:w-[35%] items-center justify-center mt-5 lg:mt-0">
                         <img src="/join-guides-page/beingaguide_aboriginalart.jpeg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
                     </div>
                 </div>
@@ -445,7 +445,7 @@
         </div>
 
         <!--Running Banner #2-->
-        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9] pb-12">
+        <div class="scrollElement running-text-container font-[Roboto] font-medium text-[#ECE9E9] pb-12">
             <!--First Copy-->
             <ul>
                 <li>
@@ -687,6 +687,22 @@
 
 <script setup>
     import { ref } from 'vue';
+    import { onMounted } from "vue"
+
+    onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show")
+        } else {
+            entry.target.classList.remove("show")
+        }
+        })
+    })
+
+    const scrollElements = document.querySelectorAll(".scrollElement")
+    scrollElements.forEach((element) => observer.observe(element))
+    })
 
     const joinGuides = ref(true); // set to true so that the section shows up on the page on load
     const beingAGuide = ref(false);
@@ -694,7 +710,6 @@
     const toggleBeingAGuide = () => {
         beingAGuide.value = true;
         joinGuides.value = false;
-
     }
 
     const toggleJoinGuides = () => {
@@ -708,6 +723,15 @@
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 6rem;
+    }
+    .scrollElement {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .scrollElement.show {
+        opacity: 1;
+        transform: translateY(0);
     }
     .running-text-container {
         /* margin: 20px; */
