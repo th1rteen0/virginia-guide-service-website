@@ -22,7 +22,7 @@
                     Specialty Tours
                 </a>
                 <a href="/your-visit" class="text-lg hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
-                    Plan Your Visit
+                    Take a Tour
                 </a>
                 <a href="/for-educators" class="text-lg hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     For Educators
@@ -36,28 +36,28 @@
         <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="flex flex-col lg:flex-row justify-center items-center gap-10">
                 <!-- Right: Image -->
-                <div class="w-full lg:w-1/2 flex justify-center items-center">
-                    <img src="/about-tours-page/Tourpage_LawnRooms.jpg" alt="Historical Tour Image" class="w-full max-w-xl h-auto rounded-md shadow-md">
+                <div class="scrollElement w-full lg:w-1/2 flex justify-center items-center">
+                    <img src="/about-tours-page/Tourpage_LawnRooms.jpg" alt="Historical Tour Image" loading="lazy" class="w-full max-w-xl h-auto rounded-md shadow-md">
                 </div>
 
                 <!-- Left: Text -->
                 <div class="w-full lg:w-1/2 px-5 lg:px-0 justify-between items-center">
-                    <p class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
-                    HISTORICAL TOURS
+                    <p class="scrollElement font-['Playfair_Display'] italic text-center font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
+                        HISTORICAL TOURS
                     </p>
-                    <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
+                    <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
                         Founded in 1819 by Thomas Jefferson to promote education as a defense against tyranny, 
                         UVA's history is more than its founding ideals. It is also shaped by the labor, activism, 
                         and voices of those once excluded. Built and maintained by an estimated 4,000 enslaved 
                         laborers between 1817 and 1865, the University's grounds hold stories long overlooked.
                     </p>
-                    <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 pt-2">
+                    <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 pt-2">
                         From its founding to construction, from the Civil War to Civil Rights, our student-led tours 
                         explore 200+ years of change, resistance, and community that shape the present. Tours navigate 
                         the outdoor grounds of the UNESCO World Heritage Site and are written by students after a 
                         semester of intensive training, research, and critical reflection.
                     </p>
-                    <div class="flex flex-col justify-center items-center pt-5">
+                    <div class="scrollElement flex flex-col justify-center items-center pt-5">
                         <div class="flex flex-col justify-center items-center border-3 border-dark-green p-4">
                             <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-xl px-4">
                                 <li>
@@ -76,7 +76,7 @@
                             <!--Button-->
                             <NuxtLink to="/your-visit#times-and-registration" class="justify-center items-center pt-3">
                                 <button class="rounded-full bg-dark-green px-6 py-2 shadow-md hover:shadow-lg hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
-                                    <p class="font-['Roboto'] text-white text-base">
+                                    <p class="font-['Roboto'] text-white text-base font-medium">
                                         Register Here
                                     </p>
                                 </button>
@@ -91,39 +91,39 @@
 
     <!-- Carousel of pictures-->
     <section>
-        <div class="about-carousel-body">
+        <div class="scrollElement about-carousel-body">
             <div class="about-slider">
                 <div class="about-slide-track">
                     <div class="about-slide flex flex-col justify-start">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_womenatuva.jpg" alt="">
+                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img object-top" src="/about-tours-page/carousel-history/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
+                        <img class="about-carousel-img object-top" src="/about-tours-page/carousel-history/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_GardenTours.jpg" alt="">
+                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_MEL.jpeg" alt="">
+                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_childrenstour.jpg" alt="">
+                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
                     </div>
                     <!--Same 5 slides (doubled)-->
                     <div class="about-slide flex flex-col justify-start">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_womenatuva.jpg" alt="">
+                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img object-top" src="/about-tours-page/carousel-history/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
+                        <img class="about-carousel-img object-top" src="/about-tours-page/carousel-history/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_GardenTours.jpg" alt="">
+                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_MEL.jpeg" alt="">
+                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
                     </div>
                     <div class="about-slide flex flex-col">
-                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_childrenstour.jpg" alt="">
+                        <img class="about-carousel-img" src="/about-tours-page/carousel-history/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
                     </div>
                 </div>
             </div>
@@ -133,20 +133,19 @@
     <!--Specialty Tours Section-->
     <section id="specialty-tours" class="pt-6 pb-12">
         <div class="flex flex-col justify-center items-center">
-
             <!--Heading-->
             <div class="flex flex-col justify-center items-center pb-10">
-                <h1 class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-5xl sm:text-6xl leading-tight mb-2">
+                <h1 class="scrollElement font-['Playfair_Display'] italic text-center font-medium text-dark-green text-5xl sm:text-6xl leading-tight mb-2">
                     SPECIALTY TOURS
                 </h1>
-                <p class="font-['Montserrat'] w-full sm:w-[70%] text-center font-light text-black text-base sm:text-xl px-10">
+                <p class="scrollElement font-['Montserrat'] w-full sm:w-[70%] text-center font-light text-black text-base sm:text-xl px-10">
                     In addition to our regularly scheduled historical tours, we also offer Specialty Tours by request,
                     which focus on a specific aspect of UVA's extensive 200 year history.
                 </p>
             </div>
 
             <!--Banner-->
-            <div class="bg-dark-green py-6 px-10">
+            <div class="scrollElement bg-dark-green py-6 px-10">
                 <div class="flex flex-col md:flex-row w-full items-center justify-between gap-8">
 
                     <!-- Description -->
@@ -154,8 +153,6 @@
                         <p class="italic">
                             To ensure guide availability for special topic or large tour groups, all tour requests should be submitted at least 
                             <span class="underline font-semibold">two to three weeks in advance</span>.
-                        </p>
-                        <p class="pt-2">
                             Standard Historical Tours occur regularly throughout the school year and 
                             <span class="underline font-semibold">do not</span> require a special request.
                         </p>
@@ -178,12 +175,11 @@
 
             <!--Specialty Tours List-->
             <div class="flex flex-col justify-center items-center gap-10 md:gap-5 py-6 m-5 lg:m-10">
-
                 <!--History of African-Americans at UVA-->
-                <div id="history-of-african-americans-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
+                <div id="history-of-african-americans-tour" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/HAA.jpg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
+                        <img src="/about-tours-page/specialty-tours/HAA.jpg" loading="lazy" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-2 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -197,7 +193,7 @@
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
                             <a href="/request-specialty-tours">
-                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                     <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
                                         Request Tour
                                     </p>
@@ -212,10 +208,10 @@
                 </div>
 
                 <!--Memorial to Enslaved Laborers-->
-                <div id="MEL-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
+                <div id="MEL-tour" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/MEL.jpeg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
+                        <img src="/about-tours-page/specialty-tours/MEL.jpeg" loading="lazy" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -230,7 +226,7 @@
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
                             <a href="/request-specialty-tours">
-                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                     <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
                                         Request Tour
                                     </p>
@@ -245,10 +241,10 @@
                 </div>
 
                 <!--History of Women at UVA-->
-                <div id="history-of-women-at-uva-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
+                <div id="history-of-women-at-uva-tour" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/HistoryofWomen.jpg" class="w-full h-full object-cover object-top" alt="History of African Americans at UVA">
+                        <img src="/about-tours-page/specialty-tours/HistoryofWomen.jpg" loading="lazy" class="w-full h-full object-cover object-top" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -262,7 +258,7 @@
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
                             <a href="/request-specialty-tours">
-                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                     <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
                                         Request Tour
                                     </p>
@@ -277,10 +273,10 @@
                 </div>
 
                 <!--Children's Tours-->
-                <div id="childrens-tours" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
+                <div id="childrens-tours" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/ChildrensTour.jpg" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
+                        <img src="/about-tours-page/specialty-tours/ChildrensTour.jpg" loading="lazy" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -295,7 +291,7 @@
                         <!--Button-->
                         <div class="w-full flex justify-start">
                             <a href="/for-educators">
-                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out hover:cursor-pointer">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out hover:cursor-pointer">
                                 <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
                                     For Educators
                                 </p>
@@ -310,10 +306,10 @@
                 </div>
 
                 <!--Private Admissions Tours-->
-                <div id="private-admissions-tour" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
+                <div id="private-admissions-tour" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/PrivateTour.jpg" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
+                        <img src="/about-tours-page/specialty-tours/PrivateTour.jpg" loading="lazy" class="w-full h-full object-cover object-bottom" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -329,7 +325,7 @@
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
                             <a href="/request-specialty-tours">
-                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                     <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
                                         Request Tour
                                     </p>
@@ -345,10 +341,10 @@
                 </div>
 
                 <!--Garden Tours-->
-                <div id="garden-tours" class="flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
+                <div id="garden-tours" class="scrollElement flex flex-col md:flex-row lg:h-[50vh] justify-center gap-1 sm:gap-3 md:gap-2 items-stretch">
                     <!--Picture-->
                     <div class="w-full md:w-1/2 px-2 sm:px-6 md:px-0">
-                        <img src="/about-tours-page/specialty-tours/GardenTour.jpg" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
+                        <img src="/about-tours-page/specialty-tours/GardenTour.jpg" loading="lazy" class="w-full h-full object-cover object-center" alt="History of African Americans at UVA">
                     </div>
                     <!--Text-->
                     <div class="md:w-1/2 flex flex-col justify-start space-y-3 md:space-y-6 px-2 sm:px-6 md:px-4">
@@ -362,7 +358,7 @@
                         <!--Request Tour Button-->
                         <div class="w-full flex justify-start">
                             <a href="/request-specialty-tours">
-                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
+                                <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                                     <p class="font-['Roboto'] text-gray-800 font-semibold text-sm sm:text-base md:text-lg">
                                         Request Tour
                                     </p>
@@ -376,9 +372,7 @@
                     </div>
 
                 </div>
-
             </div>
-
         </div>
     </section>
 
@@ -398,30 +392,30 @@
 
                 <!-- Header -->
                 <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                    <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                    <h1 class="scrollElement font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                         SHED LIGHT
                     </h1>
-                    <p class="font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+                    <p class="scrollElement font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                         ON HISTORY
                     </p>
                 </div>
 
                 <!-- Buttons -->
-                <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
+                <div class="scrollElement mt-35 md:mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
                     <a href="/your-visit">
-                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                        <button class="font-['Roboto'] border-1 border-gray-300 text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-gray-100 hover:scale-105 rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
                             TAKE A TOUR
                         </button>
                     </a>
                     <a href="/donate">
-                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
+                        <button class="font-['Roboto'] border-1 border-gray-300 text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-gray-100 hover:scale-105 rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
                             DONATE
                         </button>
                     </a>
                 </div>
 
                 <!-- Description -->
-                <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                <p class="scrollElement mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
                     The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
                     If you would like to provide additional support, please consider donating to our day-to-day operations 
                     <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
@@ -437,14 +431,14 @@
             <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-10">
 
                 <!-- Left Side Footer -->
-                <div class="basis-1/2 flex flex-wrap justify-between gap-6 text-sm text-zinc-400 font-['Roboto']">
+                <div class="scrollElement basis-1/2 flex flex-wrap justify-between gap-6 text-sm text-zinc-400 font-['Roboto']">
                     <!-- Column 1 -->
                     <ul class="flex flex-col gap-2 min-w-[100x]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
-                        <a href="/your-visit">
+                        <a href="your-visit">
                             <li class="cursor-pointer">Directions + FAQ</li>
                         </a>
-                        <a href="/about-tours#about-tours">
+                        <a href="about-tours#about-tours">
                             <li class="cursor-pointer">History Tours</li>
                         </a>
                         <a href="/about-tours#specialty-tours">
@@ -485,9 +479,9 @@
                 </div>
 
                 <!-- Right Side Footer -->
-                <div class="basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
+                <div class="scrollElement basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
                     <div class="flex items-start gap-4 font-['Roboto']">
-                        <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" alt="Virginia Guides Logo" />
+                        <img class="h-12 w-12 obSject-contain" loading="lazy" src="/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
                             The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
                             student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
@@ -496,7 +490,7 @@
 
                     <div class="flex justify-center md:justify-end">
                         <a href="/contact-us">
-                            <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
+                            <button class="border-1 border-gray-300 text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-gray-100 hover:scale-105 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
                                 CONTACT US
                             </button>
                         </a>
@@ -507,12 +501,41 @@
         </div>
     </section>
 
+
 </template>
+
+<script setup>
+    import { onMounted } from "vue"
+
+    onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show")
+        } else {
+            entry.target.classList.remove("show")
+        }
+        })
+    })
+
+    const scrollElements = document.querySelectorAll(".scrollElement")
+    scrollElements.forEach((element) => observer.observe(element))
+    })
+</script>
 
 <style>
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 8rem;
+    }
+    .scrollElement {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .scrollElement.show {
+        opacity: 1;
+        transform: translateY(0);
     }
     .about-carousel-body {
         width: 100%;

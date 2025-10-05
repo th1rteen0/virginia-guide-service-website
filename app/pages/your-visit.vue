@@ -35,7 +35,7 @@
     <!--Banner-->
     <section class="pt-5 sm:pt-10 md:pt-8">
         <div class="w-full bg-gray-300 textpcenter py-6 px-4 flex justify-center items-center">
-            <p class="font-['Roboto'] text-royal-blue italic text-center font-medium text-base sm:text-lg md:text-md">
+            <p class="scrollElement font-['Roboto'] text-royal-blue italic text-center font-medium text-base sm:text-lg md:text-md">
                 Because Virginia Guides is student-run, we do not provide tours during exam periods, reading days, or student breaks, which are specified 
                 <a href="https://registrar.virginia.edu/calendar/academic">
                     <span class="underline">
@@ -51,12 +51,13 @@
         <div class="flex flex-col lg:flex-row justify-center items-start max-w-7xl mx-auto gap-10">
 
         <!-- Right: Image with Half Overlay -->
-        <div class="w-full lg:w-1/2 flex justify-center items-center relative">
+        <div class="scrollElement w-full lg:w-1/2 flex justify-center items-center relative">
             <!-- Base Image -->
             <img 
                 src="/your-visit-page/YourVisit_Image.jpg" 
                 alt="Historical Tour Image" 
                 class="w-full max-w-lg h-auto rounded-md shadow-md"
+                loading="lazy"
             />
 
             <!-- Overlay Image (half size, shifted) -->
@@ -64,26 +65,27 @@
                 src="/your-visit-page/YourVisit_Image.jpg" 
                 alt="Overlay Image" 
                 class="hidden lg:block absolute w-full max-w-lg top-35 rounded-md"
+                loading="lazy"
             />
         </div>
 
         <!-- Left: Text -->
         <div class="w-full lg:w-1/2 px-5 lg:px-0">
-            <p class="font-['Montserrat'] text-center lg:text-left font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
+            <p class="scrollElement font-['Montserrat'] text-center lg:text-left font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-6">
             HISTORICAL TOURS
             </p>
-            <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
+            <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
                 From its founding to the Civil War. From the Civil Rights Movement to the present day, 
                 student-led history tours trace over 200 years of change, resistance, and community. 
                 Tours navigate the outdoor grounds of the UNESCO World Heritage Site and are written by 
                 students after a semester of intensive training, research, and critical reflection.
                 <br /><br />
-                <span class="font-bold">
+                <span class="scrollElement font-bold">
                     All tours are free of charge,
                 </span> regardless of group size. Donations to support work are welcome.
             </p>
             <br /><br />
-            <div class="flex justify-center items-center px-4">
+            <div class="scrollElement flex justify-center items-center px-4">
                 <a href="/about-tours">
                     <button class="border-1 text-white rounded-full py-3 px-10 cursor-pointer font-semibold shadow-md hover:shadow-large bg-dark-green hover:bg-green-700 transition-all duration-300 ease-in-out">
                         Learn More
@@ -100,27 +102,27 @@
         <div class="flex flex-col lg:flex-row items-start max-w-7xl mx-auto gap-10 px-4 sm:px-6 lg:px-8 py-6">
             <!-- Left: Tour Schedule Text -->
             <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
-                <p class="font-['Montserrat'] text-left font-medium text-UVA-orange text-4xl sm:text-5xl leading-tight mb-6">
+                <p class="scrollElement font-['Montserrat'] text-left font-medium text-UVA-orange text-4xl sm:text-5xl leading-tight mb-6">
                     TOUR SCHEDULE
                 </p>
                 <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-3xl lg:max-w-xl px-4 lg:pb-5">
-                    <li>
-                    Standard Tours will leave at 11:00 AM from the Lawn-side of the Rotunda Steps every Friday, Saturday, and Sunday 
-                    <a class="underline" href="http://www.virginia.edu/registrar/calendar.html">
-                        during the academic school year.
-                    </a>
+                    <li class="scrollElement">
+                        Standard Tours will leave at 11:00 AM from the Lawn-side of the Rotunda Steps every Friday, Saturday, and Sunday 
+                        <a class="underline" href="http://www.virginia.edu/registrar/calendar.html">
+                            during the academic school year.
+                        </a>
                     </li>
-                    <li>
-                    Exceptions include 
-                    <a class="underline" href="https://virginiasports.com/sports/football/schedule/">
-                        home football game days
-                    </a> and 
-                    <a class="underline" href="https://registrar.virginia.edu/calendar/academic">
-                        when classes are not in session.
-                    </a>
+                    <li class="scrollElement">
+                        Exceptions include 
+                        <a class="underline" href="https://virginiasports.com/sports/football/schedule/">
+                            home football game days
+                        </a> and 
+                        <a class="underline" href="https://registrar.virginia.edu/calendar/academic">
+                            when classes are not in session.
+                        </a>
                     </li>
-                    <li>
-                    Tours last around 1 Hour.
+                    <li class="scrollElement">
+                        Tours last around 1 Hour.
                     </li>
                 </ul>
             </div>
@@ -131,19 +133,19 @@
             <div class="flex flex-col lg:flex-row items-start px-4 sm:px-6 lg:px-8">
                 <!--Left: Banner Text-->
                 <div class="w-full lg:w-1/2 flex flex-col justify-center items-center max-w-7xl mx-auto">
-                    <p class="font-['Montserrat'] font-light text-base sm:text-lg leading-relaxed text-white">
+                    <p class="scrollElement font-['Montserrat'] font-light text-base sm:text-lg leading-relaxed text-white">
                         <span class="font-semibold">Registration for Standard History Tours are not required but encouraged to receive possible updates on your tour. </span>
                         Standard Historical tours are public for anyone to join and occur regularly throughout the school year.
                     </p>
                     <a href="/contact-us">
-                        <button class="rounded-full border-2 border-white text-white font-semibold text-base px-6 py-2 mt-3 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 transition-all duration-300 ease-in-out">
+                        <button class="scrollElement rounded-full border-2 border-white text-white font-semibold text-base px-6 py-2 mt-3 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 transition-all duration-300 ease-in-out">
                             Contact Us
                         </button>
                     </a>
                 </div>
 
                 <!-- Right: Registration Form (overlapping the section) -->
-                <div class="w-full lg:w-1/2 relative pt-10 md:pt-0">
+                <div class="scrollElement w-full lg:w-1/2 relative pt-10 md:pt-0">
                     <div class="relative lg:absolute lg:-bottom-110 z-20 w-full">
                         <div class="flex flex-col shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] rounded-xl p-6 bg-white">
                             <h1 class="font=['Montserrat'] font-medium text-3xl text-royal-blue mb-4">
@@ -193,7 +195,7 @@
                 </div>
             </div>
         </div>
-</section>
+    </section>
 
     <!-- Location and Parking -->
     <section id="location-and-parking" class="bg-neutral-100">
@@ -201,12 +203,12 @@
             <!-- Left: Parking Text -->
             <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
                 <!--Header-->
-                <p class="font-['Montserrat'] text-left font-medium text-UVA-orange text-4xl sm:text-5xl leading-tight mb-6">
+                <p class="scrollElement font-['Montserrat'] text-left font-medium text-UVA-orange text-4xl sm:text-5xl leading-tight mb-6">
                     LOCATION & PARKING
                 </p>
                 <!--Bullet Points-->
                 <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-3xl lg:max-w-xl px-4">
-                    <li>
+                    <li class="scrollElement">
                         We recommend 
                         <span class="font-medium">
                             Central Grounds Garage 
@@ -219,10 +221,10 @@
                         </a>
                         for single family cars.
                     </li>
-                    <li>
+                    <li class="scrollElement">
                         Access to the Lawn and Rotunda from the parking garage is also wheelchair accessible. Please see here for more information on accessibility. 
                     </li>
-                    <li>
+                    <li class="scrollElement">
                         Tours will meet at the Front Rotunda Steps & Entrance, facing the Lawn.
                     </li>
                 </ul>
@@ -232,7 +234,7 @@
 
     <!-- Map Section -->
     <section class="w-full flex justify-center px-10 pb-12 bg-neutral-100">
-        <div class="w-full max-w-7xl mx-auto h-64 sm:h-80 md:h-96 lg:h-[600px]">
+        <div class="scrollElement w-full max-w-7xl mx-auto h-64 sm:h-80 md:h-96 lg:h-[600px]">
             <iframe
                 src="https://www.google.com/maps/d/embed?mid=16Uf_oN9AUEKhU3pVgavoqg6AHNG1o-o&ehbc=2E312F&noprof=1"
                 class="w-full h-full border-0"
@@ -254,12 +256,12 @@
     <section id="frequently-asked-questions" class="bg-white py-16 px-6 sm:px-12 lg:px-20">
         <div class="max-w-5xl mx-auto">
             <!-- Title -->
-            <h2 class="uppercase font-['Montserrat'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12">
+            <h2 class="scrollElement uppercase font-['Montserrat'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12">
                 Frequently Asked Questions
             </h2>
 
             <!-- FAQ Accordion -->
-            <div class="space-y-6 text-dark-green font-['Montserrat']">
+            <div class="scrollElement space-y-6 text-dark-green font-['Montserrat']">
                 <!-- FAQ Item -->
 
                 <details class="group border-b pb-4">
@@ -367,12 +369,12 @@
     <section id="frequently-asked-questions" class="bg-royal-blue py-16 px-6 sm:px-12 lg:px-20">
     <div class="max-w-5xl mx-auto">
         <!-- Title -->
-        <h2 class="font-['Montserrat'] text-white text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12">
+        <h2 class="scrollElement font-['Montserrat'] text-white text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12">
             ACCESSIBILITY
         </h2>
 
         <!-- FAQ Accordion -->
-        <div class="space-y-6 text-[#DC8051] font-['Montserrat']">
+        <div class="scrollElement space-y-6 text-[#DC8051] font-['Montserrat']">
             <!-- FAQ Item -->
             <details class="group border-b pb-4">
                 <summary class="cursor-pointer text-xl sm:text-2xl font-medium xl:flex xl:justify-between xl:items-start">
@@ -404,22 +406,22 @@
 
     <!-- Explore UVA History Section -->
     <section class="bg-white py-16 sm:py-20 md:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
 
             <!-- Header -->
-            <h1 class="font-['Montserrat'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-medium">
+            <h1 class="scrollElement font-['Playfair_Display'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-medium">
                 Explore UVA History
             </h1>
 
             <!-- Description -->
-            <p class="font-['Montserrat'] text-black text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            <p class="scrollElement font-['Montserrat'] text-black text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
                 In addition to our regularly scheduled historical tours, we also offer Specialty Tours by request,
                 which focus on a specific aspect of UVA's extensive 200 year history.
             </p>
 
             <!-- Button -->
             <a href="/about-tours">
-                <button class="inline-flex items-center space-x-3 rounded-full border text-black font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-black hover:bg-neutral-300 transition-all duration-300 ease-in-out cursor-pointer">
+                <button class="scrollElement inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-black font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
                     <span>HISTORY TOURS</span>
                     <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -429,68 +431,68 @@
         </div>
 
         <!-- Carousel: Our Tours-->
-        <div class="carousel-body">
+        <div class="scrollElement carousel-body">
             <div class="slider">
                 <div class="slide-track">
                     <a href="/about-tours/#history-of-women-at-uva">
                         <div class="slide flex flex-col justify-start">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">History of Women</p>
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black font-['Roboto']">History of Women</p>
                         </div>
                     </a>
                     <a href="/about-tours/#history-of-african-americans-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">History of African-Americans</p>
+                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black  font-['Roboto']">History of African-Americans</p>
                         </div>
                     </a>
                     <a href="/about-tours/#garden-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">Garden Tours</p>
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black  font-['Roboto']">Garden Tours</p>
                         </div>
                     </a>
                     <a href="/about-tours/#MEL-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">Memorial to Enslaved Laborers</p>
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black font-['Roboto']">Memorial to Enslaved Laborers</p>
                         </div>
                     </a>
                     <a href="/about-tours/#childrens-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">Children's Tour</p>
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black font-['Roboto']">Children's Tour</p>
                         </div>
                     </a>
                     <!--Same 5 slides (doubled)-->
                     <a href="/about-tours/#history-of-women-at-uva">
                         <div class="slide flex flex-col justify-start">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">History of Women</p>
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black font-['Roboto']">History of Women</p>
                         </div>
                     </a>
                     <a href="/about-tours/#history-of-african-americans-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">History of African-Americans</p>
+                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black font-['Roboto']">History of African-Americans</p>
                         </div>
                     </a>
                     <a href="/about-tours/#garden-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">Garden Tours</p>
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black font-['Roboto']">Garden Tours</p>
                         </div>
                     </a>
                     <a href="/about-tours/#MEL-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">Memorial to Enslaved Laborers</p>
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black font-['Roboto']">Memorial to Enslaved Laborers</p>
                         </div>
                     </a>
                     <a href="/about-tours/#childrens-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
-                            <p class="carousel-text self-start text-black font-normal font-['Roboto']">Children's Tour</p>
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
+                            <p class="carousel-text self-start text-black font-['Roboto']">Children's Tour</p>
                         </div>
                     </a>
                 </div>
@@ -514,30 +516,30 @@
 
                 <!-- Header -->
                 <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                    <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                    <h1 class="scrollElement font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                         SHED LIGHT
                     </h1>
-                    <p class="font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+                    <p class="scrollElement font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                         ON HISTORY
                     </p>
                 </div>
 
                 <!-- Buttons -->
-                <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
+                <div class="scrollElement mt-35 md:mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
                     <a href="/your-visit">
-                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                        <button class="font-['Roboto'] border-1 border-gray-300 text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-gray-100 hover:scale-105 rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
                             TAKE A TOUR
                         </button>
                     </a>
                     <a href="/donate">
-                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
+                        <button class="font-['Roboto'] border-1 border-gray-300 text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-gray-100 hover:scale-105 rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
                             DONATE
                         </button>
                     </a>
                 </div>
 
                 <!-- Description -->
-                <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                <p class="scrollElement mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
                     The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
                     If you would like to provide additional support, please consider donating to our day-to-day operations 
                     <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
@@ -553,7 +555,7 @@
             <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-10">
 
                 <!-- Left Side Footer -->
-                <div class="basis-1/2 flex flex-wrap justify-between gap-6 text-sm text-zinc-400 font-['Roboto']">
+                <div class="scrollElement basis-1/2 flex flex-wrap justify-between gap-6 text-sm text-zinc-400 font-['Roboto']">
                     <!-- Column 1 -->
                     <ul class="flex flex-col gap-2 min-w-[100x]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
@@ -601,9 +603,9 @@
                 </div>
 
                 <!-- Right Side Footer -->
-                <div class="basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
+                <div class="scrollElement basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
                     <div class="flex items-start gap-4 font-['Roboto']">
-                        <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" alt="Virginia Guides Logo" />
+                        <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" loading="lazy" alt="Virginia Guides Logo" />
                         <p>
                             The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
                             student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
@@ -612,7 +614,7 @@
 
                     <div class="flex justify-center md:justify-end">
                         <a href="/contact-us">
-                            <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
+                            <button class="border-1 border-gray-300 text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-gray-100 hover:scale-105 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
                                 CONTACT US
                             </button>
                         </a>
@@ -623,9 +625,38 @@
         </div>
     </section>
 
+
 </template>
 
+<script setup>
+    import { onMounted } from "vue"
+
+    onMounted(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show")
+        } else {
+            entry.target.classList.remove("show")
+        }
+        })
+    })
+
+    const scrollElements = document.querySelectorAll(".scrollElement")
+    scrollElements.forEach((element) => observer.observe(element))
+    })
+</script>
+
 <style>
+    .scrollElement {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .scrollElement.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 8rem;

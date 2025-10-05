@@ -19,32 +19,34 @@
     <!-- About Guides Info Section -->
     <section id="about-tours">
         <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <p class="scrollElement font-['Playfair_Display'] italic text-center font-medium text-dark-green text-4xl sm:text-5xl leading-tight py-5 lg:pt-0">
+                ESTABLISHED 1951
+            </p>
             <!--Flex-->
-            <div class="flex justify-center items-center xl:items-start flex-col lg:flex-row gap-x-10">
+            <div class="flex justify-center items-center flex-col lg:flex-row gap-x-10">
                 <!-- Left: Image -->
-                <div class="w-full lg:w-1/2 flex justify-center items-center">
-                    <img src="/join-guides-page/rotunda-guides.jpg" alt="Historical Tour Image" class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg shadow-md">
+                <div class="scrollElement w-full lg:w-1/2 flex justify-center items-center">
+                    <img src="/join-guides-page/rotunda-guides.jpg" alt="Historical Tour Image" loading="lazy" class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg shadow-md">
                 </div>
 
                 <!-- Right: Text -->
-                <div class="w-full lg:w-1/2">
-                    <p class="font-['Playfair_Display'] italic text-center font-medium text-dark-green text-4xl sm:text-5xl leading-tight pt-5 lg:pt-0">
-                        ESTABLISHED 1951
+                <div class="scrollElement w-full lg:w-1/2">
+                    <p class="font-['Montserrat'] text-center lg:text-start text-base sm:text-lg leading-relaxed text-gray-900 pt-5">
+                        The Virginia Guide Service, founded in 1951, is a completely student-run and independent organization dedicated 
+                        to preserving and sharing the history of the University of Virginia. Through honest, inclusive, and engaging storytelling, 
+                        our guides strive to represent the diversity of student experiences while fostering a welcoming environment for all visitors.
                     </p>
                     <p class="font-['Montserrat'] text-center lg:text-start text-base sm:text-lg leading-relaxed text-gray-900 pt-5">
-                        The Virginia Guide Service, founded in 1951, is an entirely student-run and independent organization that is 
-                        dedicated to providing historical tours of the University of Virginia's Academical Village.
-                    </p>
-                    <p class="font-['Montserrat'] text-center lg:text-start text-base sm:text-lg leading-relaxed text-gray-900 pt-5">
-                        Our tour guides are students who are put through a rigorous training semester where they learn the ins and outs of UVA's history 
-                        while practicing crucial tour-giving skills. Trainees receive mentorship from experienced guides, professors, and historical 
-                        organization leaders in the Charlottesville community.
+                        Each semester, new trainees undergo a rigorous training process where they study UVA’s history, practice essential 
+                        tour-giving skills, and receive mentorship from experienced guides, professors, and community leaders. Together, we are committed to 
+                        providing the highest quality tour experience while honoring and expanding the University’s historical narrative—ensuring it remains 
+                        accessible, accurate, and meaningful for generations to come.
                     </p>
                 </div>
             </div>
 
             <!--Volunteer Statement-->
-            <p class="font-['Montserrat'] text-base sm:text-lg leading-relaxed text-dark-green text-center pt-5 lg:pt-10">
+            <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-dark-green text-center pt-5 lg:pt-10">
                 The Guide Service is independent and volunteer-based, which gives each guide the opportunity to craft their own tour. 
                 Students are encouraged to follow their passion and engage deeply with history. If you would like to provide additional support, please consider 
                 donating to our day-to-day operations 
@@ -56,7 +58,7 @@
     </section>
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative">
+    <section class="relative scrollElement">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <!-- Blue Line in Background -->
             <div class="absolute top-1/2 left-0 w-full h-1 bg-royal-blue -z-10"></div>
@@ -102,7 +104,7 @@
     <section id="join-guides" v-show="joinGuides">
 
         <!--Running Banner: Join Guides-->
-        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9]">
+        <div class="scrollElement running-text-container font-[Roboto] font-medium text-[#ECE9E9]">
             <!--First Copy-->
             <ul>
                 <li>
@@ -132,7 +134,7 @@
         <!--Step 1 and 2 Container-->
         <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <!--Step 1-->
-            <div class="text-center sm:text-start">
+            <div class="scrollElement text-center sm:text-start">
                 <h1 class="font-Roboto text-lg sm:text-xl font-bold italic pb-2">
                     Step 1: Attend an Info Session and Learn About the Virginia Guides Service
                 </h1>
@@ -152,8 +154,8 @@
 
             <!--Info Sessions and Step 2-->
             <div class="flex flex-col lg:flex-row">
-                <div class="w-full lg:w-[70%] text-center sm:text-start">
-                    <p class="font-Roboto font-light text-base sm:text-lg italic pt-5 pb-2">
+                <div class="w-full text-center sm:text-start">
+                    <p class="scrollElement font-Roboto font-light text-base sm:text-lg italic pt-5 pb-2">
                         <span class="font-bold">
                             Info Sessions:
                         </span>
@@ -162,37 +164,32 @@
                         and learn more about what is expected of UGS members. Information sessions are mandatory and a great way to get your questions 
                         answered and better understand what makes UGS so great! Our general sessions this semester are:
                     </p>
-                    <p class="font-Roboto text-UVA-orange font-bold text-base sm:text-lg italic">
+                    <p class="scrollElement font-Roboto text-UVA-orange font-bold text-base sm:text-lg italic">
                         The Rotunda Multipurpose Room is located in the hallway underneath the Rotunda Lawn-side before you enter the building itself.
                     </p>
-                    <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2 pt-5">
-                        Step 2: Prepare to Try Out
-                    </h1>
-                    <p class="font-Roboto font-light text-base sm:text-lg pb-2">
-                        For our Fall 2024 recruitment season, you will give a 15 minute historical “trial tour” of the Lawn area to two current Guides 
-                        (who will act as your "tourists"). The trial tour is meant to see how well you can craft an organized and meaningful tour, 
-                        as well as to assess your public speaking abilities.
-                    </p>
-                    <p class="font-Roboto font-light text-base sm:text-lg">
-                        You will be able to sign up for a time slot between February 3rd through the 7th for your trial tour at one of our 
-                        info sessions (which is why it is important to attend a session)! Other sign-up opportunities may be offered, 
-                        and will be announced via Instagram. If you can't make it to the sign-up times, or need to cancel or reschedule 
-                        your trial tour for any reason, you can reach out to our Recruitment Co-Chairs to see what slots are available.
-                    </p>
-                </div>
-                <!-- Image with Subheader -->
-                <div class="w-full lg:w-[30%] flex flex-col pt-5 lg:pt-0 justify-center items-center lg:items-end">
-                    <img 
-                        src="/join-guides-page/join guides placeholder.jpeg"
-                        class="object-cover w-full max-w-3xs md:max-w-2xs lg:max-w-xs"
-                    >
+                    <div class="scrollElement">
+                        <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2 pt-5">
+                            Step 2: Prepare to Try Out
+                        </h1>
+                        <p class="font-Roboto font-light text-base sm:text-lg pb-2">
+                            For our Fall 2024 recruitment season, you will give a 15 minute historical “trial tour” of the Lawn area to two current Guides 
+                            (who will act as your "tourists"). The trial tour is meant to see how well you can craft an organized and meaningful tour, 
+                            as well as to assess your public speaking abilities.
+                        </p>
+                        <p class="font-Roboto font-light text-base sm:text-lg">
+                            You will be able to sign up for a time slot between February 3rd through the 7th for your trial tour at one of our 
+                            info sessions (which is why it is important to attend a session)! Other sign-up opportunities may be offered, 
+                            and will be announced via Instagram. If you can't make it to the sign-up times, or need to cancel or reschedule 
+                            your trial tour for any reason, you can reach out to our Recruitment Co-Chairs to see what slots are available.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!--Banner-->
         <div>
-            <div class="w-full bg-dark-green text-center py-6 px-10 lg:px-20 flex justify-center items-center">
+            <div class="scrollElement w-full bg-dark-green text-center py-6 px-10 lg:px-20 flex justify-center items-center">
                 <p class="font-Roboto text-white text-center text-base sm:text-lg md:text-md">
                     To begin writing, we encourage you to refer to this 
                     <a href="https://docs.google.com/document/d/1SgT3gxmUICInw1gs1LGYnTQ4pzVWFVgJZrtIZ2Z4Mes/edit?usp=sharing" class="underline">
@@ -216,7 +213,7 @@
         <!--Step 3 and 4 Container-->
         <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <!--Step 3-->
-            <div class="text-center sm:text-start">
+            <div class="scrollElement text-center sm:text-start">
                 <h1 class="font-Roboto text-lg sm:text-xl font-bold italic pb-2">
                     Step 3: Give Your Trial Tour
                 </h1>
@@ -237,7 +234,7 @@
             </div>
 
             <!--Step 4-->
-            <div class="text-center sm:text-start">
+            <div class="scrollElement text-center sm:text-start">
                 <h1 class="font-Roboto text-lg sm:text-xl font-bold italic mb-2 pt-5">
                     Step 4: Interview
                 </h1>
@@ -252,7 +249,7 @@
         </div>
     
         <!--Running Banner: Join Guides-->
-        <div class="running-text-container font-[Roboto] font-medium text-[#ECE9E9] pb-12">
+        <div class="scrollElement running-text-container font-[Roboto] font-medium text-[#ECE9E9] pb-12">
             <!--First Copy-->
             <ul>
                 <li>
@@ -312,9 +309,10 @@
             </ul>
         </div>
 
-        <!--Container-->
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <!--What We Do Text-->
+        <!--College Container 1-->
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-5">
+            <!--Collage Section-->
+            <!--flex row What We Do Text-->
             <div class="scrollElement flex flex-col lg:flex-row gap-6 pb-5">
                 <div class="flex flex-col space-y-1 justify-center text-center lg:text-start">
                     <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
@@ -325,122 +323,278 @@
                 </div>
             </div>
 
-            <!--Collage Section-->
-            <div>
-                <!--first flex row-->
-                <div class="flex flex-col lg:flex-row gap-x-10">
+            <!--first flex row-->
+            <div class="flex flex-col lg:flex-row gap-x-10">
 
-                    <!--flex col-->
-                    <div class="flex flex-col w-full lg:w-[60%] gap-x-10 gap-y-5 justify-center items-center">
-                        <!-- Why We Do It Text -->
-                        <div class="scrollElement flex flex-col w-full space-y-1 text-center lg:text-start">
-                            <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
-                                WHY WE DO IT
-                            </h2>
-                            <p class="font-Roboto text-base sm:text-lg leading-relaxed">
-                                Guides come from all around the world, across all the schools at UVA, and from any program of study. 
-                                We are involved in many different groups, organizations, and clubs at the University, but what brings us together 
-                                is our love for giving tours and connecting with others through the history of UVA. Each Guide joins for their own 
-                                reasons—whether it's a passion for storytelling, a desire to welcome 
-                                share history, or simply a love for this University—but together we form a community that is 
-                                meaningful, supportive, and lasting; a community that members love to be a part of. Being a Guide is 
-                                about more than just walking tours; it's about creating a community that reaches far beyond what you might expect.
+                <!--flex col-->
+                <div class="flex flex-col w-full lg:w-[60%] gap-x-10 gap-y-5 justify-center items-center">
+                    <!-- Why We Do It Text -->
+                    <div class="scrollElement flex flex-col w-full space-y-1 text-center lg:text-start">
+                        <h2 class="font-['Montserrat'] text-2xl sm:text-3xl font-bold text-black">
+                            WHY WE DO IT
+                        </h2>
+                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                            Guides come from all around the world, across all the schools at UVA, and from any program of study. 
+                            We are involved in many different groups, organizations, and clubs at the University, but what brings us together 
+                            is our love for giving tours and connecting with others through the history of UVA. Each Guide joins for their own 
+                            reasons—whether it's a passion for storytelling, a desire to welcome 
+                            share history, or simply a love for this University—but together we form a community that is 
+                            meaningful, supportive, and lasting; a community that members love to be a part of. Being a Guide is 
+                            about more than just walking tours; it's about creating a community that reaches far beyond what you might expect.
+                        
+                        </p>
+                    </div>
+                    <!-- Img + the honor of representing UVA with hover overlay -->
+                    <div class="scrollElement relative flex flex-col lg:flex-row w-[80%] lg:w-full gap-x-5 items-center justify-center p-2 bg-royal-blue text-center lg:text-start">
+                        
+                        <!-- Image with overlay -->
+                        <div class="relative group flex flex-col w-full lg:w-1/2 justify-center items-center">
+                            <img 
+                                src="/join-guides-page/beingaguide_mtnview.png" 
+                                class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2 transition duration-500 filter group-hover:opacity-50"
+                                loading="lazy"
+                            >
                             
-                            </p>
-                        </div>
-                        <!--Img + the honor of representing UVA-->
-                        <div class="scrollElement flex flex-col lg:flex-row w-[80%] lg:w-full gap-x-5 items-center justify-center p-2 bg-royal-blue text-center lg:text-start">
-                            <div class="flex flex-col w-full lg:w-1/2 justify-center items-center">
-                                <img src="/join-guides-page/beingaguide_mtnview.png" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2">
-                            </div>
-                            <!--Text-->
-                            <div class="flex flex-col w-full lg:w-1/2 space-y-1 p-2">
-                                <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-white">
-                                    The Honor of Representing UVA
-                                </h2>
-                                <p class="font-Roboto text-base sm:text-lg leading-relaxed text-white">
-                                    The opportunity to serve as the "face of UVA" to so many visitors leaves an indelible impact on our Guides and to the visitors that they have the privilege of interacting with.
-                                </p>
+                            <!-- Overlay Text -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                                        text-center text-white text-lg font-Roboto font-semibold max-w-7xl mx-auto 
+                                        opacity-0 transition duration-500 group-hover:opacity-100 px-2">
+                                Guides enjoying the view!
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Shreya and Madhin Image -->
-                    <div class="scrollElement flex flex-col w-full lg:w-[40%] justify-center items-center pt-5 lg:pt-0">
-                        <img src="/join-guides-page/beingaguide_shreyamadhin.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-2 border-4 border-dotted border-dark-green">
-                    </div>
-                </div>
-
-                <!--second flex row-->
-                <div class="flex flex-col lg:flex-row py-5 gap-5">
-                    <!--Text-->
-                    <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
-                        <div class="scrollElement p-5 border-4 border-dark-green text-center lg:text-start">
-                            <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
-                                Collaboration Across Grounds
+                        <!-- Text -->
+                        <div class="flex flex-col w-full lg:w-1/2 space-y-1 p-2">
+                            <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-white">
+                                The Honor of Representing UVA
                             </h2>
-                            <p class="font-Roboto text-base sm:text-lg leading-relaxed">
-                                Collaborate with other organizations across Grounds to spread a passion for and understanding of our University's multi-faceted history. For example, we have worked with other organizations and students on Grounds to establish the History of Enslaved African American Laborers (HEAAL) tour for first years to learn about the University’s history.
-                            </p>
-                        </div>
-                    </div>
-                    <!--Image-->
-                    <div class="scrollElement flex flex-col w-full lg:w-[30%] items-center justify-center">
-                        <img src="/join-guides-page/beingaguide_metthebanner.jpeg" class="object-cover w-full max-w-3xs md:max-w-2xs lg:max-w-xs p-2 bg-dark-green">
-                    </div>
-                    <!--Text-->
-                    <div class="scrollElement flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
-                        <div class="p-5 border-4 border-dark-green text-center lg:text-start">
-                            <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
-                                Exploring HISTORY That Matters To You
-                            </h2>
-                            <p class="font-Roboto text-base sm:text-lg leading-relaxed">
-                                Dive into a topic of history that very specifically speaks to you. Some of our members have chosen to do deeper research and work relating to topics such as the history of women, the history of Asian Americans, LGBTQ+ history, the history of African Americans, and the history of medicine at UVA.
+                            <p class="font-Roboto text-base sm:text-lg leading-relaxed text-white">
+                                The opportunity to serve as the "face of UVA" to so many visitors leaves an indelible impact on our Guides and to the visitors that they have the privilege of interacting with.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!--third flex row-->
-                <div class="flex flex-col lg:flex-row gap-5">
-                    <!--Image-->
-                    <div class="scrollElement flex flex-col w-full lg:w-1/2 items-center justify-center">
-                        <img src="/join-guides-page/beingaguide_metthepicnic.jpg" class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg p-2 border-4 border-dotted border-dark-green">
+                <!-- Image -->
+                <div class="scrollElement relative group flex flex-col w-full lg:w-[40%] justify-center items-center pt-5 lg:pt-0">
+                    <!-- Image -->
+                    <div class="p-2 border-4 border-dotted border-dark-green">
+                        <img 
+                            src="/join-guides-page/4girls.jpeg" 
+                            class="object-cover w-full max-w-2xs md:max-wxs lg:max-w-sm transition duration-400 group-hover:opacity-30"
+                            loading="lazy"
+                        >
                     </div>
-                    <!--Text-->
-                    <div class="scrollElement flex flex-col w-full lg:w-1/2 space-y-1 justify-center text-center lg:text-start">
-                        <div class="p-10 text-white bg-royal-blue">
-                            <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
-                                The Colonnades Ball
-                            </h2>
-                            <p class="font-Roboto text-base sm:text-lg leading-relaxed">
-                                Attend the unforgettable Colonnades Ball! Virginia Guides hosts the Colonnades Ball, a formal event for the University and Charlottesville community to raise money to support the community around us. The event is open for anyone to attend, but is a wonderful way for all the Guides to get together and dress up for a good cause.
-                            </p>
-                        </div>
+
+                    <!-- Overlay Text -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                                items-center justify-center text-center 
+                                text-black text-lg font-Roboto font-semibold max-w-7xl mx-auto opacity-0 transition duration-500 
+                                group-hover:opacity-100">
+                        Guides make the most of golden hour on Carter's Mountain
+                    </div>
+                </div>
+            </div>
+
+            <!--second flex row-->
+            <div class="flex flex-col lg:flex-row py-5 gap-5">
+                <!--Text-->
+                <div class="flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
+                    <div class="scrollElement p-5 border-4 border-dark-green text-center lg:text-start">
+                        <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
+                            Collaboration Across Grounds
+                        </h2>
+                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                            Collaborate with other organizations across Grounds to spread a passion for and understanding of our University's multi-faceted history. For example, we have worked with other organizations and students on Grounds to establish the History of Enslaved African American Laborers (HEAAL) tour for first years to learn about the University’s history.
+                        </p>
+                    </div>
+                </div>
+                <!-- Image-->
+                <div class="scrollElement relative group flex flex-col w-full lg:w-[30%] items-center justify-center">
+                    <!-- Image -->
+                    <div class="p-2 bg-dark-green ">
+                        <img 
+                            src="/join-guides-page/beingaguide_metthebanner.jpeg" 
+                            class="object-cover w-full max-w-3xs md:max-w-2xs lg:max-w-xs transition duration-500 filter group-hover:opacity-50"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <!-- Overlay Text -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                                text-center text-white text-lg font-Roboto font-semibold max-w-7xl mx-auto 
+                                opacity-0 transition duration-500 group-hover:opacity-100 px-2">
+                        Our Guides Banner waiting to be signed by our probie groups
                     </div>
                 </div>
 
-                <!--fourth flex row-->
-                <div class="flex flex-col lg:flex-row gap-x-5 pt-5">
-                    <!--Image-->
-                    <div class="scrollElement flex flex-col w-full lg:w-[35%] items-center justify-center mb-5 lg:mb-0">
-                        <img src="/join-guides-page/beingaguide_colonnades.jpg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
-                    </div>
-                    <!--Text-->
-                    <div class="scrollElement flex flex-col w-full lg:w-[30%] space-y-1 p-5 justify-center bg-UVA-orange text-white text-center lg:text-start">
-                        <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
-                            Friendships Beyond Grounds
+                <!--Text-->
+                <div class="scrollElement flex flex-col w-full lg:w-[35%] space-y-1 items-center justify-center">
+                    <div class="p-5 border-4 border-dark-green text-center lg:text-start">
+                        <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold text-black">
+                            Exploring HISTORY That Matters To You
                         </h2>
                         <p class="font-Roboto text-base sm:text-lg leading-relaxed">
                             Dive into a topic of history that very specifically speaks to you. Some of our members have chosen to do deeper research and work relating to topics such as the history of women, the history of Asian Americans, LGBTQ+ history, the history of African Americans, and the history of medicine at UVA.
                         </p>
                     </div>
-                    <!--Image-->
-                    <div class="scrollElement flex flex-col w-full lg:w-[35%] items-center justify-center mt-5 lg:mt-0">
-                        <img src="/join-guides-page/beingaguide_aboriginalart.jpeg" class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md p-3 border-4 border-UVA-orange">
+                </div>
+            </div>
+        </div>
+
+        <!--Carousel-->
+        <div class="scrollElement about-carousel-body">
+            <div class="about-slider">
+                <div class="about-slide-track">
+                    <div class="about-slide flex flex-col justify-start">
+                        <img class="about-carousel-img" src="/join-guides-page/gpcar.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img object-top" src="/join-guides-page/phoneinception.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/bamboo.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/lawnroom.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/grouphoto.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/lawn2.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/meetthe.JPG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/formal.JPG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/cookout.JPG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/yellow.JPG" loading="lazy" alt="">
+                    </div>
+                    <!--Same 10 slides (doubled)-->
+                    <div class="about-slide flex flex-col justify-start">
+                        <img class="about-carousel-img" src="/join-guides-page/gpcar.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img object-top" src="/join-guides-page/phoneinception.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/bamboo.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/lawnroom.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/grouphoto.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/lawn2.JPEG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/meetthe.JPG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/formal.JPG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/cookout.JPG" loading="lazy" alt="">
+                    </div>
+                    <div class="about-slide flex flex-col">
+                        <img class="about-carousel-img" src="/join-guides-page/yellow.JPG" loading="lazy" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--College Container 2-->
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-12">
+            <!--third flex row-->
+            <div class="flex flex-col lg:flex-row gap-5">
+                <!--Image-->
+                <div class="scrollElement relative group flex flex-col w-full lg:w-1/2 items-center justify-center">
+                    <div class=" p-2 border-4 border-dotted border-dark-green">
+                        <img
+                            src="/join-guides-page/beingaguide_metthepicnic.jpg" 
+                            class="object-cover w-full max-w-sm md:max-w-md lg:max-w-lg transition duration-400 group-hover:opacity-30"
+                            loading="lazy"
+                        >
+                    </div>
+                    <!-- Overlay Text -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                                items-center justify-center text-center 
+                                text-black text-lg font-Roboto font-semibold max-w-7xl mx-auto opacity-0 transition duration-500 
+                                group-hover:opacity-100">
+                        Guides enjoy the sunset with a picnic on the lawn 
                     </div>
                 </div>
 
+                <!--Text-->
+                <div class="scrollElement flex flex-col w-full lg:w-1/2 space-y-1 justify-center text-center lg:text-start">
+                    <div class="p-10 text-white bg-royal-blue">
+                        <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
+                            The Colonnades Ball
+                        </h2>
+                        <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                            Attend the unforgettable Colonnades Ball! Virginia Guides hosts the Colonnades Ball, a formal event for the University and Charlottesville community to raise money to support the community around us. The event is open for anyone to attend, but is a wonderful way for all the Guides to get together and dress up for a good cause.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--fourth flex row-->
+            <div class="flex flex-col lg:flex-row gap-x-5 pt-5">
+                <!-- Manmayi and Mercy Image with Overlay -->
+                <div class="scrollElement relative group flex flex-col w-full lg:w-[35%] justify-center items-center mb-5 lg:mb-0">
+                    <!-- Image -->
+                    <div class="p-3 border-4 border-UVA-orange ">
+                        <img 
+                            src="/join-guides-page/manmayiandmercy.JPEG" 
+                            class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-mdtransition duration-400 group-hover:opacity-30"
+                            loading="lazy"
+                        >
+
+                        <!-- Overlay Text -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                                    items-center justify-center text-center 
+                                    text-black text-lg font-Roboto font-semibold max-w-7xl mx-auto opacity-0 transition duration-500 
+                                    group-hover:opacity-100">
+                            Manmayi and Mercy sharing a hug on top of Carter's Mountain
+                        </div>
+                    </div>
+                </div>
+                <!--Text-->
+                <div class="scrollElement flex flex-col w-full lg:w-[30%] space-y-1 p-5 justify-center bg-UVA-orange text-white text-center lg:text-start">
+                    <h2 class="uppercase font-['Montserrat'] text-xl sm:text-2xl font-bold">
+                        Friendships Beyond Grounds
+                    </h2>
+                    <p class="font-Roboto text-base sm:text-lg leading-relaxed">
+                        Develop friendships that last a lifetime. So many of our members have found best friends, mentors, roommates, or even just a friendly face in class. Virginia Guides feels like a family to us all and the relationships we make here last us for years beyond our time on Grounds.
+                    </p>
+                </div>
+                <!-- Yukta and Sanjitha Image with Overlay -->
+                <div class="scrollElement relative group flex flex-col w-full lg:w-[35%] justify-center items-center mt-5 lg:mt-0">
+                    <!-- Image -->
+                    <div class="p-3 border-4 border-UVA-orange ">
+                        <img 
+                            src="/join-guides-page/yuktaandsanjitha.jpeg" 
+                            class="object-cover w-full max-w-xs md:max-w-sm lg:max-w-md transition duration-400 group-hover:opacity-30"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <!-- Overlay Text -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                                items-center justify-center text-center 
+                                text-black text-lg font-Roboto font-semibold max-w-7xl mx-auto opacity-0 transition duration-500 
+                                group-hover:opacity-100">
+                        Yukta and Sanjitha enjoying each other's company
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -464,22 +618,22 @@
 
     <!-- Explore UVA History Section -->
     <section class="bg-royal-blue py-16 sm:py-20 md:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
 
             <!-- Header -->
-            <h1 class="font-['Playfair_Display'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-medium">
+            <h1 class="scrollElement font-['Playfair_Display'] text-UVA-orange text-3xl sm:text-4xl md:text-5xl font-medium">
                 Explore UVA History
             </h1>
 
             <!-- Description -->
-            <p class="font-['Montserrat'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            <p class="scrollElement font-['Montserrat'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
                 In addition to our regularly scheduled historical tours, we also offer Specialty Tours by request,
                 which focus on a specific aspect of UVA's extensive 200 year history.
             </p>
 
             <!-- Button -->
             <a href="/about-tours">
-                <button class="inline-flex items-center space-x-3 rounded-full border text-white font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-neutral-300 transition-all duration-300 ease-in-out hover:cursor-pointer">
+                <button class="scrollElement inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-white font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
                     <span>HISTORY TOURS</span>
                     <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -489,67 +643,67 @@
         </div>
 
         <!-- Carousel: Our Tours-->
-        <div class="carousel-body">
+        <div class="scrollElement carousel-body">
             <div class="slider">
                 <div class="slide-track">
                     <a href="/about-tours/#history-of-women-at-uva">
                         <div class="slide flex flex-col justify-start">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of Women</p>
                         </div>
                     </a>
                     <a href="/about-tours/#history-of-african-americans-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
+                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white  font-['Roboto']">History of African-Americans</p>
                         </div>
                     </a>
                     <a href="/about-tours/#garden-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white  font-['Roboto']">Garden Tours</p>
                         </div>
                     </a>
                     <a href="/about-tours/#MEL-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Memorial to Enslaved Laborers</p>
                         </div>
                     </a>
                     <a href="/about-tours/#childrens-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Children's Tour</p>
                         </div>
                     </a>
                     <!--Same 5 slides (doubled)-->
                     <a href="/about-tours/#history-of-women-at-uva">
                         <div class="slide flex flex-col justify-start">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" alt="">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of Women</p>
                         </div>
                     </a>
                     <a href="/about-tours/#history-of-african-americans-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" alt="">
+                            <img class="carousel-img object-top" src="/index-page/carousel-history-tours/UVAhistoryCarousel_africanamericansatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of African-Americans</p>
                         </div>
                     </a>
                     <a href="/about-tours/#garden-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" alt="">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_GardenTours.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Garden Tours</p>
                         </div>
                     </a>
                     <a href="/about-tours/#MEL-tour">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" alt="">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_MEL.jpeg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Memorial to Enslaved Laborers</p>
                         </div>
                     </a>
                     <a href="/about-tours/#childrens-tours">
                         <div class="slide flex flex-col">
-                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" alt="">
+                            <img class="carousel-img" src="/index-page/carousel-history-tours/UVAhistoryCarousel_childrenstour.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">Children's Tour</p>
                         </div>
                     </a>
@@ -574,30 +728,30 @@
 
                 <!-- Header -->
                 <div class="absolute left-1/2 w-full max-w-6xl px-4 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                    <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+                    <h1 class="scrollElement font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                         SHED LIGHT
                     </h1>
-                    <p class="font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+                    <p class="scrollElement font-Roboto text-center xl:max-w-sm xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
                         ON HISTORY
                     </p>
                 </div>
 
                 <!-- Buttons -->
-                <div class="mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
+                <div class="scrollElement mt-35 md:mt-40 flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-4 pointer-events-auto">
                     <a href="/your-visit">
-                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
+                        <button class="font-['Roboto'] border-1 border-gray-300 text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-gray-100 hover:scale-105 rounded-full py-3 px-10 cursor-pointer transition-all duration-300 ease-in-out">
                             TAKE A TOUR
                         </button>
                     </a>
                     <a href="/donate">
-                        <button class="font-['Roboto'] border border-white text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-neutral-300 hover:border-transparent rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
+                        <button class="font-['Roboto'] border-1 border-gray-300 text-white hover:text-black bg-[rgba(0,0,0,0.30)] hover:bg-gray-100 hover:scale-105 rounded-full py-3 px-15 cursor-pointer transition-all duration-300 ease-in-out">
                             DONATE
                         </button>
                     </a>
                 </div>
 
                 <!-- Description -->
-                <p class="mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                <p class="scrollElement mt-20 font-['Roboto'] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
                     The Virginia Guides Service at UVA is an entirely student-run independent volunteer organization. 
                     If you would like to provide additional support, please consider donating to our day-to-day operations 
                     <a href="/donate" class="underline">here</a>. We appreciate your time and thank you for continuing to support our mission.
@@ -613,7 +767,7 @@
             <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-10">
 
                 <!-- Left Side Footer -->
-                <div class="basis-1/2 flex flex-wrap justify-between gap-6 text-sm text-zinc-400 font-['Roboto']">
+                <div class="scrollElement basis-1/2 flex flex-wrap justify-between gap-6 text-sm text-zinc-400 font-['Roboto']">
                     <!-- Column 1 -->
                     <ul class="flex flex-col gap-2 min-w-[100x]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
@@ -661,9 +815,9 @@
                 </div>
 
                 <!-- Right Side Footer -->
-                <div class="basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
+                <div class="scrollElement basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
                     <div class="flex items-start gap-4 font-['Roboto']">
-                        <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" alt="Virginia Guides Logo" />
+                        <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" loading="lazy" alt="Virginia Guides Logo" />
                         <p>
                             The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
                             student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
@@ -672,7 +826,7 @@
 
                     <div class="flex justify-center md:justify-end">
                         <a href="/contact-us">
-                            <button class="border border-white text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-zinc-500 hover:border-zinc-500 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
+                            <button class="border-1 border-gray-300 text-white rounded-full px-6 py-2 font-['Montserrat'] hover:bg-gray-100 hover:scale-105 hover:text-black transition-all duration-300 ease-in-out cursor-pointer">
                                 CONTACT US
                             </button>
                         </a>
@@ -682,7 +836,6 @@
             </div>
         </div>
     </section>
-
 </template>
 
 <script setup>
@@ -723,6 +876,46 @@
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 6rem;
+    }
+    .about-carousel-body {
+        width: 100%;
+        height: var(--height);
+        display: grid;
+        place-items: center;
+    }
+    .about-slider{
+        height: 300px;
+        margin: auto;
+        position: relative;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+    .about-slide-track{
+        display: flex;
+        width: calc(350px * 10);
+        animation: scroll 15s linear infinite;
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-350px * 10));
+        }
+    }
+    .about-slide{
+        height: 250px;
+        width: 350px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+    .about-carousel-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .scrollElement {
         opacity: 0;

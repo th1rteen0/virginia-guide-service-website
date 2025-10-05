@@ -51,7 +51,7 @@
         </a>
   
         <a href="/your-visit">
-          <button class="font-['Montserrat'] font-medium text-white bg-UVA-orange hover:bg-orange-800 cursor-pointer rounded-full px-5 py-2 transition duration-250">
+          <button class="font-['Montserrat'] font-medium text-white bg-UVA-orange hover:bg-orange-800 hover:scale-105 cursor-pointer rounded-full px-5 py-2 transition duration-250">
             TAKE A TOUR
           </button>
       </a>
