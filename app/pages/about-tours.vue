@@ -445,14 +445,14 @@
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
                         <a href="/request-specialty-tours">
-                            <li class="cursor-pointer">Specialty Tours Request</li>
+                            <li class="cursor-pointer">Specialty Tour Request</li>
                         </a>
                     </ul>
 
                     <!-- Column 2 -->
                     <ul class="flex flex-col gap-2 min-w-[100px]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
-                        <a href="/about-tours#about-tours">
+                        <a href="/join-guides">
                             <li class="cursor-pointer">Our Mission</li>
                         </a>
                         <a href="/join-guides#join-guides">
@@ -500,7 +500,6 @@
             </div>
         </div>
     </section>
-
 
 </template>
 

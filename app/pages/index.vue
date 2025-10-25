@@ -28,11 +28,11 @@
 
     <!-- More Tour Info Section -->
     <section class="bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-            <div class="flex flex-col md:flex-row items-center gap-10 max-w-7xl mx-auto">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+            <div class="flex flex-col lg:flex-row items-center gap-10 max-w-7xl mx-auto">
             
                 <!-- Left: Text -->
-                <div class="w-full md:w-3/5">
+                <div class="w-full lg:w-3/5">
                     <p class="scrollElement font-['Playfair_Display'] italic font-bold text-dark-green text-4xl sm:text-5xl leading-tight pb-6">
                         Where The Past Stands<br />
                         And More Is Told.
@@ -40,19 +40,19 @@
                     <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
                         The American promise rests on the idea that all are created equal, and every story has a place in that legacy. 
                         Many who have shaped this University have long gone unrecognized. As we learn more, 
-                        <span class="text-dark-green italic">our tours evolve — not to change the past, but to share more of it.</span>
+                        <a class="font-['Montserrat'] text-dark-green italic font-semibold">our tours evolve — not to change the past, but to share more of it.</a>
                         <br /><br />
                         Jefferson's Academical Village is more than its founding. From the history of enslavement to 
                         liberation, desegregation to coeducation, it shapes and reflects the American story, recognized by UNESCO for this role, 
                         and is made richer as we share more.
                         <br /><br />
-                        <span class="font-medium italic">With this mission, </span>
-                        <span class="font-['Montserrat'] italic underline text-dark-green">all tours are offered free of charge.</span>
+                        <a class="font-['Montserrat'] font-semibold italic">With this mission, </a>
+                        <a class="font-['Montserrat'] italic font-semibold underline text-dark-green">all tours are offered free of charge.</a>
                     </p>
                 </div>
 
                 <!-- Right: Image with Text Overlay -->
-                <div class="scrollElement w-full md:w-2/5 flex justify-center md:justify-end">
+                <div class="scrollElement w-full lg:w-2/5 flex justify-center lg:justify-end">
                     <div class="relative w-full max-w-sm sm:max-w-md h-[573px] overflow-hidden rounded-[35px] shadow-lg">
 
                         <!-- Background Image -->
@@ -104,8 +104,8 @@
                         </div>
 
                         <!-- Footer Note -->
-                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-full px-4 text-center text-stone-900 text-xs font-semibold italic font-['Roboto']">
-                            *Tour dates are subject to the Student Calendar. Some days may not have tours due to student breaks or finals. Click <span class="underline">here</span> for details.
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-full px-4 text-center text-stone-900 text-xs font-bold italic font-['Roboto']">
+                            *Tour dates are subject to the Student Calendar. Some days may not have tours due to student breaks or finals. Click <a href="https://registrar.virginia.edu/calendar/academic/2025-2026" class="underline">here</a> for details.
                         </div>
 
                     </div>
@@ -379,8 +379,8 @@
             </p>
 
             <!-- Button -->
-            <a href="/about-tours">
-                <button class="scrollElement inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-white font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
+            <a href="/about-tours" class="scrollElement">
+                <button class="inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-white font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
                     <p>HISTORY TOURS</p>
                     <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -734,14 +734,14 @@
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
                         <a href="/request-specialty-tours">
-                            <li class="cursor-pointer">Specialty Tours Request</li>
+                            <li class="cursor-pointer">Specialty Tour Request</li>
                         </a>
                     </ul>
 
                     <!-- Column 2 -->
                     <ul class="flex flex-col gap-2 min-w-[100px]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
-                        <a href="/about-tours#about-tours">
+                        <a href="/join-guides">
                             <li class="cursor-pointer">Our Mission</li>
                         </a>
                         <a href="/join-guides#join-guides">

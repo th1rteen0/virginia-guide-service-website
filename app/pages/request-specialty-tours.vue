@@ -14,8 +14,8 @@
         <div class="absolute top-[70%] left-1/2 w-full -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-evenly gap-1 shadow-md bg-dark-green/80 py-6 px-4 sm:px-6 lg:px-8">
             <!-- Description -->
             <div class="font-['Montserrat'] text-white text-center justify-start text-sm md:text-base max-w-6xl">
-                <a class="italic">To ensure guide availability for special topic or large tour groups, all tour requests. should be submitted at least</a>
-                    <a class="underline">two to three weeks in advance</a>. 
+                <a class="italic">To ensure guide availability for special topic or large tour groups, all tour requests. should be submitted at least </a>
+                    <a class="underline italic">two to three weeks in advance</a>. 
                 <a class="italic"> Complete this form and we can get back to you with more details on your tour!</a> 
                 Standard Historical tours occur regularly throughout the school year and do not require a special request.
             </div>
@@ -88,7 +88,7 @@
                                 After completing your tour request, click here for information on directions, parking and your visit.
                             </p>
                             <a href="/your-visit">
-                                <button class="font-medium rounded-full border-2 border-white px-6 py-2 hover:bg-white hover:text-royal-blue transition-all duration-300 ease-in-out cursor-pointer">
+                                <button class="font-medium rounded-full border-2 border-white px-6 py-2 hover:bg-white hover:text-royal-blue hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
                                     Plan Your Visit
                                 </button>
                             </a>
@@ -130,7 +130,7 @@
 
                         <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
                             <div class="flex flex-col">
-                                <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date</label>
+                                <label for="date" class="font-[Montserrat] font-light text-royal-blue">Requested Date of Tour</label>
                                 <input v-if="!fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
                                 <input v-if="fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
                                 <p v-if="fieldErrors.date" class="text-red-500 text-sm p-0 mb-2">
@@ -225,8 +225,8 @@
             </p>
 
             <!-- Button -->
-            <a href="/about-tours">
-                <button class="scrollElement inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-black font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
+            <a href="/about-tours" class="scrollElement">
+                <button class="inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-black font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
                     <span>HISTORY TOURS</span>
                     <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -374,14 +374,14 @@
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
                         <a href="/request-specialty-tours">
-                            <li class="cursor-pointer">Specialty Tours Request</li>
+                            <li class="cursor-pointer">Specialty Tour Request</li>
                         </a>
                     </ul>
 
                     <!-- Column 2 -->
                     <ul class="flex flex-col gap-2 min-w-[100px]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
-                        <a href="/about-tours#about-tours">
+                        <a href="/join-guides">
                             <li class="cursor-pointer">Our Mission</li>
                         </a>
                         <a href="/join-guides#join-guides">
@@ -410,7 +410,7 @@
                 <!-- Right Side Footer -->
                 <div class="scrollElement basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
                     <div class="flex items-start gap-4 font-['Roboto']">
-                        <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" loading="lazy" alt="Virginia Guides Logo" />
+                        <img class="h-12 w-12 obSject-contain" loading="lazy" src="/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
                             The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
                             student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.

@@ -169,7 +169,7 @@
                         <!-- Success Toast -->
                         <div v-if="success" class="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
                             <div class="font-[Montserrat] bg-green-600 text-white px-6 py-4 rounded-md shadow-lg pointer-events-auto">
-                                Thank you! Your Feedback has been recieved!
+                                Thank you! Your feedback has been recieved!
                             </div>
                         </div>
 
@@ -328,8 +328,8 @@
             </p>
 
             <!-- Button -->
-            <a href="/about-tours">
-                <button class="scrollElement inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-black font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
+            <a href="/about-tours" class="scrollElement">
+                <button class="inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-black font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
                     <span>HISTORY TOURS</span>
                     <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -477,14 +477,14 @@
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
                         <a href="/request-specialty-tours">
-                            <li class="cursor-pointer">Specialty Tours Request</li>
+                            <li class="cursor-pointer">Specialty Tour Request</li>
                         </a>
                     </ul>
 
                     <!-- Column 2 -->
                     <ul class="flex flex-col gap-2 min-w-[100px]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
-                        <a href="/about-tours#about-tours">
+                        <a href="/join-guides">
                             <li class="cursor-pointer">Our Mission</li>
                         </a>
                         <a href="/join-guides#join-guides">
@@ -513,7 +513,7 @@
                 <!-- Right Side Footer -->
                 <div class="scrollElement basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
                     <div class="flex items-start gap-4 font-['Roboto']">
-                        <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" loading="lazy" alt="Virginia Guides Logo" />
+                        <img class="h-12 w-12 obSject-contain" loading="lazy" src="/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
                             The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
                             student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.

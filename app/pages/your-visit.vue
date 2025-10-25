@@ -92,7 +92,7 @@
             <br /><br />
             <div class="scrollElement flex justify-center items-center px-4">
                 <a href="/about-tours">
-                    <button class="border-1 text-white rounded-full py-3 px-10 cursor-pointer font-semibold shadow-md hover:shadow-large bg-dark-green hover:bg-green-700 transition-all duration-300 ease-in-out">
+                    <button class="border-1 text-white rounded-full py-3 px-10 cursor-pointer font-semibold shadow-md hover:shadow-large bg-dark-green hover:bg-green-700 hover:scale-105 transition-all duration-300 ease-in-out">
                         Learn More
                     </button>
                 </a>
@@ -142,15 +142,15 @@
                         <span class="font-semibold">Registration for Standard History Tours are not required but encouraged to receive possible updates on your tour. </span>
                         Standard Historical tours are public for anyone to join and occur regularly throughout the school year. You can request specialty tours <a href="/request-specialty-tours" class="underline"> here.</a>
                     </p>
-                    <a href="/contact-us" class="md:py-5">
-                        <button class="scrollElement rounded-full border-2 border-white text-white font-semibold text-base px-6 py-2 mt-3 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 transition-all duration-300 ease-in-out">
+                    <a href="/contact-us" class="scrollElement">
+                        <button class="rounded-full border-2 border-white text-white font-semibold text-base px-6 py-2 mt-3 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 hover:scale-105 transition-all duration-300 ease-in-out">
                             Contact Us
                         </button>
                     </a>
                 </div>
 
                 <!-- Right: Registration Form (overlapping the section) -->
-                <div class="w-full lg:w-1/2 relative pt-10 md:pt-0">
+                <div class="w-full lg:w-1/2 relative pt-5 lg:pt-0">
                     <div class="relative lg:absolute lg:-bottom-110 z-20 w-full">
                         <div class="flex flex-col shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] rounded-xl p-6 bg-white">
                             <h1 class="font=['Montserrat'] font-medium text-3xl text-royal-blue mb-4">
@@ -187,7 +187,7 @@
 
                                 <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
                                     <div class="flex flex-col">
-                                        <label for="date" class="font-[Montserrat] font-light text-royal-blue">Requested Date of Tour</label>
+                                        <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date of Tour</label>
                                         <input v-if="!fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
                                         <input v-if="fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
                                         <p v-if="fieldErrors.date" class="text-red-500 text-sm p-0 mb-2">
@@ -323,7 +323,7 @@
                     </p>
                     <div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-4">
                         <a href="/about-tours" class="w-full sm:w-auto">
-                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300 ease-in-out">
+                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                                 Learn More
                             </button>
                         </a>
@@ -391,17 +391,17 @@
                     </p>
                     <div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-4">
                         <a href="#times-and-registration" class="w-full sm:w-auto">
-                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300 ease-in-out">
+                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                             Registration
                             </button>
                         </a>
                         <a href="/about-tours#specialty-tours" class="w-full sm:w-auto">
-                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300 ease-in-out">
+                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                             Specialty Tours
                             </button>
                         </a>
                         <a href="/for-educators" class="w-full sm:w-auto">
-                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300 ease-in-out">
+                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
                             For Educators
                             </button>
                         </a>
@@ -467,8 +467,8 @@
             </p>
 
             <!-- Button -->
-            <a href="/about-tours">
-                <button class="scrollElement inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-black font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
+            <a href="/about-tours" class="scrollElement">
+                <button class="inline-flex items-center space-x-3 rounded-full border-1 border-gray-300 text-black font-['Montserrat'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer">
                     <span>HISTORY TOURS</span>
                     <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -616,14 +616,14 @@
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
                         <a href="/request-specialty-tours">
-                            <li class="cursor-pointer">Specialty Tours Request</li>
+                            <li class="cursor-pointer">Specialty Tour Request</li>
                         </a>
                     </ul>
 
                     <!-- Column 2 -->
                     <ul class="flex flex-col gap-2 min-w-[100px]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">About Us</li>
-                        <a href="/about-tours#about-tours">
+                        <a href="/join-guides">
                             <li class="cursor-pointer">Our Mission</li>
                         </a>
                         <a href="/join-guides#join-guides">
@@ -652,7 +652,7 @@
                 <!-- Right Side Footer -->
                 <div class="scrollElement basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
                     <div class="flex items-start gap-4 font-['Roboto']">
-                        <img class="h-12 w-12 obSject-contain" src="/guides-logo.png" loading="lazy" alt="Virginia Guides Logo" />
+                        <img class="h-12 w-12 obSject-contain" loading="lazy" src="/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
                             The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
                             student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
