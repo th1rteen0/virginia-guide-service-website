@@ -429,7 +429,7 @@
 
     try {
         const config = useRuntimeConfig()
-        const { data, error } = await useFetch(`${config.public.apiBase}/feedback/`, {
+        const { data, error } = await useFetch(`${config.public.apiBase}/submit-feedback/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form.value)

@@ -251,7 +251,7 @@
 
         try {
             const config = useRuntimeConfig()
-            const { data, error } = await useFetch(`${config.public.apiBase}/request-specialty-tours/`, {
+            const { data, error } = await useFetch(`${config.public.apiBase}/register-specialty-tour/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(form.value)
