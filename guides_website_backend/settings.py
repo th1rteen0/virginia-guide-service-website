@@ -73,6 +73,8 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = False 
 
 CORS_ALLOWED_ORIGINS = [
+    "guides-website-backend-1.onrender.com",
+    "https://guides-website-backend-1.onrender.com/",
     "https://www.uguides.org",
     "https://uguides.org",
     "https://virginiaguides.org",
