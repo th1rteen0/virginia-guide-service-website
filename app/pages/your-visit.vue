@@ -469,6 +469,10 @@
     import Footer from '~/components/Footer.vue'
     import ExploreUVAHistoryWhite from '~/components/ExploreUVAHistoryWhite.vue';
 
+    useHead({
+        title: 'Take a Tour & Plan Your Visit | Virginia Guides Service',
+    })
+
     const form = ref({
         first_name: '',
         last_name: '',

@@ -384,6 +384,10 @@
     import { onMounted } from "vue"
     import Footer from '~/components/Footer.vue'
 
+    useHead({
+        title: 'About Our Tours | Virginia Guides Service',
+    })
+
     onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

@@ -44,6 +44,10 @@
     import Footer from '~/components/Footer.vue'
     import ExploreUVAHistoryWhite from '~/components/ExploreUVAHistoryWhite.vue';
 
+    useHead({
+        title: 'Donate| Virginia Guides Service',
+    })
+
     onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

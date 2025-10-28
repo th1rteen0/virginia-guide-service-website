@@ -630,6 +630,10 @@
     import Footer from '~/components/Footer.vue'
     import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
 
+    useHead({
+        title: 'Join Guides | Virginia Guides Service',
+    })
+
     onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

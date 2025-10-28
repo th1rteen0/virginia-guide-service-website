@@ -223,6 +223,10 @@
     import Footer from '~/components/Footer.vue'
     import ExploreUVAHistoryWhite from '~/components/ExploreUVAHistoryWhite.vue';
 
+    useHead({
+        title: 'Specialty Tour Request | Virginia Guides Service',
+    })
+
     const form = ref({
         first_name: '',
         last_name: '',

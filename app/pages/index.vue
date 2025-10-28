@@ -818,6 +818,10 @@
     import Footer from '~/components/Footer.vue';
     import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
 
+    useHead({
+        title: 'Tours of the University of Virginia | Virginia Guides Service',
+    })
+
     // IntersectionObserver logic
     onMounted(() => {
     const observer = new IntersectionObserver((entries) => {

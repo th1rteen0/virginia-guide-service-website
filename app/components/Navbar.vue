@@ -58,42 +58,42 @@
         <div class="flex flex-col justify-center items-center h-full text-center space-y-6">
           <a
             href="/about-tours"
-            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
             @click="navOpen = false"
           >
             About Tours
           </a>
           <a
             href="/join-guides"
-            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
             @click="navOpen = false"
           >
             Join Guides
           </a>
           <a
             href="/for-educators"
-            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
             @click="navOpen = false"
           >
             For Educators
           </a>
           <a
             href="/feedback"
-            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
             @click="navOpen = false"
           >
             Feedback
           </a>
           <a
             href="/donate"
-            class="text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
+            class="font-['Montserrat'] uppercase text-2xl font-medium hover:text-orange-500 transition-colors duration-200"
             @click="navOpen = false"
           >
             Donate
           </a>
           <a
             href="/your-visit"
-            class="text-2xl font-semibold text-orange-600 hover:text-orange-700 transition-colors duration-200 pt-4 border-t border-orange-300"
+            class="font-['Montserrat'] uppercase text-2xl font-semibold text-orange-500 hover:text-orange-700 transition-colors duration-200 pt-4 border-t border-orange-500"
             @click="navOpen = false"
           >
             Take a Tour
