@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   // backend: django
   runtimeConfig: {
     public: {
-      apiBase: 'http://127.0.0.1:8000/api'
+      apiBase: 'https://guides-website-backend-1.onrender.com'
     }
   },
   vite: {

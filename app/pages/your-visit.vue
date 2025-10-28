@@ -496,7 +496,7 @@
         success.value = false
 
         try {
-            const { data, error } = await useFetch('http://127.0.0.1:8000/register-tour/', {
+            const { data, error } = await useFetch('https://guides-website-backend-1.onrender.com', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(form.value)
