@@ -76,7 +76,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://www.uguides.org",
     "https://uguides.org",
     "https://virginiaguides.org",
-    "https://www.virginiaguides.org"
+    "https://www.virginiaguides.org",
     "http://localhost:3000",
     "http://localhost:3001",
     "http://localhost:3002",
