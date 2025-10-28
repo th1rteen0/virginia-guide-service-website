@@ -164,6 +164,7 @@ def register_specialty_tour(request):
 
 @api_view(['POST'])
 def contact_us(request):
+    print("Incoming request data:", request.data)
     serializer = ContactUsFormSerializer(data=request.data)
     if serializer.is_valid():
         contact_us = serializer.save()
