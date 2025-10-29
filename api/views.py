@@ -176,7 +176,7 @@ def contact_us(request):
         contact_us = serializer.save()
 
         MAILGUN_DOMAIN = os.getenv("MAILGUN_DOMAIN")
-        MAILGUN_API_KEY = os.getenv("API_KEY")
+        MAILGUN_API_KEY = os.getenv("MAILGUN_API_KEY")
 
         # Debug logging before sending
         print("Attempting to send email via Mailgun...")
