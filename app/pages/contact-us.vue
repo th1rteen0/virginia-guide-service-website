@@ -210,6 +210,7 @@
 
         try {
             const config = useRuntimeConfig()
+            console.log('API Base (runtime):', config.public.apiBase)
             const { data, error } = await useFetch(`${config.public.apiBase}/contact-us/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
