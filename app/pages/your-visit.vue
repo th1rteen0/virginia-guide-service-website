@@ -232,7 +232,7 @@
                                         <p v-if="fieldErrors.time" class="text-red-500 text-sm p-0 mb-2">
                                             {{ fieldErrors.time[0] }}
                                         </p>
-                                        </div>
+                                    </div>
 
                                 </div>
 

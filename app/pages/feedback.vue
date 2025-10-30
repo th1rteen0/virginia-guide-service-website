@@ -135,8 +135,41 @@
                             </div>
                             <div class="flex flex-col">
                                 <label for="time" class="font-[Montserrat] font-light text-royal-blue">Time of Tour</label>
-                                <input  v-if="!fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-                                <input  v-if="fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+
+                                <!-- Normal state -->
+                                <select
+                                    v-if="!fieldErrors.time"
+                                    id="time"
+                                    v-model="form.time"
+                                    class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5"
+                                >
+                                    <option value="" disabled>Select a time</option>
+                                    <option
+                                    v-for="time in times"
+                                    :key="time.value"
+                                    :value="time.value"
+                                    >
+                                    {{ time.display }}
+                                    </option>
+                                </select>
+
+                                <!-- Error state -->
+                                <select
+                                    v-else
+                                    id="time"
+                                    v-model="form.time"
+                                    class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue"
+                                >
+                                    <option value="" disabled>Select a time</option>
+                                    <option
+                                    v-for="time in times"
+                                    :key="time.value"
+                                    :value="time.value"
+                                    >
+                                    {{ time.display }}
+                                    </option>
+                                </select>
+
                                 <p v-if="fieldErrors.time" class="text-red-500 text-sm p-0 mb-2">
                                     {{ fieldErrors.time[0] }}
                                 </p>
@@ -507,6 +540,23 @@
     const fieldErrors = ref<Record<string, string[]>>({})
     const loading = ref(false)
     const showToast = ref(false)
+
+    // Times array with display (AM/PM) and value (24-hour)
+    const times = ref<{ display: string; value: string }[]>([])
+
+    for (let h = 11; h <= 18; h++) {
+    const hour12 = h > 12 ? h - 12 : h
+    const period = h >= 12 && h < 24 ? 'PM' : 'AM'
+
+    const display0 = `${hour12}:00 ${period}`
+    const display30 = `${hour12}:30 ${period}`
+
+    const value0 = `${h.toString().padStart(2, '0')}:00`
+    const value30 = `${h.toString().padStart(2, '0')}:30`
+
+    times.value.push({ display: display0, value: value0 })
+    if (!(h === 18)) times.value.push({ display: display30, value: value30 }) // skip 6:30 PM
+    }
 
     async function submitForm(e: Event) {
     e.preventDefault()
