@@ -58,7 +58,7 @@
                     <!-- Column 1 -->
                     <ul class="flex flex-col gap-2 min-w-[100x]">
                         <li class="font-['Playfair_Display'] italic underline text-white text-lg">Visit</li>
-                        <a href="your-visit">
+                        <a href="your-visit#frequently-asked-questions">
                             <li class="cursor-pointer">Directions + FAQ</li>
                         </a>
                         <a href="about-tours#about-tours">
@@ -67,8 +67,8 @@
                         <a href="/about-tours#specialty-tours">
                             <li class="cursor-pointer">Specialty Tours</li>
                         </a>
-                        <a href="/request-specialty-tours">
-                            <li class="cursor-pointer">Specialty Tour Request</li>
+                        <a href="/your-visit#times-and-registration">
+                            <li class="cursor-pointer">Tour Request</li>
                         </a>
                     </ul>
 

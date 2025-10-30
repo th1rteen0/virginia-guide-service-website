@@ -126,7 +126,7 @@
 
                         <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
                             <div class="flex flex-col">
-                                <label for="date" class="font-[Montserrat] font-light text-royal-blue">Intended Date of Tour</label>
+                                <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date of Tour</label>
                                 <input v-if="!fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
                                 <input v-if="fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
                                 <p v-if="fieldErrors.date" class="text-red-500 text-sm p-0 mb-2">

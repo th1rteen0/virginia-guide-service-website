@@ -17,4 +17,4 @@ yarn-error.log*
 public/
 
 # not used in production
-app/pages/request-specialty-tours
+app/pages/request-specialty-tours.vue

@@ -512,7 +512,7 @@
     </section>
 
     <!-- Accessibility Section -->
-    <section id="frequently-asked-questions" class="bg-royal-blue py-16 px-6 sm:px-12 lg:px-20">
+    <section class="bg-royal-blue py-16 px-6 sm:px-12 lg:px-20">
     <div class="max-w-5xl mx-auto">
         <!-- Title -->
         <h2 class="scrollElement font-['Montserrat'] text-white text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12">
