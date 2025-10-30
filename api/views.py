@@ -60,6 +60,7 @@ def feedback_dashboard(request):
     })
 
 
+# not used in production
 @api_view(['POST'])
 def register_tour(request):
     serializer = TourRegistrationSerializer(data=request.data)
@@ -189,16 +190,23 @@ def register_specialty_tour(request):
         
         # confirmation email to user
         confirmation_message = (
-            f"Hi {specialty_registration.first_name},\n\n"
-            f"Thank you for requesting a {specialty_registration.tour_type} Tour with the Virginia Guides Service!\n\n"
-            "We have received your submission and will be in touch soon to confirm your tour details. If you have any questions or need to make changes, please email our schedulers (scheduler@virginiaguides.org).\n\n"
-            f"Your submitted information:\n"
-            f"Tour Type: {specialty_registration.tour_type}\n"
+            f"Hello {specialty_registration.first_name},\n\n"
+            f"Thank you for registering for a {specialty_registration.tour_type} with the Virginia Guide Service at the University of Virginia! "
+            "We’ve received your submission and are currently pairing you with one of our volunteer student tour guides.\n\n"
+            "On the day of your tour, please arrive on time and meet your guide on the Lawn side of the Rotunda steps. "
+            "Directions, parking information, and frequently asked questions can be found under the “Take a Tour” tab on our website: "
+            "https://virginiaguides.org/take-a-tour\n\n"
+            "Your submitted information:\n"
             f"Date of Tour: {specialty_registration.date}\n"
-            f"Time of Tour: {specialty_registration.time}\n"
+            f"Time: {specialty_registration.time}\n"
             f"Guests: {specialty_registration.guests}\n"
-            f"Number of Children in Grade K-8: {specialty_registration.minors}\n"
+            f"Number of Children (Grades K-8): {specialty_registration.minors}\n"
             f"Notes: {specialty_registration.notes or 'None'}\n\n"
+            "If you have any questions or need to make changes, please email our scheduling team at scheduler@virginiaguides.org.\n\n"
+            "Thank you for choosing the Virginia Guide Service and for taking part in the tradition of student-told history at the University of Virginia! "
+            "We look forward to welcoming you!\n\n"
+            "See you soon,\n"
+            "Virginia Guide Service"
         )
 
         # send to user that registered
