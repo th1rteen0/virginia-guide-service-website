@@ -202,41 +202,68 @@
                         </button>
 
                         <!-- Loading Spinner Overlay -->
-                        <div v-if="loading" class="fixed inset-0 flex items-center justify-center z-50 bg-black/30">
-                            <div class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-                        </div>
+                        <transition
+                            enter-active-class="transition ease-out duration-500"
+                            enter-from-class="opacity-0 translate-y-3"
+                            enter-to-class="opacity-100 translate-y-0"
+                            leave-active-class="transition ease-in duration-500"
+                            leave-from-class="opacity-100 translate-y-0"
+                            leave-to-class="opacity-0 translate-y-3"
+                        >
+                            <div v-if="loading" class="fixed inset-0 flex items-center justify-center z-50 bg-black/30">
+                                <div class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                            </div>
+                        </transition>
 
                         <!-- Success Toast -->
-                        <div v-if="success && showToast" class="fixed bottom-6 right-6 z-50 pointer-events-auto animate-slide-in max-w-[90%] sm:w-80 sm:right-6 sm:bottom-6 w-full px-4 sm:px-0 flex justify-center sm:justify-end">
-                            <div class="backdrop-blur-lg bg-green-700 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-xl shadow-lg flex items-center justify-between space-x-3 sm:space-x-4 w-full sm:w-80">
-                            <span class="font-[Montserrat] flex items-center space-x-2 text-sm sm:text-base">
-                                <svg
-                                    class="w-5 h-5 text-white flex-shrink-0"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span>Message sent successfully!</span>
-                            </span>
-                            <button @click="showToast = false" class="text-white hover:text-gray-200 text-lg leading-none cursor-pointer">&times;</button>
-                            </div>
-                        </div>
-
-                        <!-- Error Toast -->
-                        <div v-if="errorMsg && showToast" class="fixed bottom-6 right-6 z-50 pointer-events-auto animate-slide-in max-w-[90%] sm:w-[28rem] sm:right-6 sm:bottom-6 w-full px-4 sm:px-0 flex justify-center sm:justify-end">
-                            <div class="backdrop-blur-lg bg-red-700 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-xl shadow-lg flex items-center justify-between space-x-3 sm:space-x-4 w-full sm:w-[28rem]">
-                                <svg class="w-5 h-5 text-white justify-center items-center flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
-                                </svg>
-                                <span class="text-sm sm:text-base flex-1">
-                                    Something went wrong. Please try again later.
+                        <transition
+                            enter-active-class="transition transform ease-out duration-500"
+                            enter-from-class="opacity-0 translate-x-10"
+                            enter-to-class="opacity-100 translate-x-0"
+                            leave-active-class="transition transform ease-in duration-500"
+                            leave-from-class="opacity-100 translate-x-0"
+                            leave-to-class="opacity-0 translate-x-10"
+                        >
+                            <div v-if="success && showToast" class="fixed bottom-6 right-6 z-50 pointer-events-auto animate-slide-in max-w-[90%] sm:w-80 sm:right-6 sm:bottom-6 w-full px-4 sm:px-0 flex justify-center sm:justify-end">
+                                <div class="backdrop-blur-lg bg-green-700 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-xl shadow-lg flex items-center justify-between space-x-3 sm:space-x-4 w-full sm:w-80">
+                                <span class="font-[Montserrat] flex items-center space-x-2 text-sm sm:text-base">
+                                    <svg
+                                        class="w-5 h-5 text-white flex-shrink-0"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>Message sent successfully!</span>
                                 </span>
                                 <button @click="showToast = false" class="text-white hover:text-gray-200 text-lg leading-none cursor-pointer">&times;</button>
+                                </div>
                             </div>
-                        </div>
+                        </transition>
+
+                        <!-- Error Toast -->
+                        <transition
+                            enter-active-class="transition transform ease-out duration-500"
+                            enter-from-class="opacity-0 translate-x-10"
+                            enter-to-class="opacity-100 translate-x-0"
+                            leave-active-class="transition transform ease-in duration-500"
+                            leave-from-class="opacity-100 translate-x-0"
+                            leave-to-class="opacity-0 translate-x-10"
+                        >
+                            <div v-if="errorMsg && showToast" class="fixed bottom-6 right-6 z-50 pointer-events-auto animate-slide-in max-w-[90%] sm:w-[28rem] sm:right-6 sm:bottom-6 w-full px-4 sm:px-0 flex justify-center sm:justify-end">
+                                <div class="backdrop-blur-lg bg-red-700 text-white px-5 sm:px-6 py-3 sm:py-4 rounded-xl shadow-lg flex items-center justify-between space-x-3 sm:space-x-4 w-full sm:w-[28rem]">
+                                    <svg class="w-5 h-5 text-white justify-center items-center flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                                    </svg>
+                                    <span class="text-sm sm:text-base flex-1">
+                                        Something went wrong. Please try again later.
+                                    </span>
+                                    <button @click="showToast = false" class="text-white hover:text-gray-200 text-lg leading-none cursor-pointer">&times;</button>
+                                </div>
+                            </div>
+                        </transition>
 
                     </form>
                 </div>

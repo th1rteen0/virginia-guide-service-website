@@ -199,31 +199,58 @@
                         </button>
                         
                         <!-- Loading Spinner Overlay -->
-                        <div v-if="loading" class="fixed inset-0 flex items-center justify-center z-50 bg-black/30">
-                            <div class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-                        </div>
-                        
-                        <!-- Success Toast -->
-                        <div v-if="success && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
-                            <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-green-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
-                                <svg class="w-6 h-6 text-green-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span class="font-semibold text-sm sm:text-base">Message sent successfully!</span>
+                        <transition
+                            enter-active-class="transition ease-out duration-500"
+                            enter-from-class="opacity-0 translate-y-3"
+                            enter-to-class="opacity-100 translate-y-0"
+                            leave-active-class="transition ease-in duration-500"
+                            leave-from-class="opacity-100 translate-y-0"
+                            leave-to-class="opacity-0 translate-y-3"
+                        >
+                            <div v-if="loading" class="fixed inset-0 flex items-center justify-center z-50 bg-black/20">
+                                <div class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                             </div>
-                        </div>
+                        </transition>
 
-                        <!-- Error Toast -->
-                        <div v-if="errorMsg && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
-                            <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-red-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
-                                <svg class="w-6 h-6 text-red-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                                <div class="flex flex-col font-semibold text-sm sm:text-base leading-tight">
-                                    <span>Something went wrong. If the error persists, feel free to email our chairs personally!</span>
+                        <!-- Success Toast -->
+                        <transition
+                            enter-active-class="transition ease-out duration-500"
+                            enter-from-class="opacity-0 translate-y-3"
+                            enter-to-class="opacity-100 translate-y-0"
+                            leave-active-class="transition ease-in duration-500"
+                            leave-from-class="opacity-100 translate-y-0"
+                            leave-to-class="opacity-0 translate-y-3"
+                        >
+                            <div v-if="success && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
+                                <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-green-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
+                                    <svg class="w-6 h-6 text-green-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="font-semibold text-sm sm:text-base">Message sent successfully!</span>
                                 </div>
                             </div>
-                        </div>
+                        </transition>
+
+                        <!-- Error Toast -->
+                        <transition
+                            enter-active-class="transition ease-out duration-500"
+                            enter-from-class="opacity-0 translate-y-3"
+                            enter-to-class="opacity-100 translate-y-0"
+                            leave-active-class="transition ease-in duration-500"
+                            leave-from-class="opacity-100 translate-y-0"
+                            leave-to-class="opacity-0 translate-y-3"
+                        >
+                            <div v-if="errorMsg && showToast" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50 transition-opacity duration-500">
+                                <div class="pointer-events-auto backdrop-blur-md bg-white/70 text-red-700 px-6 py-4 sm:px-8 sm:py-5 rounded-xl shadow-lg flex flex-row justify-center items-center sm:space-x-3 space-y-2 sm:space-y-0 w-[90%] sm:w-auto sm:max-w-sm max-w-2xs text-center sm:text-left animate-fade-in">
+                                    <svg class="w-6 h-6 text-red-600 shrink-0 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                    <div class="flex flex-col font-semibold text-sm sm:text-base leading-tight">
+                                        <span>Something went wrong. If the error persists, feel free to email our chairs personally!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </transition>
 
                     </form>
                 </div>
