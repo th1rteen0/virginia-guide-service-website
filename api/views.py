@@ -153,7 +153,7 @@ def register_specialty_tour(request):
 
         # Full message for schedulers
         full_message = (
-            f"Specialty Tour Registration from {specialty_registration.first_name} {specialty_registration.last_name}\n\n"
+            f"Tour Registration from {specialty_registration.first_name} {specialty_registration.last_name}\n\n"
             f"Registered on: {date.today()}\n"
             f"Email: {specialty_registration.email}\n"
             f"Phone: {specialty_registration.phone_number}\n"
