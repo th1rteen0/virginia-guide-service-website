@@ -22,7 +22,7 @@
         </div>
     </header> 
 
-    <!-- Overlapping Section For Feedback Form-->
+    <!-- Overlapping Section For Request Form-->
     <section class="relative z-20 -mt-10 md:-mt-15 px-4 sm:px-6 lg:px-8">
         <div class="shadow-xl p-6 max-w-7xl mx-auto bg-white mb-10">
             <div class="flex flex-col lg:flex-row justify-between gap-y-8 gap-x-10">
@@ -41,6 +41,19 @@
 
                     <!--Icons and Links-->
                     <div class="text-base md:text-lg font-light flex flex-col gap-3">
+
+                        <div class="flex items-center gap-2 justify-center md:justify-start">
+                            <a href="mailto:scheduler@virginiaguides.org">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                                <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                            </svg>
+                            </a>
+                            <a href="mailto:scheduler@virginiaguides.org">
+                            <p>scheduler@virginiaguides.org</p>
+                            </a>
+                        </div>
+
                         <div class="flex items-center gap-2 justify-center md:justify-start">
                             <a href="mailto:chair@virginiaguides.org">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -50,18 +63,6 @@
                             </a>
                             <a href="mailto:chair@virginiaguides.org">
                             <p>chair@virginiaguides.org</p>
-                            </a>
-                        </div>
-
-                        <div class="flex items-center gap-2 justify-center md:justify-start">
-                            <a href="mailto:schedulersofugs@gmail.com">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                                <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
-                                <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
-                            </svg>
-                            </a>
-                            <a href="mailto:schedulersofugs@gmail.com">
-                            <p>schedulersofugs@gmail.com</p>
                             </a>
                         </div>
 
@@ -147,7 +148,7 @@
                             </div>
                         </div>
 
-                        <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">How many minors are in your group?</label>
+                        <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">Number of Children in Grade K-8?</label>
                         <input v-if="!fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
                         <input v-if="fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
                         <p v-if="fieldErrors.minors" class="text-red-500 text-sm p-0 mb-2">
@@ -262,7 +263,7 @@
                 if (error.value.data) {
                     fieldErrors.value = error.value.data // store per-field errors
                 } else {
-                    errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
+                    errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
                 }
                 return
             }

@@ -202,7 +202,7 @@
                                     </div>
                                 </div>
 
-                                <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">How many minors are in your group?</label>
+                                <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">Number of Children in Grade K-8?</label>
                                 <input v-if="!fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
                                 <input v-if="fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
                                 <p v-if="fieldErrors.minors" class="text-red-500 text-sm p-0 mb-2">
@@ -505,7 +505,7 @@
                 if (error.value.data) {
                     fieldErrors.value = error.value.data // store per-field errors
                 } else {
-                    errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (schedulersofugs@gmail.com) personally to schedule a tour!'
+                    errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
                 }
                 return
             }
