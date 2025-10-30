@@ -136,9 +136,9 @@
                 <!--Left: Banner Text-->
                 <div class="w-full lg:w-1/2 flex flex-col justify-center items-center max-w-7xl mx-auto">
                     <p class="scrollElement font-['Montserrat'] font-light text-base sm:text-lg leading-relaxed text-white">
-                        <span class="font-semibold">Registration for Standard History Tours are encouraged to receive possible updates on your tour. </span>
-                        <br/>
-                        <span class="text-gray-400">Standard Historical tours are public for anyone to join and occur regularly throughout the school year. You can request specialty tours <a href="/request-specialty-tours" class="underline"> here.</a></span>
+                        <span class="font-semibold">Registration for Standard History Tours are encouraged to receive possible updates on your tour. Standard Historical tours are public for anyone to join and occur regularly throughout the school year.</span>
+                        <br>
+                        <span>To ensure guide availability for special topic or large tour groups, all tour requests. should be submitted at least <a class="underline italic">two to three weeks in advance</a>. Complete this form and we can get back to you with more details on your tour!</span>
                     </p>
                     <a href="/contact-us" class="scrollElement">
                         <button class="rounded-full border-2 border-white text-white font-semibold text-base px-6 py-2 mt-3 cursor-pointer hover:bg-gray-200 hover:text-black hover:border-gray-200 hover:scale-105 transition-all duration-300 ease-in-out">
@@ -170,8 +170,8 @@
                                 </p>
 
                                 <label for="email" class="font-[Montserrat] font-light text-royal-blue">Email</label>
-                                <input v-if="!fieldErrors.email" ype="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-                                <input v-if="fieldErrors.email" ype="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <input v-if="!fieldErrors.email" type="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.email" type="email" id="email" name="email" v-model="form.email" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
                                 <p v-if="fieldErrors.email" class="text-red-500 text-sm p-0 mb-2">
                                     {{ fieldErrors.email[0] }}
                                 </p>
@@ -185,7 +185,7 @@
 
                                 <div class="flex flex-col lg:flex-row justify-between lg:gap-4">
                                     <div class="flex flex-col">
-                                        <label for="date" class="font-[Montserrat] font-light text-royal-blue">Date of Tour</label>
+                                        <label for="date" class="font-[Montserrat] font-light text-royal-blue">Requested Date of Tour</label>
                                         <input v-if="!fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
                                         <input v-if="fieldErrors.date" type="date" id="date" name="date" v-model="form.date" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
                                         <p v-if="fieldErrors.date" class="text-red-500 text-sm p-0 mb-2">
@@ -193,14 +193,21 @@
                                         </p>
                                     </div>
                                     <div class="flex flex-col">
-                                        <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
-                                        <input v-if="!fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-                                        <input v-if="fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
-                                        <p v-if="fieldErrors.guests" class="text-red-500 text-sm p-0 mb-2">
-                                            {{ fieldErrors.guests[0] }}
+                                        <label for="time" class="font-[Montserrat] font-light text-royal-blue">Time of Tour</label>
+                                        <input  v-if="!fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                        <input  v-if="fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                        <p v-if="fieldErrors.time" class="text-red-500 text-sm p-0 mb-2">
+                                            {{ fieldErrors.time[0] }}
                                         </p>
                                     </div>
                                 </div>
+
+                                <label for="guestNum" class="font-[Montserrat] font-light text-royal-blue">Guest(s)</label>
+                                <input v-if="!fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
+                                <input v-if="fieldErrors.guests" type="number" id="guestNum" name="guestNum" v-model="form.guests" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                <p v-if="fieldErrors.guests" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.guests[0] }}
+                                </p>
 
                                 <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">Number of Children in Grade K-8?</label>
                                 <input v-if="!fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
@@ -209,17 +216,41 @@
                                     {{ fieldErrors.minors[0] }}
                                 </p>
 
-                                <label for="tour" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
-                                <input type="text" id="tour" name="tour" value="Standard Historical Tour" readonly class="font-[Montserrat] text-royal-blue border border-gray-300 bg-gray-100 cursor-not-allowed rounded-lg px-4 py-2 focus:outline-none mb-5"/>
+                                <label for="tour-type" class="font-[Montserrat] font-light text-royal-blue">Type of Tour</label>
+                                <select v-if="!fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5">>
+                                    <option value="Standard Historical">Standard Historical Tour</option>
+                                    <option value="History of African Americans at UVA">History of African Americans at UVA</option>
+                                    <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
+                                    <option value="History of Women">History of Women at UVA</option>
+                                    <option value="Children's Tour">Children's Tour</option>
+                                    <option value="Private Admissions Tours">Private Admissions Tours</option>
+                                    <option value="Garden Tours">Garden Tours</option>
+                                </select>
+                                <select v-if="fieldErrors.tour_type" name="tour-type" id="tour-type" v-model="form.tour_type" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue">>
+                                    <option value="Standard Historical">Standard Historical Tour</option>
+                                    <option value="History of African Americans at UVA">History of African Americans at UVA</option>
+                                    <option value="Memorial to Enslaved Laborers">Memorial to Enslaved Laborers</option>
+                                    <option value="History of Women">History of Women at UVA</option>
+                                    <option value="Children's Tour">Children's Tour</option>
+                                    <option value="Private Admissions Tours">Private Admissions Tours</option>
+                                    <option value="Garden Tours">Garden Tours</option>
+                                </select>
+                                <p v-if="fieldErrors.tour_type" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.tour_type[0] }}
+                                </p>
 
+                                <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Tour Group Information & Details</label>
+                                <textarea v-if="!fieldErrors.notes" id="notes" v-model="form.notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5"> </textarea>
+                                <textarea v-if="fieldErrors.notes" id="notes" v-model="form.notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue"> </textarea>
+                                <p v-if="fieldErrors.notes" class="text-red-500 text-sm p-0 mb-2">
+                                    {{ fieldErrors.notes[0] }}
+                                </p>
 
-                                <label for="notes" class="font-[Montserrat] font-light text-royal-blue">Notes for the Tour</label>
-                                <textarea id="notes" v-model="form.notes" class="flex-grow font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-4"></textarea>
-
-                                <button type="submit" class="font-[Montserrat] bg-royal-blue text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-900 transition-all duration-300 ease-in-out cursor-pointer">
-                                    Register
+                                <button type="submit"
+                                    class="font-[Montserrat] bg-dark-green text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer">
+                                    Request Tour
                                 </button>
-
+                                
                                 <!-- Loading Spinner Overlay -->
                                 <transition
                                     enter-active-class="transition ease-out duration-500"
@@ -272,8 +303,7 @@
                                             </div>
                                         </div>
                                     </div>
-                            </transition>
-
+                                </transition>
                             </form>
                         </div>
                     </div>
@@ -432,12 +462,7 @@
                     <div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-4">
                         <a href="#times-and-registration" class="w-full sm:w-auto">
                             <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-                            Registration
-                            </button>
-                        </a>
-                        <a href="/request-specialty-tours" class="w-full sm:w-auto">
-                            <button class="w-full sm:w-auto px-6 py-2 sm:px-8 sm:py-3 rounded-full bg-dark-green text-white font-semibold text-sm sm:text-base shadow-md hover:bg-green-700 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-                            Specialty Tour Registration
+                            Tour Registration
                             </button>
                         </a>
                         <a href="/for-educators" class="w-full sm:w-auto">
@@ -516,9 +541,10 @@
         email: '',
         phone_number: '',
         date: '',
+        time: '',
         guests: 1,
         minors: 0,
-        tour_type: 'Standard Historical Tour',
+        tour_type: '',
         notes: ''
     })
 
@@ -538,24 +564,24 @@
 
         try {
             const config = useRuntimeConfig()
-            const { data, error } = await useFetch(`${config.public.apiBase}/register-tour/`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(form.value)
+            const { data, error } = await useFetch(`${config.public.apiBase}/register-specialty-tour/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form.value)
             })
 
             if (error.value) {
                 console.log('Form submission error:', error.value)
                 if (error.value.data) {
-                    fieldErrors.value = error.value.data // store per-field errors
+                    fieldErrors.value = error.value.data
                 } else {
-                    errorMsg.value = 'Something went wrong. Please try again. If the issue persist, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+                    errorMsg.value = 'Something went wrong. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
                 }
                 return
             }
 
             success.value = true
-        
+
             // clear form fields
             form.value = {
                 first_name: '',
@@ -563,9 +589,10 @@
                 email: '',
                 phone_number: '',
                 date: '',
+                time: '',
                 guests: 1,
                 minors: 0,
-                tour_type: 'Standard Historical Tour',
+                tour_type: '',
                 notes: ''
             }
 

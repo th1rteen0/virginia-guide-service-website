@@ -68,7 +68,7 @@
                         </a>
                     </div>
 
-                    <a href="/request-specialty-tours">
+                    <a href="/your-visit#times-and-registration">
                         <button class="font-medium rounded-full border-2 border-white px-4 py-3 mt-6 hover:bg-white hover:scale-105 hover:text-royal-blue transition-all duration-300 ease-in-out cursor-pointer">
                             Specialty Tour Request Form
                         </button>

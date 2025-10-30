@@ -25,7 +25,7 @@
                 <a href="/join-guides" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     About Us
                 </a>
-                <a href="/request-specialty-tours" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/your-visit#times-and-registration" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
                     Specialty Tour Request Form
                 </a>
                 <a href="/about-tours#specialty-tours" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
@@ -107,13 +107,13 @@
                 </span>
                 If interested in a student tour group, 
                 <span class="font-bold">
-                    please complete the <a href="/request-specialty-tours" class="underline">specialty tour form</a> at least 3 weeks in advance,
+                    please complete the <a href="/your-visit#times-and-registration" class="underline">specialty tour form</a> at least 3 weeks in advance,
                 </span> to better plan with you for your tour group size, 
                 interests, and needs.
             </p>
             <!--Request Tour Button-->
             <div class="w-full lg:w-1/4 flex justify-center items-center">
-                <a href="/request-specialty-tours">
+                <a href="/your-visit#times-and-registration">
                     <button class="flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3 shadow-sm hover:bg-gray-100 hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer">
                         <p class="font-['Roboto'] text-gray-800 font-semibold text-base md:text-lg">
                             Request Tour

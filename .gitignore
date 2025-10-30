@@ -15,3 +15,6 @@ yarn-error.log*
 
 # Large Files
 public/
+
+# not used in production
+app/pages/request-specialty-tours
