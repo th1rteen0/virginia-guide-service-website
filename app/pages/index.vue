@@ -397,8 +397,8 @@
     <ExploreUVAHistoryBlue />
 
     <!--Carousel: Tour Review Section-->
-    <div class="review-carousel-body bg-royal-blue">
-        <div class="scrollElement review-slider">
+    <div class="scrollElement review-carousel-body bg-white">
+        <div class="review-slider">
             <div class="review-slide-track grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Review 1 -->
@@ -591,6 +591,78 @@
             </div>
         </div>
     </div>
+
+    <!--Our Events Section-->
+    <section class="relative w-full">
+        <!-- Background image with opacity -->
+        <div class="absolute inset-0">
+            <div class="w-full h-full bg-[url('https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/OurEvents_Background.jpg')] bg-cover bg-center opacity-50"></div>
+        </div>
+
+        <!-- Content above background -->
+        <div class="relative px-6 sm:px-8 lg:px-16 py-12 sm:py-16">
+            <div class="flex flex-col md:flex-row items-start gap-10">
+            
+            <!-- Left: Column Information -->
+            <div class="w-full md:w-2/5 flex justify-start">
+                <div class="relative w-full">
+                <p class="scrollElement font-['Playfair_Display'] font-bold text-black text-4xl sm:text-5xl leading-tight mb-6">
+                    Our Events
+                </p>
+                <p class="scrollElement font-['Montserrat'] font-semibold text-base sm:text-lg leading-relaxed text-black">
+                    Join us in our work of telling a more honest, just, and complete telling of UVA's history.
+                </p>
+                </div>
+            </div>
+
+            <!-- Right: Event Image Slider -->
+            <swiper
+                :slides-per-view="1"
+                :slides-per-group="1"
+                :space-between="30"
+                :pagination="{ clickable: true }"
+                :grabCursor="true"
+                :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
+                :loop="true"
+                :speed="800"
+                :modules="modules"
+                class="scrollElement events-swiper mx-auto max-w-4xl"
+            >
+                <!-- Card 1 -->
+                <swiper-slide class="flex justify-end items-center">
+                    <a href="https://www.instagram.com/p/DQDBmTEjbOH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                        <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
+                            <img class="events-image mb-2 object-center" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/monticello_tour.jpg">
+                            <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                                Monticello Student Tour
+                            </p>
+                            <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                                Monticello isn’t just a part of Jefferson’s legacy, it's a key chapter in understanding Jefferson and slavery’s deep roots at 
+                                UVA and beyond. All are created equal, and in that, we learn and seek the histories of lives that have been overlooked, 
+                                bringing the full story into light.
+                            </p>
+                        </div>
+                    </a>
+                </swiper-slide>
+
+                <!-- Card 2 -->
+                <swiper-slide class="flex justify-center items-center">
+                    <a href="https://www.instagram.com/p/DP1wUr-Ca3n/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                        <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
+                            <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/special_collections.jpg">
+                            <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                                Special Collections Tour: Albert and Shirley Small Sepcial Collections Library
+                            </p>
+                            <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                                Join Guides on Oct. 22 from 5 PM to 6PM to learn about how to use Special Collections and explore their primary resources on UVA history and past student life. This is open to all UVA students interested in history or learning more about Special Collections.                        </p>
+                        </div>
+                    </a>
+                </swiper-slide>
+            </swiper>
+
+            </div>
+        </div>
+    </section>
 
     <Footer />
 

@@ -149,7 +149,7 @@
 
                 <!-- Right: Registration Form (overlapping the section) -->
                 <div class="w-full lg:w-1/2 relative pt-5 lg:pt-0">
-                    <div class="relative lg:absolute lg:-bottom-110 z-20 w-full">
+                    <div class="relative lg:absolute lg:-bottom-130 z-20 w-full">
                         <div class="flex flex-col shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] rounded-xl p-6 bg-white">
                             <h1 class="font=['Montserrat'] font-medium text-3xl text-royal-blue mb-4">
                                 Register Here for a Historical Tour
@@ -194,8 +194,26 @@
                                     </div>
                                     <div class="flex flex-col">
                                         <label for="time" class="font-[Montserrat] font-light text-royal-blue">Time of Tour</label>
-                                        <input  v-if="!fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
-                                        <input  v-if="fieldErrors.time" type="time" id="time" name="time" v-model="form.time" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
+                                        <!-- Normal state -->
+                                        <select
+                                            v-if="!fieldErrors.time"
+                                            id="time"
+                                            v-model="form.time"
+                                            class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5"
+                                        >
+                                            <option value="" disabled>Select a time</option>
+                                            <option v-for="time in times" :key="time" :value="time">{{ time }}</option>
+                                        </select>
+                                        <!-- Error state -->
+                                        <select
+                                            v-else
+                                            id="time"
+                                            v-model="form.time"
+                                            class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-2 sm:px-12 md:px-20 lg:px-5 xl:px-13 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue"
+                                        >
+                                            <option value="" disabled>Select a time</option>
+                                            <option v-for="time in times" :key="time" :value="time">{{ time }}</option>
+                                        </select>
                                         <p v-if="fieldErrors.time" class="text-red-500 text-sm p-0 mb-2">
                                             {{ fieldErrors.time[0] }}
                                         </p>
@@ -209,7 +227,7 @@
                                     {{ fieldErrors.guests[0] }}
                                 </p>
 
-                                <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">Number of Children in Grade K-8?</label>
+                                <label for="minorNum" class="font-[Montserrat] font-light text-royal-blue">Number of Children in Grades K-8?</label>
                                 <input v-if="!fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue mb-5" />
                                 <input v-if="fieldErrors.minors" type="number" id="minorNum" name="minorNum" v-model="form.minors" class="font-[Montserrat] text-royal-blue border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-royal-blue" />
                                 <p v-if="fieldErrors.minors" class="text-red-500 text-sm p-0 mb-2">
@@ -553,6 +571,16 @@
     const fieldErrors = ref<Record<string, string[]>>({})
     const loading = ref(false)
     const showToast = ref(false)
+    const times = ref<string[]>([])
+
+    // Generate 30-minute increment times from 11:00 AM to 6:00 PM
+    for (let h = 11; h <= 18; h++) {
+        const hour12 = h > 12 ? h - 12 : h
+        const period = h >= 12 && h < 24 ? 'PM' : 'AM'
+
+        times.value.push(`${hour12}:00 ${period}`)
+        if (!(h === 18)) times.value.push(`${hour12}:30 ${period}`) // skip 6:30 PM
+    }
 
     async function submitForm(e: Event) {
         e.preventDefault()
@@ -636,6 +664,7 @@
     const scrollElements = document.querySelectorAll(".scrollElement")
     scrollElements.forEach((element) => observer.observe(element))
     })
+
 </script>
 
 <style>
