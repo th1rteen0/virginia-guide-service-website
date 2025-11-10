@@ -109,7 +109,7 @@
                     <div class="flex items-start gap-4 font-['Roboto']">
                         <img class="h-12 w-12 obSject-contain" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
-                            The Virginia Guides continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
+                            The Virginia Guides Service continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
                             student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.
                         </p>
                     </div>
