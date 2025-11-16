@@ -319,7 +319,7 @@
                         <p class="font-['Roboto'] text-left font-light text-black text-md sm:text-lg">
                             Admissions tours are 75-90 minutes long and centered around the student experience at UVA. 
                             None of our Guides have an identical script. While all tours cover a shared basic information, 
-                            our goal is to present the University with candor, personal experienceand enthusiasm. 
+                            our goal is to present the University with candor, personal experience and enthusiasm. 
                             The tour covers a brief history of the University, as well as academics, extracurricular activities, 
                             athletics, dining, traditions, and much more.                      </p>
                         <!--Request Tour Button-->
