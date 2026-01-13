@@ -220,7 +220,7 @@ def register_specialty_tour(request):
             "If you have any questions or need to make changes, please email our scheduling team at scheduler@virginiaguides.org.\n\n"
             "Thank you for choosing the Virginia Guide Service and for taking part in the tradition of student-told history at the University of Virginia! "
             "We look forward to welcoming you!\n\n"
-            "Warmlys,\n"
+            "Warmly,\n"
             "Virginia Guide Service"
         )
 
