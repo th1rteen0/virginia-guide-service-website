@@ -29,7 +29,7 @@
         <div class="scrollElement carousel-body">
             <div class="slider">
                 <div class="slide-track">
-                    <a href="/about-tours/#history-of-women-at-uva">
+                    <a href="/about-tours/#history-of-women-at-uva-tour">
                         <div class="slide flex flex-col justify-start">
                             <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of Women at UVA</p>
@@ -60,7 +60,7 @@
                         </div>
                     </a>
                     <!--Same 5 slides (doubled)-->
-                    <a href="/about-tours/#history-of-women-at-uva">
+                    <a href="/about-tours/#history-of-women-at-uva-tour">
                         <div class="slide flex flex-col justify-start">
                             <img class="carousel-img" src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-history-tours/UVAhistoryCarousel_womenatuva.jpg" loading="lazy" alt="">
                             <p class="carousel-text self-start text-white font-['Roboto']">History of Women at UVA</p>
