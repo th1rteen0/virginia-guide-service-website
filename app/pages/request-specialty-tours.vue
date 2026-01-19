@@ -44,14 +44,14 @@
                     <div class="text-base md:text-lg font-light flex flex-col gap-3">
 
                         <div class="flex items-center gap-2 justify-center md:justify-start">
-                            <a href="mailto:scheduler@virginiaguides.org">
+                            <a href="mailto:schedulerofugs@gmail.com">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                                 <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
                                 <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                             </svg>
                             </a>
-                            <a href="mailto:scheduler@virginiaguides.org">
-                            <p>scheduler@virginiaguides.org</p>
+                            <a href="mailto:schedulerofugs@gmail.com">
+                            <p>schedulerofugs@gmail.com</p>
                             </a>
                         </div>
 
@@ -315,7 +315,7 @@
                 if (error.value.data) {
                     fieldErrors.value = error.value.data
                 } else {
-                    errorMsg.value = 'Something went wrong. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+                    errorMsg.value = 'Something went wrong. Please try again. If the issue persists, feel free to contact our schedulers (schedulerofugs@gmail.com) personally to schedule a tour!'
                 }
                 return
             }
@@ -338,7 +338,7 @@
 
         } catch (err) {
             console.error('Network error:', err)
-            errorMsg.value = 'Network error. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+            errorMsg.value = 'Network error. Please try again. If the issue persists, feel free to contact our schedulers (schedulerofugs@gmail.com) personally to schedule a tour!'
         } finally {
             loading.value = false
             await nextTick()

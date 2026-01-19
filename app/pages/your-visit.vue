@@ -345,7 +345,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                                             </svg>
                                             <div class="flex flex-col font-semibold text-sm sm:text-base leading-tight">
-                                                <span>Something went wrong. If the error persists, feel free to email our schedulers (scheduler@virginiaguides.org) personally!</span>
+                                                <span>Something went wrong. If the error persists, feel free to email our schedulers (schedulerofugs@gmail.com) personally!</span>
                                             </div>
                                         </div>
                                     </div>
@@ -666,7 +666,7 @@
                 if (error.value.data) {
                     fieldErrors.value = error.value.data
                 } else {
-                    errorMsg.value = 'Something went wrong. Please try again. If the issue persists, feel free to contact our schedulers (scheduler@virginiaguides.org) personally to schedule a tour!'
+                    errorMsg.value = 'Something went wrong. Please try again. If the issue persists, feel free to contact our schedulers (schedulerofugs@gmail.com) personally to schedule a tour!'
                 }
                 return
             }
@@ -689,7 +689,7 @@
 
         } catch (err) {
             console.error('Network error or timeout:', err)
-            errorMsg.value = 'Request timed out or network error. Please try again or email scheduler@virginiaguides.org to schedule a tour!'
+            errorMsg.value = 'Request timed out or network error. Please try again or email schedulerofugs@gmail.com to schedule a tour!'
         } finally {
             loading.value = false
             await nextTick()
