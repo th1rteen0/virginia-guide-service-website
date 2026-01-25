@@ -19,7 +19,8 @@
     <p class="details">
       Saturday, Jan. 24: Tours will run in the morning.<br />
       Sunday, Jan. 25: There will be
-      <span class="font-bold">no tours on Sunday</span>.
+      <span class="font-bold">no tours on Sunday</span>.<br />
+      <a class="underline text-blue-500" href="https://virginia.zoom.us/j/93711736752?pwd=245K9MhR4PbbUrbdUSf1ptMVCKbaUm.1">Meet Guides 4-6pm 1/25 is now online</a> (Passcode: 930753)
     </p>
   </div>
 </template>
