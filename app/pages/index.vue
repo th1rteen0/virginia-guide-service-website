@@ -782,7 +782,6 @@ FRONT PAGE (virginiaguides.org)
                     :pagination="{ clickable: true }"
                     :grabCursor="true"
                     :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
-                    :loop="true"
                     :speed="800"
                     :modules="modules"
                     class="scrollElement events-swiper mx-auto max-w-4xl"
