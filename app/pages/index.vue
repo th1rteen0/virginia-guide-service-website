@@ -804,22 +804,6 @@ FRONT PAGE (virginiaguides.org)
                         </a>
                     </swiper-slide>
 
-                    <!-- Event Card 3: Raising the bar -->
-                    <swiper-slide class="flex justify-center items-start">
-                        <a href="https://www.instagram.com/p/DT-zAhwjRc8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
-                            <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
-                                <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/RTB.jpg" alt="Raising the bar Infographic">
-                                <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
-                                    OAAAPA X VGS: Raising The Bar
-                                </p>
-                                <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
-                                    Join OAAAPA and Guides on Wednesday, January 28th 5pm-7pm for the first RTB of the semester (if weather permits)! 
-                                    It will be hosted at the PAC (first floor of Newcomb Hall) and food will be provided!
-                                </p>
-                            </div>
-                        </a>
-                    </swiper-slide>
-
                     <!-- Event Card 2: Shine with Guides -->
                     <swiper-slide class="flex justify-center items-start">
                         <a href="https://www.instagram.com/p/DTqzVa_CfFw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
@@ -833,6 +817,22 @@ FRONT PAGE (virginiaguides.org)
                                     Learn more about the recruitment process, ask questions, meet current tour guides, and sign up for your trial tour.
                                     Info sessions are mandatory for potential guides to sign up for the next step in recruitment. Learn more about the process
                                     on our "Join Guides" page!
+                                </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
+
+                    <!-- Event Card 3: Raising the bar -->
+                    <swiper-slide class="flex justify-center items-start">
+                        <a href="https://www.instagram.com/p/DT-zAhwjRc8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                            <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
+                                <img class="events-image mb-2 object-top" loading="lazy" src="https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/RTB.jpg" alt="Raising the bar Infographic">
+                                <p class="font-['Montserrat'] font-bold text-black text-2xl sm:text-3xl leading-tight mb-2">
+                                    OAAAPA X VGS: Raising The Bar
+                                </p>
+                                <p class="font-['Montserrat'] font-medium text-base sm:text-lg leading-relaxed text-gray-900">
+                                    Join OAAAPA and Guides on Wednesday, January 28th 5pm-7pm for the first RTB of the semester (if weather permits)! 
+                                    It will be hosted at the PAC (first floor of Newcomb Hall) and food will be provided!
                                 </p>
                             </div>
                         </a>
