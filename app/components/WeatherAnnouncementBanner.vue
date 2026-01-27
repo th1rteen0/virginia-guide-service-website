@@ -17,8 +17,8 @@
     </h2>
 
     <p class="details">
-      <span><a class="font-bold">Jan. 26th, 6:30-7:30pm:</a> Info Session is now <a class="underline text-blue-500" href="https://virginia.zoom.us/j/97903234893?pwd=gSXbR9jGhdDznmM4aZJ9fkbaA8afPC.1">online</a> (Passcode: 235296)</span><br />
-      <span><a class="font-bold">Jan. 27th, 7:30-8:30pm:</a> Info Session is now online (link will be posted soon)</span>
+      <span><a class="font-bold">Jan. 26th 6:30-7:30pm:</a> Info Session is now <a class="underline text-blue-500" href="https://virginia.zoom.us/j/97903234893?pwd=gSXbR9jGhdDznmM4aZJ9fkbaA8afPC.1">online</a></span><br />
+      <span><a class="font-bold">Jan. 27th 7:30-8:30pm:</a> Info Session is now <a class="underline text-blue-500" href="https://us05web.zoom.us/j/89324547703?pwd=CtZgycVEWFu1KmdplFOlad27cfBDaB.1">online</a></span>
     </p>
   </div>
 </template>

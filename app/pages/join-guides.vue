@@ -126,7 +126,7 @@
                         <li>Saturday, January 31st 12:00 PM - 1:00 PM @ MPR</li>
                         <li>Monday, February 2nd 7:30 PM - 8:30 PM @ Cocke Hall 101</li>
                         <li class="font-bold pt-2">BIPOC Centered Information Sessions:</li>
-                        <li>Tuesday, January 27th 7:30 PM - 8:30 PM (MOVED ONLINE)</li>
+                        <li>Tuesday, January 27th 7:30 PM - 8:30 PM (MOVED <a class="underline text-blue-500" href="https://us05web.zoom.us/j/89324547703?pwd=CtZgycVEWFu1KmdplFOlad27cfBDaB.1">ONLINE</a>)</li>
                         <li>Thursday, January 29th 6:30 PM - 7:30 PM @ MPR</li>
                         <li class="text-UVA-orange italic font-bold pt-2">LW: Lower West Oval Room (inside the Rotunda basement)</li>
                         <li class="text-UVA-orange italic font-bold">MPR: Multipurpose Room (beneath Rotunda steps)</li>
