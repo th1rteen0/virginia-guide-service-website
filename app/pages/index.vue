@@ -785,6 +785,7 @@ FRONT PAGE (virginiaguides.org)
                     :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
                     :loop="true"
                     :speed="800"
+                    :auto-height="true"
                     :modules="modules"
                     class="scrollElement events-swiper mx-auto max-w-4xl"
                 >
