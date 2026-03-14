@@ -37,11 +37,11 @@ const close = () => {
 
 <style scoped>
 .announcement-banner {
-  position: fixed;  /* Change from relative to fixed */
-  top: 0;           /* Add this */
-  left: 0;          /* Add this */
-  width: 100%;      /* Add this */
-  z-index: 60;      /* Higher than navbar's z-50 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 60;
   background-color: #fdf1f1;
   color: black;
   padding: 10px 32px 10px 10px;

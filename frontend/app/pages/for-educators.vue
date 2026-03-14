@@ -361,6 +361,9 @@
 
     useHead({
         title: 'For Educators | Virginia Guides Service',
+        link: [
+            { rel: 'preload', as: 'image', href: 'https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Header_ForEducators.jpg', fetchpriority: 'high' }
+        ]
     })
 
     onMounted(() => {
@@ -407,8 +410,9 @@
     }
     .review-slide-track{
         display: flex;
-        width: calc(350px * 16);
+        width: calc(350px * 10);
         animation: scroll-right 20s linear infinite;
+        will-change: transform;
     }
     /* Right to left */
     @keyframes scroll-right {

@@ -254,6 +254,9 @@
 
     useHead({
         title: 'Join Guides | Virginia Guides Service',
+        link: [
+            { rel: 'preload', as: 'image', href: 'https://virginia-guides-website-images.s3.amazonaws.com/public/Header_JoinGuides.jpg', fetchpriority: 'high' }
+        ]
     })
 
     onMounted(() => {
@@ -310,6 +313,7 @@
         display: flex;
         width: calc(350px * 10);
         animation: scroll 15s linear infinite;
+        will-change: transform;
     }
     @keyframes scroll {
         0% {
@@ -360,6 +364,7 @@
         align-items: center;
         gap: var(--gap);
         animation: text-scroll 20s linear infinite;
+        will-change: transform;
     }
 
     @keyframes text-scroll {
@@ -387,6 +392,7 @@
         display: flex;
         width: calc(350px * 18);
         animation: scroll 15s linear infinite;
+        will-change: transform;
     }
     @keyframes scroll {
         0% {

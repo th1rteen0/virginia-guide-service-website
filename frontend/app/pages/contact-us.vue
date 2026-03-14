@@ -231,6 +231,9 @@
 
     useHead({
         title: 'Contact Us | Virginia Guides Service',
+        link: [
+            { rel: 'preload', as: 'image', href: 'https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Header_ContactUs.jpg', fetchpriority: 'high' }
+        ]
     })
 
     const form = ref({
@@ -355,8 +358,9 @@
     }
     .slide-track{
         display: flex;
-        width: calc(350px * 18);
+        width: calc(350px * 10);
         animation: scroll 15s linear infinite;
+        will-change: transform;
     }
     @keyframes scroll {
         0% {

@@ -5,9 +5,12 @@
 
             <!-- Background Image -->
             <NuxtImg 
-            src="https://virginia-guides-website-images.s3.amazonaws.com/public/Header_PageFooters.jpg"
-            alt="My image file description"
-            class="w-full min-h-screen sm:h-[120vh] object-cover object-top"
+                src="https://virginia-guides-website-images.s3.amazonaws.com/public/Header_PageFooters.jpg"
+                alt="UVA Lawn at dusk"
+                width="1920"
+                height="1080"
+                loading="lazy"
+                class="w-full min-h-screen sm:h-[120vh] object-cover object-top"
             />
 
             <!-- Overlay Content -->
@@ -107,7 +110,7 @@
                 <!-- Right Side Footer -->
                 <div class="scrollElement basis-1/2 flex flex-col gap-3 text-zinc-400 text-sm md:text-base font-light">
                     <div class="flex items-start gap-4 font-['Roboto']">
-                        <img class="h-12 w-12 obSject-contain" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/guides-logo.png" alt="Virginia Guides Logo" />
+                        <img class="h-12 w-12 object-contain" width="48" height="48" loading="lazy" src="https://virginia-guides-website-images.s3.amazonaws.com/public/guides-logo.png" alt="Virginia Guides Logo" />
                         <p>
                             The Virginia Guide Service continues 75 years of guiding visitors through UVA in Charlottesville VA. The Guides Service is a 
                             student-run organization independent of the University of Virginia, carrying forward tradition while bringing a more complete light to the past.

@@ -386,6 +386,9 @@
 
     useHead({
         title: 'About Our Tours | Virginia Guides Service',
+        link: [
+            { rel: 'preload', as: 'image', href: 'https://virginia-guides-website-images.s3.amazonaws.com/public/Header_Tours.jpg', fetchpriority: 'high' }
+        ]
     })
 
     onMounted(() => {
@@ -435,8 +438,9 @@
     }
     .about-slide-track{
         display: flex;
-        width: calc(350px * 18);
+        width: calc(350px * 10);
         animation: scroll 15s linear infinite;
+        will-change: transform;
     }
     @keyframes scroll {
         0% {

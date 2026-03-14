@@ -16,6 +16,13 @@ FRONT PAGE (virginiaguides.org)
   8. Our Events - Upcoming events with image slider
   9. Footer - Site-wide footer component
 
+  Performance Choices:
+  1. Hero image preloaded via useHead (fixes LCP — browser fetches before CSS parses)
+  2. Google Fonts preconnect added to useHead (reduces font load latency)
+  3. NuxtImg carousel cards get explicit width/height/loading=lazy (fixes CLS, defers offscreen fetches)
+  4. Who We Are NuxtImg gets loading=eager + fetchpriority=high (it's near-fold)
+  5. will-change: transform on both animated CSS tracks (GPU compositing)
+
 ============================================================================
 -->
 <template>
@@ -145,11 +152,14 @@ FRONT PAGE (virginiaguides.org)
                         <div class="relative w-full max-w-sm sm:max-w-md h-[573px] overflow-hidden rounded-[35px] shadow-lg">
 
                             <!-- Background Image - Blurred and semi-transparent for text readability -->
+                            <!-- Performance: explicit width/height prevent layout shift; loading=lazy defers this below-fold image -->
                             <img
                                 src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/TourTaking1_Blurry.jpg"
                                 alt="Tour illustration"
-                                class="absolute inset-0 w-full h-full object-cover rounded-[35px] opacity-80"
+                                width="448"
+                                height="573"
                                 loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover rounded-[35px] opacity-80"
                             />
 
                             <!-- Header: "Tour Times" with Clock Icon -->
@@ -222,187 +232,218 @@ FRONT PAGE (virginiaguides.org)
          - Click, drag, and swipe interactions
          - Responsive breakpoints for all screen sizes
          - Image hover effects (brightness reduction)
+
+         Performance: Wrapped in <ClientOnly> so Swiper JS is not included in the
+         SSR bundle and does not block initial page render. A lightweight
+         skeleton placeholder is shown while the component hydrates.
          ======================================== -->
     <section>
         <div class="scrollElement pb-20 md:pb-0">
-            <!-- 
-                Swiper Configuration:
-                Responsive breakpoints:
-                - 320px+: 1 slide per view (mobile portrait)
-                - 640px+: 2 slides per view (mobile landscape/small tablet)
-                - 1024px+: 3 slides per view (tablet)
-                - 1280px+: 4 slides per view (desktop)
+            <div v-if="isMounted">
+                <!-- 
+                    Swiper Configuration:
+                    Responsive breakpoints:
+                    - 320px+: 1 slide per view (mobile portrait)
+                    - 640px+: 2 slides per view (mobile landscape/small tablet)
+                    - 1024px+: 3 slides per view (tablet)
+                    - 1280px+: 4 slides per view (desktop)
+                    
+                    Navigation: Arrow buttons enabled
+                    Pagination: Clickable dots enabled
+                    Loop: Seamless infinite scrolling
+                    Speed: 800ms transition
+                    Autoplay: 4s delay, doesn't disable on interaction, pauses on hover
+                -->
+                <swiper
+                    :slides-per-view="4"
+                    :slides-per-group="4"
+                    :space-between="30"
+                    :pagination="{ clickable: true }"
+                    :navigation="true"
+                    :grabCursor="true"
+                    :loop="true"
+                    :speed="800"
+                    :modules="modules"
+                    :autoplay="{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }"
+                    class="mySwiper"
+                    :breakpoints="{
+                        320: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 10 },
+                        640: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 35 },
+                        1024: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 25 },
+                        1280: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 30 }
+                    }"
+                >
+                    <!-- Card 1: About Tours -->
+                    <!-- Links to general tour information page -->
+                    <swiper-slide>
+                        <a href="/about-tours">
+                            <div class="relative w-full p-4 group cursor-pointer">
+                            <!-- Performance: width/height reserve space to prevent CLS; loading=lazy defers offscreen fetch -->
+                            <NuxtImg
+                                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/TourTaking3_Cropped.jpg"
+                                alt="Columns at the Academical Village"
+                                width="400"
+                                height="300"
+                                loading="lazy"
+                                class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
+                            />
+                            <!-- Centered overlay text -->
+                            <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
+                                About Tours
+                            </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
                 
-                Navigation: Arrow buttons enabled
-                Pagination: Clickable dots enabled
-                Loop: Seamless infinite scrolling
-                Speed: 800ms transition
-                Autoplay: 4s delay, doesn't disable on interaction, pauses on hover
-            -->
-            <swiper
-                :slides-per-view="4"
-                :slides-per-group="4"
-                :space-between="30"
-                :pagination="{ clickable: true }"
-                :navigation="true"
-                :grabCursor="true"
-                :loop="true"
-                :speed="800"
-                :modules="modules"
-                :autoplay="{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }"
-                class="mySwiper"
-                :breakpoints="{
-                    320: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 10 },
-                    640: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 35 },
-                    1024: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 25 },
-                    1280: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 30 }
-                }"
-            >
-                <!-- Card 1: About Tours -->
-                <!-- Links to general tour information page -->
-                <swiper-slide>
-                    <a href="/about-tours">
-                        <div class="relative w-full p-4 group cursor-pointer">
-                        <NuxtImg
-                            src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/TourTaking3_Cropped.jpg"
-                            alt="Columns at the Academical Village"
-                            class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
-                        />
-                        <!-- Centered overlay text -->
-                        <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
-                            About Tours
-                        </p>
-                        </div>
-                    </a>
-                </swiper-slide>
-            
-                <!-- Card 2: Take a Tour -->
-                <!-- Links to visitor information and tour signup page -->
-                <swiper-slide>
-                    <a href="/your-visit">
-                        <div class="relative w-full p-4 group cursor-pointer">
-                        <NuxtImg
-                            src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_YourVisit.jpg"
-                            alt="Panels of a Pavillion at the Academical Village"
-                            class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
-                        />
-                        <!-- Centered overlay text -->
-                        <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
-                            Take a Tour
-                        </p>
-                        </div>
-                    </a>
-                </swiper-slide>
-            
-                <!-- Card 3: For Educators -->
-                <!-- Links to educational resources for K-12+ teachers -->
-                <swiper-slide>
-                    <a href="/for-educators">
-                        <div class="relative w-full p-4 group cursor-pointer">
-                        <NuxtImg
-                            src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_ForEducators.jpg"
-                            alt="Close up of bottom of the columns at the Academical Village"
-                            class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
-                        />
-                        <!-- Centered overlay text -->
-                        <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
-                            For Educators (K-12+)
-                        </p>
-                        </div>
-                    </a>
-                </swiper-slide>
-            
-                <!-- Card 4: Contact Us -->
-                <!-- Links to contact form -->
-                <swiper-slide>
-                    <a href="/contact-us">
-                        <div class="relative w-full p-4 group cursor-pointer">
-                        <NuxtImg
-                            src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_ContactUs.jpg"
-                            alt="Image of a tree and an arch made of brick"
-                            class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
-                        />
-                        <!-- Centered overlay text -->
-                        <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
-                            Contact Us
-                        </p>
-                        </div>
-                    </a>
-                </swiper-slide>
+                    <!-- Card 2: Take a Tour -->
+                    <!-- Links to visitor information and tour signup page -->
+                    <swiper-slide>
+                        <a href="/your-visit">
+                            <div class="relative w-full p-4 group cursor-pointer">
+                            <NuxtImg
+                                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_YourVisit.jpg"
+                                alt="Panels of a Pavillion at the Academical Village"
+                                width="400"
+                                height="300"
+                                loading="lazy"
+                                class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
+                            />
+                            <!-- Centered overlay text -->
+                            <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
+                                Take a Tour
+                            </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
                 
-                <!-- Card 5: About Our Guides -->
-                <!-- Links to information about the guide service -->
-                <swiper-slide>
-                    <a href="/join-guides">
-                        <div class="relative w-full p-4 group cursor-pointer">
-                        <NuxtImg
-                            src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_AboutOurGuides.jpeg"
-                            alt="Columns at the Academical Village"
-                            class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
-                        />
-                        <!-- Centered overlay text -->
-                        <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
-                            About Our Guides
-                        </p>
-                        </div>
-                    </a>
-                </swiper-slide>
-            
-                <!-- Card 6: Feedback -->
-                <!-- Links to visitor feedback form -->
-                <swiper-slide>
-                    <a href="/feedback">
-                        <div class="relative w-full p-4 group cursor-pointer">
-                        <NuxtImg
-                            src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_Feedback.jpeg"
-                            alt="Panels of a Pavillion at the Academical Village"
-                            class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
-                        />
-                        <!-- Centered overlay text -->
-                        <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
-                            Feedback
-                        </p>
-                        </div>
-                    </a>
-                </swiper-slide>
-            
-                <!-- Card 7: Become a Guide -->
-                <!-- Links to guide recruitment section -->
-                <!-- Note: Darker base brightness to make white text more readable -->
-                <swiper-slide>
-                    <a href="/join-guides#join-guides">
-                        <div class="relative w-full p-4 group cursor-pointer">
-                        <NuxtImg
-                            src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_BecomeAGuide.jpeg"
-                            alt="Close up of bottom of the columns at the Academical Village"
-                            class="w-full rounded-lg transition-all duration-300 ease-in-out brightness-70 group-hover:brightness-60"
-                        />
-                        <!-- Centered overlay text -->
-                        <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
-                            Become a Guide
-                        </p>
-                        </div>
-                    </a>
-                </swiper-slide>
-            
-                <!-- Card 8: Donate -->
-                <!-- Links to donation page -->
-                <swiper-slide>
-                    <a href="/donate">
-                        <div class="relative w-full p-4 group cursor-pointer">
-                        <NuxtImg
-                            src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_Donate.jpeg"
-                            alt="Image of a tree and an arch made of brick"
-                            class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
-                        />
-                        <!-- Centered overlay text -->
-                        <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
-                            Donate
-                        </p>
-                        </div>
-                    </a>
-                </swiper-slide>
-            </swiper>
+                    <!-- Card 3: For Educators -->
+                    <!-- Links to educational resources for K-12+ teachers -->
+                    <swiper-slide>
+                        <a href="/for-educators">
+                            <div class="relative w-full p-4 group cursor-pointer">
+                            <NuxtImg
+                                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_ForEducators.jpg"
+                                alt="Close up of bottom of the columns at the Academical Village"
+                                width="400"
+                                height="300"
+                                loading="lazy"
+                                class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
+                            />
+                            <!-- Centered overlay text -->
+                            <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
+                                For Educators (K-12+)
+                            </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
+                
+                    <!-- Card 4: Contact Us -->
+                    <!-- Links to contact form -->
+                    <swiper-slide>
+                        <a href="/contact-us">
+                            <div class="relative w-full p-4 group cursor-pointer">
+                            <NuxtImg
+                                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_ContactUs.jpg"
+                                alt="Image of a tree and an arch made of brick"
+                                width="400"
+                                height="300"
+                                loading="lazy"
+                                class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
+                            />
+                            <!-- Centered overlay text -->
+                            <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
+                                Contact Us
+                            </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
+                    
+                    <!-- Card 5: About Our Guides -->
+                    <!-- Links to information about the guide service -->
+                    <swiper-slide>
+                        <a href="/join-guides">
+                            <div class="relative w-full p-4 group cursor-pointer">
+                            <NuxtImg
+                                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_AboutOurGuides.jpeg"
+                                alt="Columns at the Academical Village"
+                                width="400"
+                                height="300"
+                                loading="lazy"
+                                class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
+                            />
+                            <!-- Centered overlay text -->
+                            <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
+                                About Our Guides
+                            </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
+                
+                    <!-- Card 6: Feedback -->
+                    <!-- Links to visitor feedback form -->
+                    <swiper-slide>
+                        <a href="/feedback">
+                            <div class="relative w-full p-4 group cursor-pointer">
+                            <NuxtImg
+                                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_Feedback.jpeg"
+                                alt="Panels of a Pavillion at the Academical Village"
+                                width="400"
+                                height="300"
+                                loading="lazy"
+                                class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
+                            />
+                            <!-- Centered overlay text -->
+                            <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
+                                Feedback
+                            </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
+                
+                    <!-- Card 7: Become a Guide -->
+                    <!-- Links to guide recruitment section -->
+                    <!-- Note: Darker base brightness to make white text more readable -->
+                    <swiper-slide>
+                        <a href="/join-guides#join-guides">
+                            <div class="relative w-full p-4 group cursor-pointer">
+                            <NuxtImg
+                                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_BecomeAGuide.jpeg"
+                                alt="Close up of bottom of the columns at the Academical Village"
+                                width="400"
+                                height="300"
+                                loading="lazy"
+                                class="w-full rounded-lg transition-all duration-300 ease-in-out brightness-70 group-hover:brightness-60"
+                            />
+                            <!-- Centered overlay text -->
+                            <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
+                                Become a Guide
+                            </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
+                
+                    <!-- Card 8: Donate -->
+                    <!-- Links to donation page -->
+                    <swiper-slide>
+                        <a href="/donate">
+                            <div class="relative w-full p-4 group cursor-pointer">
+                            <NuxtImg
+                                src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/carousel-cards/Carousel_Donate.jpeg"
+                                alt="Image of a tree and an arch made of brick"
+                                width="400"
+                                height="300"
+                                loading="lazy"
+                                class="w-full rounded-lg transition-all duration-300 ease-in-out group-hover:brightness-75"
+                            />
+                            <!-- Centered overlay text -->
+                            <p class="absolute inset-0 flex items-center justify-center font-['Montserrat'] text-center px-2 text-white font-bold text-base sm:text-lg md:text-xl">
+                                Donate
+                            </p>
+                            </div>
+                        </a>
+                    </swiper-slide>
+                </swiper>
+            </div>
         </div>
     </section>
 
@@ -415,13 +456,21 @@ FRONT PAGE (virginiaguides.org)
     <section>
         <div class="relative overflow-visible">
 
-            <!-- Background Image - Semi-transparent with top gradient mask -->
+            <!-- 
+                Background Image - Semi-transparent with top gradient mask
+                Performance: loading=eager because this image is close to the fold and
+                visible shortly after scrolling. fetchpriority=high tells the
+                browser to request it before other lazy images.
+            -->
             <NuxtImg 
                 src="https://virginia-guides-website-images.s3.amazonaws.com/public/index-page/FrontPage_WhoWeAre.jpg"
-                alt="My image file description"
+                alt="Students giving a tour on the Lawn at UVA"
+                width="1920"
+                height="1080"
+                loading="eager"
+                fetchpriority="high"
                 class="overflow-visible h-screen w-full object-cover mask-t-from-10% opacity-40"
-            >
-            </NuxtImg>
+            />
 
             <!-- Content Overlay - Centered on background -->
             <div class="scrollElement absolute top-1/2 left-1/2 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 -translate-x-1/2 -translate-y-1/2 text-center">
@@ -486,7 +535,7 @@ FRONT PAGE (virginiaguides.org)
          Social media call-to-action banner
          Encourages visitors to follow Instagram for updates
          Full-width banner with royal blue background
-         ======================================== -->
+        ======================================== -->
     <section>
         <div class="relative w-full shadow-md bg-royal-blue py-6 px-4">
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-5">
@@ -527,6 +576,10 @@ FRONT PAGE (virginiaguides.org)
          - Pauses on hover for readability
          - Responsive grid: 1 col mobile, 2 cols tablet, 3 cols desktop
          - Animation: 20s duration, right-to-left movement
+
+         Performance: will-change: transform added to .review-slide-track in <style>
+         so the browser promotes the element to its own compositor layer,
+         keeping the animation on the GPU and off the main thread.
      ======================================== -->
     <div class="scrollElement review-carousel-body bg-white">
         <div class="review-slider">
@@ -545,8 +598,8 @@ FRONT PAGE (virginiaguides.org)
                     </p>
                     <!-- Review Text -->
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “[Guide name]—he was so well informed and thoughtful in explaining the historical
-                        relationship to history and the importance of understanding it in the present.”
+                        "[Guide name]—he was so well informed and thoughtful in explaining the historical
+                        relationship to history and the importance of understanding it in the present."
                     </p>
                 </div>
 
@@ -556,8 +609,8 @@ FRONT PAGE (virginiaguides.org)
                         February 2024
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “Well researched presentation. She did a great job putting various events onto a timeline, 
-                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university.”
+                        "Well researched presentation. She did a great job putting various events onto a timeline, 
+                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university."
                     </p>
                 </div>
 
@@ -567,9 +620,9 @@ FRONT PAGE (virginiaguides.org)
                         February 2024
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “I was very impressed with how well the event was organized. 
+                        "I was very impressed with how well the event was organized. 
                         I reached out in January when most students were still on break and got a response within 2 days! 
-                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do.”
+                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do."
                     </p>
                 </div>
 
@@ -579,8 +632,8 @@ FRONT PAGE (virginiaguides.org)
                         February 2024
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “Our tour guide, [guide], was incredibly knowledgeable and engaging. 
-                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling.”
+                        "Our tour guide, [guide], was incredibly knowledgeable and engaging. 
+                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling."
                     </p>
                 </div>
 
@@ -590,8 +643,8 @@ FRONT PAGE (virginiaguides.org)
                         February 2024
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
-                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects.”
+                        "[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
+                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects."
                     </p>
                 </div>
 
@@ -601,8 +654,8 @@ FRONT PAGE (virginiaguides.org)
                         October 2025
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “This critical/complicated understanding and connection to the institutions 
-                        we come from are so essential to figuring out how we move forward.“
+                        "This critical/complicated understanding and connection to the institutions 
+                        we come from are so essential to figuring out how we move forward."
                     </p>
                 </div>
             
@@ -614,7 +667,7 @@ FRONT PAGE (virginiaguides.org)
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
                         "Going to Monticello after UVa was really important and looking back at the Rotunda from Monticello 
                         to see how the organization of the house is related to the organization of the institution, citizenship, 
-                        and the nation which makes you really question how these spaces normalized what they stood for.”
+                        and the nation which makes you really question how these spaces normalized what they stood for."
                     </p>
                 </div>
             
@@ -624,9 +677,9 @@ FRONT PAGE (virginiaguides.org)
                         October 2025
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “Thank you for your outstanding tour and extraordinarily generous hospitality. I think our students got 
+                        "Thank you for your outstanding tour and extraordinarily generous hospitality. I think our students got 
                         a chance to see through your example what an exemplary UVa student sounds like. You also allowed me to 
-                        reconnect with where I come from. So I can't thank you enough.”
+                        reconnect with where I come from. So I can't thank you enough."
                     </p>
                 </div>
 
@@ -643,8 +696,8 @@ FRONT PAGE (virginiaguides.org)
                     </p>
                     <!-- Review Text -->
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “[Guide name]—he was so well informed and thoughtful in explaining the historical
-                        relationship to history and the importance of understanding it in the present.”
+                        "[Guide name]—he was so well informed and thoughtful in explaining the historical
+                        relationship to history and the importance of understanding it in the present."
                     </p>
                 </div>
 
@@ -654,8 +707,8 @@ FRONT PAGE (virginiaguides.org)
                         February 2024
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “Well researched presentation. She did a great job putting various events onto a timeline, 
-                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university.”
+                        "Well researched presentation. She did a great job putting various events onto a timeline, 
+                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university."
                     </p>
                 </div>
 
@@ -665,9 +718,9 @@ FRONT PAGE (virginiaguides.org)
                         February 2024
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “I was very impressed with how well the event was organized. 
+                        "I was very impressed with how well the event was organized. 
                         I reached out in January when most students were still on break and got a response within 2 days! 
-                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do.”
+                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do."
                     </p>
                 </div>
 
@@ -677,8 +730,8 @@ FRONT PAGE (virginiaguides.org)
                         February 2024
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “Our tour guide, [guide], was incredibly knowledgeable and engaging. 
-                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling.”
+                        "Our tour guide, [guide], was incredibly knowledgeable and engaging. 
+                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling."
                     </p>
                 </div>
 
@@ -688,8 +741,8 @@ FRONT PAGE (virginiaguides.org)
                         February 2024
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
-                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects.”
+                        "[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
+                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects."
                     </p>
                 </div>
             
@@ -699,8 +752,8 @@ FRONT PAGE (virginiaguides.org)
                         October 2025
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “This critical/complicated understanding and connection to the institutions 
-                        we come from are so essential to figuring out how we move forward.“
+                        "This critical/complicated understanding and connection to the institutions 
+                        we come from are so essential to figuring out how we move forward."
                     </p>
                 </div>
             
@@ -712,7 +765,7 @@ FRONT PAGE (virginiaguides.org)
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
                         "Going to Monticello after UVa was really important and looking back at the Rotunda from Monticello 
                         to see how the organization of the house is related to the organization of the institution, citizenship, 
-                        and the nation which makes you really question how these spaces normalized what they stood for.”
+                        and the nation which makes you really question how these spaces normalized what they stood for."
                     </p>
                 </div>
             
@@ -722,9 +775,9 @@ FRONT PAGE (virginiaguides.org)
                         October 2025
                     </p>
                     <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        “Thank you for your outstanding tour and extraordinarily generous hospitality. I think our students got 
+                        "Thank you for your outstanding tour and extraordinarily generous hospitality. I think our students got 
                         a chance to see through your example what an exemplary UVa student sounds like. You also allowed me to 
-                        reconnect with where I come from. So I can't thank you enough.”
+                        reconnect with where I come from. So I can't thank you enough."
                     </p>
                 </div>
             </div>
@@ -774,22 +827,21 @@ FRONT PAGE (virginiaguides.org)
                 <!-- ========================================
                     RIGHT COLUMN: Event Image Carousel
                     Swiper slider with event cards linking to Instagram posts
-                    Wrapped in ClientOnly to prevent hydration mismatches
                     ======================================== -->
-                <swiper
-                    :slides-per-view="1"
-                    :slides-per-group="1"
-                    :space-between="30"
-                    :pagination="{ clickable: true }"
-                    :grabCursor="true"
-                    :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
-                    :loop="true"
-                    :speed="800"
-                    :auto-height="true"
-                    :modules="modules"
-                    class="scrollElement events-swiper mx-auto max-w-4xl"
-                >
-                    <!-- Event Card 1: INCLEMENT WEATHER -->
+                <div v-if="isMounted">
+                    <swiper
+                        :slides-per-view="1"
+                        :slides-per-group="1"
+                        :space-between="30"
+                        :pagination="{ clickable: true }"
+                        :grabCursor="true"
+                        :autoplay="{ delay: 10000, disableOnInteraction: false, pauseOnMouseEnter: true }"
+                        :loop="true"
+                        :speed="800"
+                        :modules="modules"
+                        class="scrollElement events-swiper mx-auto max-w-4xl"
+                    >
+                   <!-- Event Card 1: INCLEMENT WEATHER -->
                     <swiper-slide class="flex justify-center items-start">
                         <a href="https://www.instagram.com/p/DT6DdoiidTO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
                             <div class="relative max-w-2xl mx-auto p-4 pb-10 group cursor-pointer">
@@ -838,8 +890,8 @@ FRONT PAGE (virginiaguides.org)
                             </div>
                         </a>
                     </swiper-slide>
-
-                </swiper>
+                    </swiper>
+                </div>
             </div>
         </div>
     </section>
@@ -893,6 +945,7 @@ FRONT PAGE (virginiaguides.org)
         /* 16 slides × 350px each */
         width: calc(350px * 16);
         animation: scroll-right 20s linear infinite;
+        will-change: transform;
     }
     /* Right-to-left scrolling animation */
     @keyframes scroll-right {
@@ -919,7 +972,6 @@ FRONT PAGE (virginiaguides.org)
     /* === Our Events Section (Swiper) === */
     .events-swiper{
         width: 100%;
-        /* padding: 15px 40px; */
     }
     /* Pagination container inside events swiper */
     .events-swiper .swiper-pagination {
@@ -957,8 +1009,9 @@ FRONT PAGE (virginiaguides.org)
     .slide-track{
         display: flex;
         /* 10 slides × 350px */
-        width: calc(350px * 10); /* total # of slides x individual slide width */
+        width: calc(350px * 10);
         animation: scroll 15s linear infinite;
+        will-change: transform;
     }
     /* Left-to-right scrolling animation */
     @keyframes scroll {
@@ -1034,22 +1087,56 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 /* Vue Imports */
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 
 /* Components */
 import Footer from '~/components/Footer.vue';
 import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
 
-/* Page Metadata */
+
+/* Page Metadata
+    Performance Choices:
+   1. Preload the hero background image so the browser fetches it
+      during the <head> parse rather than waiting to discover it
+      inside CSS — this directly improves Largest Contentful Paint (LCP).
+   2. preconnect to fonts.googleapis.com opens the TCP/TLS handshake
+      early so font CSS downloads faster.
+   3. crossorigin preconnect to fonts.gstatic.com (the actual font file
+      CDN) shaves one round-trip off each font file request.
+*/
 useHead({
-  title: 'Tours of the University of Virginia | Virginia Guides Service',
-});
+    title: 'Tours of the University of Virginia | Virginia Guides Service',
+    link: [
+        // PERF 1: Preload hero background image (biggest LCP improvement)
+        {
+            rel: 'preload',
+            as: 'image',
+            href: 'https://virginia-guides-website-images.s3.amazonaws.com/public/Header_FrontPageNew.jpg',
+            fetchpriority: 'high',
+        },
+        // PERF 2: Preconnect to Google Fonts CSS endpoint
+        {
+            rel: 'preconnect',
+            href: 'https://fonts.googleapis.com',
+        },
+        // PERF 3: Preconnect to Google Fonts file CDN (needs crossorigin for CORS fonts)
+        {
+            rel: 'preconnect',
+            href: 'https://fonts.gstatic.com',
+            crossorigin: 'anonymous',
+        },
+    ],
+})
 
 /* Swiper features enabled for this page */
 const modules = [Pagination, Navigation, Autoplay]
 
+const isMounted = ref(false)
+let observerElements = null
+
 /* Scroll Effect / Reveal (IntersectionObserver for .scrollElement) */
 onMounted(() => {
+    isMounted.value = true
     // Prevent errors during server-side rendering
     if (typeof window === "undefined") return
 
@@ -1064,6 +1151,18 @@ onMounted(() => {
                 entry.target.classList.remove("show")
             }
         })
+
+        const attachObserver = () => {
+            document.querySelectorAll(".scrollElement").forEach((el) => {
+            observerElements.observe(el)
+            })
+        }
+
+        attachObserver()
+
+        isMounted.value = true
+        nextTick(() => attachObserver())
+        
     })
 
     // Attach observer to all scroll animation elements

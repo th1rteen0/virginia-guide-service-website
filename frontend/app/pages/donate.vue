@@ -36,7 +36,10 @@
     import ExploreUVAHistoryWhite from '~/components/ExploreUVAHistoryWhite.vue';
 
     useHead({
-        title: 'Donate| Virginia Guides Service',
+        title: 'Donate | Virginia Guides Service',
+        link: [
+            { rel: 'preload', as: 'image', href: 'https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Header_Donate.jpeg', fetchpriority: 'high' }
+        ]
     })
 
     onMounted(() => {

@@ -579,6 +579,9 @@
 
     useHead({
         title: 'Take a Tour & Plan Your Visit | Virginia Guides Service',
+        link: [
+            { rel: 'preload', as: 'image', href: 'https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Header_YourVisit.jpg', fetchpriority: 'high' }
+        ]
     })
 
     const form = ref({
@@ -772,6 +775,7 @@
         display: flex;
         width: calc(350px * 18);
         animation: scroll 15s linear infinite;
+        will-change: transform;
     }
     @keyframes scroll {
         0% {

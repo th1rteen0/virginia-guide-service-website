@@ -519,6 +519,9 @@
 
     useHead({
         title: 'Feedback | Virginia Guides Service',
+        link: [
+            { rel: 'preload', as: 'image', href: 'https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Rotundabasementhall.jpeg', fetchpriority: 'high' }
+        ]
     })
 
     const form = ref({
@@ -684,6 +687,7 @@
         display: flex;
         width: calc(350px * 16);
         animation: scroll-right 20s linear infinite;
+        will-change: transform;
     }
     /* Right to left */
     @keyframes scroll-right {
@@ -723,8 +727,9 @@
     }
     .slide-track{
         display: flex;
-        width: calc(350px * 18);
+        width: calc(350px * 10);
         animation: scroll 15s linear infinite;
+        will-change: transform;
     }
     @keyframes scroll {
         0% {
