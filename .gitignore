@@ -102,6 +102,7 @@ sftp-config.json
 
 # Misc
 .DS_Store
+*.DS_Store
 *.bak
 /site
 google_auth.apps.googleusercontent.com.json
