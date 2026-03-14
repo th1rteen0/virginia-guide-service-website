@@ -1,4 +1,4 @@
-# Virginia Guide Service — Website
+# Virginia Guide Service Website
 
 The official website for the **Virginia Guide Service**, a student organization
 at the University of Virginia that offers historical walking tours of Grounds —
