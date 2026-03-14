@@ -206,7 +206,7 @@ def register_specialty_tour(request):
             f"Hello {specialty_registration.first_name},\n\n"
             f"Thank you for submitting a {specialty_registration.tour_type} request with the Virginia Guide Service at the University of Virginia! "
             "We've received your submission and are currently pairing you with a volunteer student tour guide.\n\n"
-            "Please verify your request falls during periods when academic courses are in session for the Fall and Spring terms, as"
+            "Please verify your request falls during periods when academic courses are in session for the Fall and Spring terms, as "
             "indicated here: https://registrar.virginia.edu/calendar/academic/2025-2026. During examination periods, reading periods, and recesses, we do not schedule tour requests. "
             "We also cannot guarantee tour guide availability for parties under 8. One of our schedulers will be in contact with you once your request has been scheduled.\n\n"
             "If you have registered for one of our Standard Tour times, which occur at 11:00 AM every Friday, Saturday, and Sunday during the academic year (https://registrar.virginia.edu/calendar/academic), "
