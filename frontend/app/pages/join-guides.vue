@@ -275,6 +275,8 @@
     })
 
     const joinGuides = ref(true); // set to true so that the section shows up on the page on load
+
+    // TODO: add being a guide page (not yet implemented in production)
     const beingAGuide = ref(false);
 
     const toggleBeingAGuide = () => {
@@ -294,6 +296,16 @@
         scroll-behavior: smooth;
         scroll-padding-top: 6rem;
     }
+    .scrollElement {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .scrollElement.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* TODO: Carousel for the "About Guides" toggle section, not yet in production */
     .about-carousel-body {
         width: 100%;
         height: var(--height);
@@ -312,10 +324,10 @@
     .about-slide-track{
         display: flex;
         width: calc(350px * 10);
-        animation: scroll 15s linear infinite;
+        animation: scroll-about-carousel 15s linear infinite;
         will-change: transform;
     }
-    @keyframes scroll {
+    @keyframes scroll-about-carousel {
         0% {
             transform: translateX(0);
         }
@@ -335,15 +347,7 @@
         height: 100%;
         object-fit: cover;
     }
-    .scrollElement {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .scrollElement.show {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    /* Infinite Autoscroll Text */
     .running-text-container {
         /* margin: 20px; */
         font-size: 5em;
