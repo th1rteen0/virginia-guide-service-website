@@ -281,34 +281,14 @@
         scroll-behavior: smooth;
         scroll-padding-top: 6rem;
     }
-    .about-carousel-body {
-        width: 100%;
-        height: var(--height);
-        display: grid;
-        place-items: center;
+    .scrollElement {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .about-slider{
-        height: 300px;
-        margin: auto;
-        position: relative;
-        width: 100%;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-    }
-    .about-slide-track{
-        display: flex;
-        width: calc(350px * 10);
-        animation: scroll 15s linear infinite;
-        will-change: transform;
-    }
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(calc(-350px * 10));
-        }
+    .scrollElement.show {
+        opacity: 1;
+        transform: translateY(0);
     }
     /* Infinite Autoscroll Text Banner */
     .running-text-container {
