@@ -383,6 +383,9 @@
 </script>
 
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
     .scrollElement {
         opacity: 0;
         transform: translateY(30px);

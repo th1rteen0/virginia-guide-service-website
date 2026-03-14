@@ -734,13 +734,9 @@
 </script>
 
 <style>
-    /* Animation for toasts */
-    @keyframes fade-in {
-        from { opacity: 0; transform: scale(0.95); }
-        to { opacity: 1; transform: scale(1); }
-    }
-    .animate-fade-in {
-        animation: fade-in 0.4s ease-out;
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 8rem;
     }
     .scrollElement {
         opacity: 0;
@@ -751,8 +747,12 @@
         opacity: 1;
         transform: translateY(0);
     }
-    html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 8rem;
+    /* Animation for toasts */
+    @keyframes fade-in {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.4s ease-out;
     }
 </style>
