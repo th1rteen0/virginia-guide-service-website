@@ -273,19 +273,6 @@
     const scrollElements = document.querySelectorAll(".scrollElement")
     scrollElements.forEach((element) => observer.observe(element))
     })
-
-    const joinGuides = ref(true); // set to true so that the section shows up on the page on load
-    const beingAGuide = ref(false);
-
-    const toggleBeingAGuide = () => {
-        beingAGuide.value = true;
-        joinGuides.value = false;
-    }
-
-    const toggleJoinGuides = () => {
-        joinGuides.value = true;
-        beingAGuide.value = false;
-    }
     
 </script>
 
@@ -323,27 +310,7 @@
             transform: translateX(calc(-350px * 10));
         }
     }
-    .about-slide{
-        height: 250px;
-        width: 350px;
-        display: flex;
-        align-items: center;
-        padding: 5px;
-    }
-    .about-carousel-img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .scrollElement {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .scrollElement.show {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    /* Infinite Autoscroll Text Banner */
     .running-text-container {
         /* margin: 20px; */
         font-size: 5em;
