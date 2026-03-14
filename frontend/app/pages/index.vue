@@ -563,226 +563,15 @@ FRONT PAGE (virginiaguides.org)
 
     <!-- ========================================
          EXPLORE UVA HISTORY SECTION
-         Imported component with historical tour content
+         Imported component with historical tour content (components/ExploreUVAHistoryBlue.vue)
      ======================================== -->
     <ExploreUVAHistoryBlue />
 
     <!-- ========================================
-         TOUR REVIEWS CAROUSEL SECTION
-         Infinite scrolling testimonials from tour participants
-         Technical Implementation:
-         - Pure CSS animation (scroll-right keyframe)
-         - 8 reviews duplicated (16 total) for seamless loop
-         - Pauses on hover for readability
-         - Responsive grid: 1 col mobile, 2 cols tablet, 3 cols desktop
-         - Animation: 20s duration, right-to-left movement
-
-         Performance: will-change: transform added to .review-slide-track in <style>
-         so the browser promotes the element to its own compositor layer,
-         keeping the animation on the GPU and off the main thread.
-     ======================================== -->
-    <div class="scrollElement review-carousel-body bg-white">
-        <div class="review-slider">
-            <!-- 
-                Review Track Container
-                Contains 16 cards (8 unique reviews × 2 for infinite loop)
-                Width calculated: 350px per card × 16 cards = 5600px total
-            -->
-            <div class="review-slide-track grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- Review 1 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <!-- Date -->
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        January 2024
-                    </p>
-                    <!-- Review Text -->
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "[Guide name]—he was so well informed and thoughtful in explaining the historical
-                        relationship to history and the importance of understanding it in the present."
-                    </p>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)]  p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        February 2024
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "Well researched presentation. She did a great job putting various events onto a timeline, 
-                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university."
-                    </p>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        February 2024
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "I was very impressed with how well the event was organized. 
-                        I reached out in January when most students were still on break and got a response within 2 days! 
-                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do."
-                    </p>
-                </div>
-
-                <!-- Review 4 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        February 2024
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "Our tour guide, [guide], was incredibly knowledgeable and engaging. 
-                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling."
-                    </p>
-                </div>
-
-                <!-- Review 5 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        February 2024
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
-                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects."
-                    </p>
-                </div>
-
-                <!-- Review 6 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        October 2025
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "This critical/complicated understanding and connection to the institutions 
-                        we come from are so essential to figuring out how we move forward."
-                    </p>
-                </div>
-            
-                <!-- Review 7 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        October 2025
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "Going to Monticello after UVa was really important and looking back at the Rotunda from Monticello 
-                        to see how the organization of the house is related to the organization of the institution, citizenship, 
-                        and the nation which makes you really question how these spaces normalized what they stood for."
-                    </p>
-                </div>
-            
-                <!-- Review 8 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        October 2025
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "Thank you for your outstanding tour and extraordinarily generous hospitality. I think our students got 
-                        a chance to see through your example what an exemplary UVa student sounds like. You also allowed me to 
-                        reconnect with where I come from. So I can't thank you enough."
-                    </p>
-                </div>
-
-                <!-- ========================================
-                     DUPLICATED REVIEWS (for seamless infinite loop)
-                     Same 8 reviews repeated to create continuous scrolling effect
-                 ======================================== -->
-
-                <!-- Review 1 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <!-- Date -->
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        January 2024
-                    </p>
-                    <!-- Review Text -->
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "[Guide name]—he was so well informed and thoughtful in explaining the historical
-                        relationship to history and the importance of understanding it in the present."
-                    </p>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        February 2024
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "Well researched presentation. She did a great job putting various events onto a timeline, 
-                        which in turned helped to explain the contemporary mindset. She also communicated her love of the university."
-                    </p>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        February 2024
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "I was very impressed with how well the event was organized. 
-                        I reached out in January when most students were still on break and got a response within 2 days! 
-                        It was a real pleasure to see such professionalism coming from young people! Bravo and thank you for all you do."
-                    </p>
-                </div>
-
-                <!-- Review 4 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        February 2024
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "Our tour guide, [guide], was incredibly knowledgeable and engaging. 
-                        We learned a lot about UVA, Charlottesville, and Virginia through her fantastic storytelling."
-                    </p>
-                </div>
-
-                <!-- Review 5 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        February 2024
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "[Guide], the tour guide, was knowledgeable, enthusiastic, and articulate. 
-                        The tour itself was well-balanced and managed, in a well-structured way, to cover a variety of interesting subjects."
-                    </p>
-                </div>
-            
-                <!-- Review 6 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        October 2025
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "This critical/complicated understanding and connection to the institutions 
-                        we come from are so essential to figuring out how we move forward."
-                    </p>
-                </div>
-            
-                <!-- Review 7 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        October 2025
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "Going to Monticello after UVa was really important and looking back at the Rotunda from Monticello 
-                        to see how the organization of the house is related to the organization of the institution, citizenship, 
-                        and the nation which makes you really question how these spaces normalized what they stood for."
-                    </p>
-                </div>
-            
-                <!-- Review 8 -->
-                <div class="review-slide flex flex-col w-full h-64 bg-white rounded-lg shadow-[0px_2px_16px_0px_rgba(14,30,37,0.32)] p-4 relative">
-                    <p class="absolute top-2 right-4 text-black text-sm sm:text-base font-semibold font-['Montserrat']">
-                        October 2025
-                    </p>
-                    <p class="mt-8 text-black text-base sm:text-lg font-medium font-['Montserrat'] overflow-auto">
-                        "Thank you for your outstanding tour and extraordinarily generous hospitality. I think our students got 
-                        a chance to see through your example what an exemplary UVa student sounds like. You also allowed me to 
-                        reconnect with where I come from. So I can't thank you enough."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+        TOUR REVIEWS CAROUSEL SECTION
+        Imported component with tour reviews (components/TourReviews.vue)
+    ======================================== -->
+    <TourReviews />
 
     <!-- ========================================
         OUR EVENTS SECTION
@@ -922,53 +711,6 @@ FRONT PAGE (virginiaguides.org)
         opacity: 1;
         transform: translateY(0);
     }
-    /* === Tour Reviews Auto-Scroll Carousel === */
-    .review-carousel-body {
-        width: 100%;
-        height: var(--height);
-        display: grid;
-        place-items: center;
-    }
-    /* Visible window for the carousel */
-    .review-slider{
-        height: 400px;
-        margin: auto;
-        position: relative;
-        width: 100%;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-    }
-    /* Container that moves horizontally */
-    .review-slide-track{
-        display: flex;
-        /* 16 slides × 350px each */
-        width: calc(350px * 16);
-        animation: scroll-right 20s linear infinite;
-        will-change: transform;
-    }
-    /* Right-to-left scrolling animation */
-    @keyframes scroll-right {
-        0% {
-            transform: translateX(calc(-350px * 8));
-        }
-        100% {
-            transform: translateX(0);
-        }
-    }
-    /* Pause animation on hover */
-    .review-slide-track:hover{
-        animation-play-state: paused;
-    }
-    /* Individual review card */
-    .review-slide{
-        height: 250px;
-        width: 350px;
-        display: flex;
-        align-items: center;
-        padding: 15px;
-        perspective: 100px;
-    }
     /* === Our Events Section (Swiper) === */
     .events-swiper{
         width: 100%;
@@ -1012,151 +754,151 @@ FRONT PAGE (virginiaguides.org)
 </style>
 
 <script setup>
-/* Swiper Imports */
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+    /* Swiper Imports */
+    import { Swiper, SwiperSlide } from "swiper/vue";
+    import "swiper/css";
+    import "swiper/css/pagination";
+    import "swiper/css/navigation";
+    import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
-/* Vue Imports */
-import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
+    /* Vue Imports */
+    import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 
-/* Components */
-import Footer from '~/components/Footer.vue';
-import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
+    /* Components */
+    import Footer from '~/components/Footer.vue';
+    import ExploreUVAHistoryBlue from '~/components/ExploreUVAHistoryBlue.vue';
+    import TourReviews from '~/components/TourReviews.vue'
 
+    /* Page Metadata
+        Performance Choices:
+    1. Preload the hero background image so the browser fetches it
+        during the <head> parse rather than waiting to discover it
+        inside CSS — this directly improves Largest Contentful Paint (LCP).
+    2. preconnect to fonts.googleapis.com opens the TCP/TLS handshake
+        early so font CSS downloads faster.
+    3. crossorigin preconnect to fonts.gstatic.com (the actual font file
+        CDN) shaves one round-trip off each font file request.
+    */
+    useHead({
+        title: 'Tours of the University of Virginia | Virginia Guides Service',
+        link: [
+            // PERF 1: Preload hero background image (biggest LCP improvement)
+            {
+                rel: 'preload',
+                as: 'image',
+                href: 'https://virginia-guides-website-images.s3.amazonaws.com/public/Header_FrontPageNew.jpg',
+                fetchpriority: 'high',
+            },
+            // PERF 2: Preconnect to Google Fonts CSS endpoint
+            {
+                rel: 'preconnect',
+                href: 'https://fonts.googleapis.com',
+            },
+            // PERF 3: Preconnect to Google Fonts file CDN (needs crossorigin for CORS fonts)
+            {
+                rel: 'preconnect',
+                href: 'https://fonts.gstatic.com',
+                crossorigin: 'anonymous',
+            },
+        ],
+    })
 
-/* Page Metadata
-    Performance Choices:
-   1. Preload the hero background image so the browser fetches it
-      during the <head> parse rather than waiting to discover it
-      inside CSS — this directly improves Largest Contentful Paint (LCP).
-   2. preconnect to fonts.googleapis.com opens the TCP/TLS handshake
-      early so font CSS downloads faster.
-   3. crossorigin preconnect to fonts.gstatic.com (the actual font file
-      CDN) shaves one round-trip off each font file request.
-*/
-useHead({
-    title: 'Tours of the University of Virginia | Virginia Guides Service',
-    link: [
-        // PERF 1: Preload hero background image (biggest LCP improvement)
-        {
-            rel: 'preload',
-            as: 'image',
-            href: 'https://virginia-guides-website-images.s3.amazonaws.com/public/Header_FrontPageNew.jpg',
-            fetchpriority: 'high',
-        },
-        // PERF 2: Preconnect to Google Fonts CSS endpoint
-        {
-            rel: 'preconnect',
-            href: 'https://fonts.googleapis.com',
-        },
-        // PERF 3: Preconnect to Google Fonts file CDN (needs crossorigin for CORS fonts)
-        {
-            rel: 'preconnect',
-            href: 'https://fonts.gstatic.com',
-            crossorigin: 'anonymous',
-        },
-    ],
-})
+    /* Swiper features enabled for this page */
+    const modules = [Pagination, Navigation, Autoplay]
 
-/* Swiper features enabled for this page */
-const modules = [Pagination, Navigation, Autoplay]
+    const isMounted = ref(false)
+    let observerElements = null
 
-const isMounted = ref(false)
-let observerElements = null
-
-/* Scroll Effect / Reveal (IntersectionObserver for .scrollElement) */
-onMounted(() => {
-    isMounted.value = true
-    // Prevent errors during server-side rendering
-    if (typeof window === "undefined") return
-
-        // Observe elements as they enter the viewport
-        const observerElements = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                // Show animation when visible
-                entry.target.classList.add("show")
-            } else {
-                // Hide when out of view
-                entry.target.classList.remove("show")
-            }
-        })
-
-        const attachObserver = () => {
-            document.querySelectorAll(".scrollElement").forEach((el) => {
-            observerElements.observe(el)
-            })
-        }
-
-        attachObserver()
-
+    /* Scroll Effect / Reveal (IntersectionObserver for .scrollElement) */
+    onMounted(() => {
         isMounted.value = true
-        nextTick(() => attachObserver())
-        
-    })
+        // Prevent errors during server-side rendering
+        if (typeof window === "undefined") return
 
-    // Attach observer to all scroll animation elements
-    const scrollElements = document.querySelectorAll(".scrollElement")
-    scrollElements.forEach((el) => observerElements.observe(el))
-})
+            // Observe elements as they enter the viewport
+            const observerElements = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Show animation when visible
+                    entry.target.classList.add("show")
+                } else {
+                    // Hide when out of view
+                    entry.target.classList.remove("show")
+                }
+            })
 
-/* Scroll Icon / Text Switch for Header Section  */
-// References to DOM elements
-const topElement = ref(null)
-const iconWrap = ref(null)
-const textWrap = ref(null)
+            const attachObserver = () => {
+                document.querySelectorAll(".scrollElement").forEach((el) => {
+                observerElements.observe(el)
+                })
+            }
 
-// Tracks whether the user is at the top of the page
-const isAtTop = ref(true) // true = show arrow icon
+            attachObserver()
 
-let observerTopElement = null
-
-onMounted(() => {
-    // Prevent SSR issues
-    if (typeof window === "undefined") return
-
-    // Observer options
-    const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0
-    }
-
-    // Observe the top invisible element
-    observerTopElement = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            isAtTop.value = entry.isIntersecting
+            isMounted.value = true
+            nextTick(() => attachObserver())
+            
         })
-    }, options)
 
-    if (topElement.value) observerTopElement.observe(topElement.value)
-
-    // Scroll icon and text elements
-    const scrollIcon = document.getElementById("scroll-icon")
-    const scrollText = document.getElementById("scroll-text")
-
-    // Toggle visibility based on scroll position
-    function handleScroll() {
-        if (window.scrollY > 20) {
-            if (scrollIcon) scrollIcon.style.opacity = "0"
-            if (scrollText) scrollText.style.opacity = "1"
-        } else {
-            if (scrollIcon) scrollIcon.style.opacity = "1"
-            if (scrollText) scrollText.style.opacity = "0"
-        }
-    }
-
-    // Initial state check
-    handleScroll()
-    window.addEventListener("scroll", handleScroll)
-
-    // Cleanup observers and listeners
-    onBeforeUnmount(() => {
-        window.removeEventListener("scroll", handleScroll)
-        if (observerTopElement && topElement.value) observerTopElement.unobserve(topElement.value)
+        // Attach observer to all scroll animation elements
+        const scrollElements = document.querySelectorAll(".scrollElement")
+        scrollElements.forEach((el) => observerElements.observe(el))
     })
-})
+
+    /* Scroll Icon / Text Switch for Header Section  */
+    // References to DOM elements
+    const topElement = ref(null)
+    const iconWrap = ref(null)
+    const textWrap = ref(null)
+
+    // Tracks whether the user is at the top of the page
+    const isAtTop = ref(true) // true = show arrow icon
+
+    let observerTopElement = null
+
+    onMounted(() => {
+        // Prevent SSR issues
+        if (typeof window === "undefined") return
+
+        // Observer options
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0
+        }
+
+        // Observe the top invisible element
+        observerTopElement = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                isAtTop.value = entry.isIntersecting
+            })
+        }, options)
+
+        if (topElement.value) observerTopElement.observe(topElement.value)
+
+        // Scroll icon and text elements
+        const scrollIcon = document.getElementById("scroll-icon")
+        const scrollText = document.getElementById("scroll-text")
+
+        // Toggle visibility based on scroll position
+        function handleScroll() {
+            if (window.scrollY > 20) {
+                if (scrollIcon) scrollIcon.style.opacity = "0"
+                if (scrollText) scrollText.style.opacity = "1"
+            } else {
+                if (scrollIcon) scrollIcon.style.opacity = "1"
+                if (scrollText) scrollText.style.opacity = "0"
+            }
+        }
+
+        // Initial state check
+        handleScroll()
+        window.addEventListener("scroll", handleScroll)
+
+        // Cleanup observers and listeners
+        onBeforeUnmount(() => {
+            window.removeEventListener("scroll", handleScroll)
+            if (observerTopElement && topElement.value) observerTopElement.unobserve(topElement.value)
+        })
+    })
 </script>
