@@ -410,7 +410,7 @@
     }
     .review-slide-track{
         display: flex;
-        width: calc(350px * 10);
+        width: calc(350px * 16);
         animation: scroll-right 20s linear infinite;
         will-change: transform;
     }
@@ -452,7 +452,7 @@
     }
     .slide-track{
         display: flex;
-        width: calc(350px * 18);
+        width: calc(350px * 10);
         animation: scroll 15s linear infinite;
     }
     @keyframes scroll {
