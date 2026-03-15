@@ -12,7 +12,7 @@
       </p>
 
       <a href="/about-tours" class="scrollElement">
-        <button :class="['inline-flex items-center space-x-3 rounded-full border-1 font-[\'Montserrat\'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-300 ease-in-out hover:cursor-pointer', blue ? 'text-white border-white' : 'text-black border-gray-300']">
+        <button :class="['inline-flex items-center space-x-3 rounded-full border-1 font-[\'Montserrat\'] text-base sm:text-lg md:text-xl py-3 px-6 hover:text-royal-blue hover:bg-gray-100 hover:scale-105 transition-all duration-400 ease-in-out hover:cursor-pointer', blue ? 'text-white border-white' : 'text-black border-gray-300']">
           <span>HISTORY TOURS</span>
           <svg class="flex-shrink-0" height="25px" width="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -138,6 +138,7 @@ const specialtyTours = [
     }
     .history-slide:hover .tour-img {
         transform: scale(1.1);
+        filter: grayscale(100%);
     }
     .history-slide:hover .tour-label {
         color: #E57200;
