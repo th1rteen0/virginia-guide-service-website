@@ -14,7 +14,7 @@
 
       <!-- Hamburger Button (Right) -->
       <div class="flex items-center gap-x-3">
-        <p @click="navOpen = !navOpen" v-if="!navOpen" class="font-['Montserrat']  font-medium transition-all duration-300 cursor-pointer">MENU</p>
+        <p @click="navOpen = !navOpen" v-if="!navOpen" class="font-['Montserrat'] font-medium transition-all duration-300 cursor-pointer">MENU</p>
         <button @click="navOpen = !navOpen" class="focus:outline-none">
           <svg
             v-if="!navOpen"
@@ -82,13 +82,13 @@
 
       <!-- Navigation Links (Right Side) -->
       <div class="flex items-center gap-x-6">
-        <a href="/about-tours" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">ABOUT TOURS</a>
-        <a href="/join-guides" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">JOIN GUIDES</a>
-        <a href="/for-educators" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">FOR EDUCATORS</a>
-        <a href="/feedback" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">FEEDBACK</a>
-        <a href="/donate" class="nav-link font-['Montserrat'] font-medium px-5 py-2 cursor-pointer">DONATE</a>
+        <a href="/about-tours" class="nav-link font-['Montserrat'] tracking-wide font-medium px-5 py-2 cursor-pointer">ABOUT TOURS</a>
+        <a href="/join-guides" class="nav-link font-['Montserrat'] tracking-wide font-medium px-5 py-2 cursor-pointer">JOIN GUIDES</a>
+        <a href="/for-educators" class="nav-link font-['Montserrat'] tracking-wide font-medium px-5 py-2 cursor-pointer">FOR EDUCATORS</a>
+        <a href="/feedback" class="nav-link font-['Montserrat'] tracking-wide font-medium px-5 py-2 cursor-pointer">FEEDBACK</a>
+        <a href="/donate" class="nav-link font-['Montserrat'] tracking-wide font-medium px-5 py-2 cursor-pointer">DONATE</a>
         <a href="/your-visit">
-          <button class="font-['Montserrat'] font-medium text-white bg-UVA-orange hover:bg-orange-800 hover:scale-105 rounded-full px-5 py-2 cursor-pointer transition duration-250 active:scale-95">
+          <button class="font-['Montserrat'] tracking-wide font-medium text-white bg-UVA-orange hover:bg-orange-800 hover:scale-105 rounded-full px-5 py-2 cursor-pointer transition duration-250 active:scale-95">
             TAKE A TOUR
           </button>
         </a>
