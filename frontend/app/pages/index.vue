@@ -731,13 +731,11 @@ FRONT PAGE (virginiaguides.org)
         height: 250px;
         object-fit: cover;
     }
-
     @media (min-width: 640px) {
         .events-image {
             height: 350px;
         }
     }
-
     @media (min-width: 1024px) {
         .events-image {
             height: 450px;
