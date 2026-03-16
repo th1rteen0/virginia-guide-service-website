@@ -5,7 +5,7 @@
             <h1 class="font-['Playfair_Display'] italic text-center xl:text-left whitespace-nowrap text-[clamp(3rem,9.5vw,5.5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
                 SHED LIGHT
             </h1>
-            <p class="font-Roboto text-center xl:max-w-lg xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+            <p class="font-Roboto text-center xl:max-w-lg xl:text-right text-xl sm:text-2xl md:text-3xl font-extralight tracking-widest opacity-90">
                 ON HISTORY
             </p>
         </div>
@@ -14,18 +14,21 @@
     <!-- Overlapping Section With Buttons for Navigation-->
     <section class="relative z-20 -mt-10 px-4 mb-5">
         <!-- Blue Line in Background -->
-        <div class="absolute top-1/2 left-0 w-full h-2 bg-royal-blue -z-10 hidden sm:block"></div>
+        <div class="absolute top-[40%] left-0 w-full h-2 bg-royal-blue -z-10 hidden sm:block"></div>
 
         <div class="shadow-lg p-6 max-w-2xl mx-auto text-center bg-royal-blue">
             <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4 text-white">
-                <a href="#specialty-tours" class="text-lg hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="#specialty-tours" class="group relative text-white text-lg md:text-base font-bold tracking-wide transition-colors duration-300">
                     Specialty Tours
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="/your-visit" class="text-lg hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/your-visit"
+                    class="px-6 py-2 bg-white text-royal-blue text-lg md:text-base font-black uppercase tracking-tighter rounded shadow-sm hover:shadow-md hover:bg-gray-100 active:scale-95 transition-all duration-200">
                     Take a Tour
                 </a>
-                <a href="/for-educators" class="text-lg hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/for-educators" class="group relative text-white text-lg md:text-base font-bold tracking-wide transition-colors duration-300">
                     For Educators
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
             </div>
         </div>

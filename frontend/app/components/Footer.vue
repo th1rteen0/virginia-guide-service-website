@@ -102,7 +102,7 @@
                             <li class="cursor-pointer">Donate</li>
                         </a>
                         <a href="/">
-                            <li class="cursor-pointer">Home Page</li>
+                            <li class="cursor-pointer">Home</li>
                         </a>
                     </ul>
                 </div>

@@ -3,33 +3,34 @@
     <header class="relative bg-[url('https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Header_ForEducators.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-7xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
-            <h1 class="font-['Playfair_Display'] italic text-center xl:text-right text-[clamp(2.5rem,7vw,3rem)] lg:text-[clamp(1rem,8vw,4rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+            <h1 class="font-['Playfair_Display'] italic text-center xl:text-right text-[clamp(2.5rem,7vw,3.5rem)] leading-tight drop-shadow-2xl">
                 BEYOND THE CLASSROOM
             </h1>
-            <p class="font-['Roboto'] text-base sm:text-md md:text-lg font-semibold leading-snug text-center xl:text-right uppercase [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
-                History Tours of the University of Virginia
-            </p>
-            <p class="font-['Roboto'] text-base sm:text-md md:text-lg font-semibold leading-snug text-center xl:text-right uppercase [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
-                For K-12 & College Groups
-            </p>
+            <div class="mt-4 space-y-1 text-center xl:text-right uppercase tracking-widest font-['Roboto'] font-medium">
+                <p class="text-base sm:text-lg opacity-90">History Tours of the University of Virginia</p>
+                <p class="text-sm opacity-75">For K-12 & College Groups</p>
+            </div>
         </div>
     </header> 
 
     <!-- Overlapping Section With Buttons for Navigations-->
-    <section class="relative z-20 -mt-10 px-4 mb-10">
+    <section class="relative z-20 -mt-10 px-4">
         <!-- Line in Background -->
-        <div class="absolute top-1/2 left-0 w-full h-2 bg-royal-blue -z-10 hidden sm:block"></div>
+        <div class="absolute top-[40%] left-0 w-full h-2 bg-royal-blue -z-10 hidden sm:block"></div>
 
         <div class="shadow-lg p-6 max-w-2xl mx-auto text-center bg-royal-blue">
             <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4 text-white">
-                <a href="/join-guides" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/join-guides" class="group relative text-white text-lg md:text-base font-bold tracking-wide transition-colors duration-300">
                     About Us
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="/your-visit#times-and-registration" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
-                    Specialty Tour Request Form
+                <a href="/your-visit#times-and-registration" 
+                    class="px-6 py-2 bg-white text-royal-blue text-lg md:text-base font-black uppercase tracking-tighter rounded shadow-sm hover:shadow-md hover:bg-gray-100 active:scale-95 transition-all duration-200">
+                    Request a Tour
                 </a>
-                <a href="/about-tours#specialty-tours" class="text-lg rounded-full hover:scale-105 transition-all duration-300 ease-in-out font-semibold">
+                <a href="/about-tours#specialty-tours" class="group relative text-white text-lg md:text-base font-bold tracking-wide transition-colors duration-300">
                     Other Tours
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
             </div>
         </div>

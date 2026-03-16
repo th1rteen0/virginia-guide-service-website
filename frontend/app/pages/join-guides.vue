@@ -3,10 +3,10 @@
     <header class="relative bg-[url('https://virginia-guides-website-images.s3.amazonaws.com/public/Header_JoinGuides.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[100vh]">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-7xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
-            <p class="font-Roboto text-xs sm:text-sm md:text-md text-royal-blue font-semibold leading-snug text-center xl:text-right uppercase">
+            <p class="font-Roboto text-xs sm:text-sm md:text-md text-royal-blue font-semibold tracking-widest text-center xl:text-right uppercase opacity-90">
                 EST. 1951 - celebrating 75 years
             </p>
-            <h1 class="font-['Playfair_Display'] italic text-center xl:text-right whitespace-nowrap text-[clamp(1rem,7vw,3rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+            <h1 class="font-['Playfair_Display'] italic text-center xl:text-right whitespace-nowrap text-[clamp(1rem,7vw,3rem)] leading-tight drop-shadow-2xl">
                 Our tours evolve
                 <br />
                 not to change the past,

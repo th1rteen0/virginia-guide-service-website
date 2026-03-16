@@ -3,11 +3,11 @@
     <header class="relative bg-[url('https://virginia-guides-website-images.s3.us-east-2.amazonaws.com/public/Header_ContactUs.jpg')] w-full bg-cover bg-center bg-no-repeat h-[60vh] sm:h-[75vh] bg-">
         <!-- Centered Text -->
         <div class="absolute top-1/2 left-1/2 w-full max-w-7xl px-10 -translate-x-1/2 -translate-y-1/2 text-white">
-            <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2rem,9.5vw,5rem)] leading-tight [text-shadow:_0px_4px_4px_rgb(0_0_0_/_0.25)]">
+            <h1 class="font-['Playfair_Display'] text-center xl:text-right italic text-[clamp(2rem,9.5vw,5rem)] leading-tight drop-shadow-2xl">
                 <span class="text-[clamp(1rem,8.5vw,6rem)]">V</span>IRGINIA
                 <span class="text-[clamp(1rem,8.5vw,6rem)]">G</span>UIDES
             </h1>
-            <p class="font-Roboto text-center xl:text-right text-sm sm:text-lg md:text-md font-semibold leading-snug [text-shadow:_3px_3px_6px_rgb(0_0_0_/_0.70)]">
+            <p class="font-Roboto text-center xl:text-right text-sm sm:text-lg md:text-md font-medium tracking-widest opacity-90">
                 HISTORICAL TOURS OF THE UNIVERSITY OF VIRGINIA
             </p>
         </div>
