@@ -11,7 +11,7 @@
         </div>
     </header>
 
-    <!-- Overlapping Section With Buttons for Navigations-->
+    <!-- Overlapping Section With Buttons for Navigation-->
     <section class="relative z-20 -mt-10 px-4 mb-5">
         <!-- Blue Line in Background -->
         <div class="absolute top-1/2 left-0 w-full h-2 bg-royal-blue -z-10 hidden sm:block"></div>
@@ -423,12 +423,13 @@
     }
     .about-carousel-body {
         width: 100%;
-        height: var(--height);
         display: grid;
         place-items: center;
     }
-    .about-slider{
-        height: 300px;
+    .about-slider {
+        --slide-size: clamp(160px, 30vw, 350px);
+        --slide-height: clamp(130px, 24vw, 250px);
+        height: var(--slide-height);
         margin: auto;
         position: relative;
         width: 100%;
@@ -436,9 +437,9 @@
         place-items: center;
         overflow: hidden;
     }
-    .about-slide-track{
+    .about-slide-track {
         display: flex;
-        width: calc(350px * 10);
+        width: calc(var(--slide-size) * 10);
         animation: scroll 15s linear infinite;
         will-change: transform;
     }
@@ -447,17 +448,17 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-350px * 5));
+            transform: translateX(calc(var(--slide-size) * -5));
         }
     }
-    .about-slide{
-        height: 250px;
-        width: 350px;
+    .about-slide {
+        height: var(--slide-height);
+        width: var(--slide-size);
         display: flex;
         align-items: center;
-        padding: 5px;
+        padding: clamp(2px, 0.5vw, 5px);
     }
-    .about-carousel-img{
+    .about-carousel-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
