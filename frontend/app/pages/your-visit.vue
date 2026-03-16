@@ -19,17 +19,16 @@
 
         <div class="shadow-lg p-6 max-w-3xl mx-auto text-center bg-royal-blue">
             <div class="flex flex-col sm:flex-row justify-evenly items-center gap-4 text-white">
-                <a href="#times-and-registration"
-                    class="px-6 py-2 bg-white text-royal-blue text-lg md:text-base font-black uppercase tracking-tighter rounded shadow-sm hover:shadow-md hover:bg-gray-100 active:scale-95 transition-all duration-200">
+                <a href="#times-and-registration" class="px-6 py-2 bg-white text-royal-blue text-xs md:text-sm font-black uppercase tracking-widest rounded shadow-md hover:bg-gray-50 active:scale-95 transition-all duration-200">
                     Times & Registration
                 </a>
-                <a href="#location-and-parking" class="group relative text-white text-lg md:text-base font-bold tracking-wide transition-colors duration-300">
+                <a href="#location-and-parking" class="group relative py-1 text-sm font-bold tracking-widest uppercase transition-colors duration-300">
                     Location & Parking
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
                 </a>
-                <a href="#frequently-asked-questions" class="group relative text-white text-lg md:text-base font-bold tracking-wide transition-colors duration-300">
-                    Frequently Asked Questions
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                <a href="#frequently-asked-questions" class="group relative py-1 text-sm font-bold tracking-widest uppercase transition-colors duration-300">
+                    FAQ
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
                 </a>
             </div>
         </div>
@@ -77,20 +76,19 @@
             <p class="scrollElement font-['Montserrat'] text-center lg:text-left font-medium text-dark-green text-4xl sm:text-5xl leading-tight mb-4">
             HISTORICAL TOURS
             </p>
-            <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900">
+            <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 pb-5">
                 From its founding to the Civil War. From the Civil Rights Movement to the present day, 
                 student-led history tours trace over 200 years of change, resistance, and community. 
                 Tours navigate the outdoor grounds of the UNESCO World Heritage Site and are written by 
                 students after a semester of intensive training, research, and critical reflection.
-                <br /><br />
-                <span class="scrollElement font-bold">
-                    All tours are free of charge,
-                </span> regardless of group size. Donations to support work are welcome.
-                <br /><br />
-                <span class="scrollElement font-bold italic">
-                    The University of Virginia expects parents or guardians to provide supervision over minors on University property. 
-                    Parents or guardians should not leave minors unsupervised on University property.
-                </span>
+            <p class="scrollElement font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 pb-5">
+                <span class="font-bold">All tours are free of charge</span>,
+                regardless of group size.
+            </p> 
+            </p>
+            <p class="font-['Montserrat'] scrollElement text-sm italic opacity-75 border-t pt-5">
+                The University of Virginia expects parents or guardians to provide supervision over minors on University property. 
+                Parents or guardians should not leave minors unsupervised on University property.
             </p>
             <br /><br />
             <div class="scrollElement flex justify-center items-center px-4">
@@ -114,20 +112,22 @@
                     TOUR SCHEDULE
                 </p>
                 <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-3xl lg:max-w-xl px-4 lg:pb-5">
-                    <li class="scrollElement">
-                        Standard Tours will leave at 11:00 AM from the Lawn-side of the Rotunda Steps every Friday, Saturday, and Sunday 
-                        <a class="underline" href="http://www.virginia.edu/registrar/calendar.html">
-                            during the academic school year.
-                        </a>
+                    <li class="scrollElement flex gap-4">
+                        <span class="text-UVA-orange font-bold">01.</span>
+                        <p class="font-['Montserrat'] text-gray-800 text-lg">Standard Tours leave at <span class="font-bold">11:00 AM</span> from the Rotunda Steps (Friday-Sunday).</p>
                     </li>
-                    <li class="scrollElement">
-                        Exceptions to our schedule is
-                        <a class="underline" href="https://registrar.virginia.edu/calendar/academic">
-                            when classes are not in session.
-                        </a>
+                    <li class="scrollElement flex gap-4">
+                        <span class="text-UVA-orange font-bold">02.</span>
+                        <p class="font-['Montserrat'] text-gray-800 text-lg">
+                            Exceptions to our schedule is
+                            <a class="underline" href="https://registrar.virginia.edu/calendar/academic">
+                                when classes are not in session.
+                            </a>
+                        </p>
                     </li>
-                    <li class="scrollElement">
-                        Tours last around 1 Hour.
+                    <li class="scrollElement flex gap-4">
+                        <span class="text-UVA-orange font-bold">03.</span>
+                        <p class="font-['Montserrat'] text-gray-800 text-lg">Tours typically last <span class="font-bold">60 minutes</span>.</p>
                     </li>
                 </ul>
             </div>
@@ -372,24 +372,33 @@
                 </p>
                 <!--Bullet Points-->
                 <ul class="list-disc font-['Montserrat'] text-base sm:text-lg leading-relaxed text-gray-900 max-w-3xl lg:max-w-xl px-4">
-                    <li class="scrollElement">
-                        We recommend 
-                        <span class="font-medium">
-                            Central Grounds Garage 
-                        </span> 
-                        <span class="italic">
-                            (fees will apply)
-                        </span> at 
-                        <a href="https://maps.app.goo.gl/7nHgafiEj1LqNrcN8" class="underline text-blue-500">
-                            400 Emmet Street, Charlottesville, VA, 22903
-                        </a>
-                        for single family cars.
+                    <li class="scrollElement flex gap-4">
+                        <span class="text-UVA-orange font-bold">01.</span>
+                        <p class="font-['Montserrat'] text-gray-800 text-lg">
+                            We recommend 
+                            <span class="font-bold">
+                                Central Grounds Garage 
+                            </span> 
+                            <span class="italic">
+                                (fees will apply)
+                            </span> at 
+                            <a href="https://maps.app.goo.gl/7nHgafiEj1LqNrcN8" class="underline text-blue-500">
+                                400 Emmet Street, Charlottesville, VA, 22903
+                            </a>
+                            for single family cars.
+                        </p>
                     </li>
-                    <li class="scrollElement">
-                        Access to the Lawn and Rotunda from the parking garage is also wheelchair accessible. Please see here for more information on accessibility. 
+                    <li class="scrollElement flex gap-4">
+                        <span class="text-UVA-orange font-bold">02.</span>
+                        <p class="font-['Montserrat'] text-gray-800 text-lg">Access to the Lawn and Rotunda from the parking garage is also wheelchair accessible. Please see here for more information on accessibility.</p>
                     </li>
-                    <li class="scrollElement">
-                        Tours will meet at the Front Rotunda Steps & Entrance, facing the Lawn.
+                    <li class="scrollElement flex gap-4">
+                        <span class="text-UVA-orange font-bold">03.</span>
+                        <p class="font-['Montserrat'] text-gray-800 text-lg">
+                            Tours will meet at the
+                            <span class="font-bold">front Rotunda Steps</span>
+                            & Entrance, facing the Lawn.
+                        </p>
                     </li>
                 </ul>
             </div>
